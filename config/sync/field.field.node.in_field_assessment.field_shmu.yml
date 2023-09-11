@@ -1,0 +1,29 @@
+uuid: fb75334f-e948-4322-af95-a3a30148f4eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shmu
+    - node.type.in_field_assessment
+    - node.type.shmu
+id: node.in_field_assessment.field_shmu
+field_name: field_shmu
+entity_type: node
+bundle: in_field_assessment
+label: SHMU
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      shmu: shmu
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

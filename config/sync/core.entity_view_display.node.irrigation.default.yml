@@ -1,0 +1,28 @@
+uuid: 7b01c353-976c-407a-96f6-98cf646c05de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.irrigation.field_shmu
+    - node.type.irrigation
+  module:
+    - user
+id: node.irrigation.default
+targetEntityType: node
+bundle: irrigation
+mode: default
+content:
+  field_shmu:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

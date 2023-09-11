@@ -1,0 +1,8 @@
+uuid: 4ca520a0-c97e-4e7f-ab4f-a05b0acfeb1a
+langcode: en
+status: true
+dependencies: {  }
+name: Treatments
+vid: treatments
+description: ''
+weight: 0

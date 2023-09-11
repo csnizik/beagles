@@ -1,0 +1,17 @@
+uuid: 35c53f27-b049-4467-b475-585a5fc56e1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.projects
+    - node.type.shmu
+  module:
+    - gnode
+    - node
+id: projects-group_node-shmu
+group_type: projects
+content_plugin: 'group_node:shmu'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

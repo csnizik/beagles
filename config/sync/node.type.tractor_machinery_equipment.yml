@@ -1,0 +1,17 @@
+uuid: f97a58c3-a323-4521-b066-97a581c629c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Tractor Machinery Equipment'
+type: tractor_machinery_equipment
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,68 @@
+uuid: 9e1b82d8-b010-4039-99fa-00c5822d65f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.shmu.field_crop_rotation
+    - field.field.node.shmu.field_is_control
+    - field.field.node.shmu.field_producer
+    - field.field.node.shmu.field_shape_polygon
+    - field.field.node.shmu.field_treatment
+    - node.type.shmu
+  module:
+    - geofield
+    - user
+id: node.shmu.default
+targetEntityType: node
+bundle: shmu
+mode: default
+content:
+  field_crop_rotation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_is_control:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_producer:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_shape_polygon:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_treatment:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,17 @@
+uuid: 8f403e3d-ce1a-4900-8f8d-13e2aacfd689
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Award
+type: award
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

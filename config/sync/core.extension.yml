@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  address: 0
   admin_toolbar: 0
   automated_cron: 0
   big_pipe: 0
@@ -12,7 +13,9 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  date_range_formatter: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   devel: 0
   devel_generate: 0
@@ -24,6 +27,7 @@ module:
   file: 0
   filter: 0
   flexible_permissions: 0
+  geofield: 0
   gnode: 0
   group: 0
   help: 0
@@ -49,6 +53,7 @@ module:
   user: 0
   variationcache: 0
   views_ui: 0
+  yearonly: 0
   views: 10
   standard: 1000
 theme:

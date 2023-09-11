@@ -1,0 +1,17 @@
+uuid: 9331c4d9-64f0-463d-80c8-05df6ab3778b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.projects
+    - node.type.tractor_machinery_equipment
+  module:
+    - gnode
+    - node
+id: projects-a98b388e139f84cbfd1801b
+group_type: projects
+content_plugin: 'group_node:tractor_machinery_equipment'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

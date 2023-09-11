@@ -1,0 +1,30 @@
+uuid: 5246f07b-4512-4992-b455-1c57166b68c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.shmu.field_crop_rotation
+    - field.field.node.shmu.field_is_control
+    - field.field.node.shmu.field_producer
+    - field.field.node.shmu.field_shape_polygon
+    - field.field.node.shmu.field_treatment
+    - node.type.shmu
+  module:
+    - user
+id: node.shmu.teaser
+targetEntityType: node
+bundle: shmu
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_crop_rotation: true
+  field_is_control: true
+  field_producer: true
+  field_shape_polygon: true
+  field_treatment: true

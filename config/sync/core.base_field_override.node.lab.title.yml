@@ -1,0 +1,18 @@
+uuid: fd7ae948-193e-456f-a6be-f45e3d78c7b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lab
+id: node.lab.title
+field_name: title
+entity_type: node
+bundle: lab
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

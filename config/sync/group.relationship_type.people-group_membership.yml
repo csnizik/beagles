@@ -1,0 +1,15 @@
+uuid: 00b4e149-f744-4665-b14d-94c04deae9ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.people
+  module:
+    - user
+id: people-group_membership
+group_type: people
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

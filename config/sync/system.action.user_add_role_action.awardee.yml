@@ -1,0 +1,14 @@
+uuid: 7b593899-ff81-4ba0-b3b1-89b2fabb19ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.awardee
+  module:
+    - user
+id: user_add_role_action.awardee
+label: 'Add the Awardee role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: awardee

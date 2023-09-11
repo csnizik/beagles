@@ -1,0 +1,29 @@
+uuid: b58e5e16-fe85-48d1-8096-007c9a56eded
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_crop_type
+    - node.type.crop_schedule
+    - taxonomy.vocabulary.crop_types
+id: node.crop_schedule.field_crop_type
+field_name: field_crop_type
+entity_type: node
+bundle: crop_schedule
+label: 'Crop type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      crop_types: crop_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

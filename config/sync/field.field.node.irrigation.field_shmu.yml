@@ -1,0 +1,29 @@
+uuid: e5a2c06d-59b3-4a9d-bd5b-fb84b983a17e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shmu
+    - node.type.irrigation
+    - node.type.shmu
+id: node.irrigation.field_shmu
+field_name: field_shmu
+entity_type: node
+bundle: irrigation
+label: SHMU
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      shmu: shmu
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

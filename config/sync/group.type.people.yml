@@ -1,0 +1,11 @@
+uuid: 783613b6-f43f-4864-a185-6bb7fdd94ea1
+langcode: en
+status: true
+dependencies: {  }
+id: people
+label: People
+description: ''
+new_revision: false
+creator_membership: true
+creator_wizard: false
+creator_roles: {  }

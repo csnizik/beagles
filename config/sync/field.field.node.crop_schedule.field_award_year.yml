@@ -1,0 +1,23 @@
+uuid: baabf8bc-3d57-4385-a5b9-7251b0a8e4c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_year
+    - node.type.crop_schedule
+  module:
+    - yearonly
+id: node.crop_schedule.field_award_year
+field_name: field_award_year
+entity_type: node
+bundle: crop_schedule
+label: 'Award year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '2020'
+  yearonly_to: '2040'
+field_type: yearonly

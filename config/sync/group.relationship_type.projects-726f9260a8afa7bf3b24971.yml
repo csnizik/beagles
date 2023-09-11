@@ -1,0 +1,17 @@
+uuid: 4025af31-5c81-473e-9903-df133c389f25
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.projects
+    - node.type.crop_schedule
+  module:
+    - gnode
+    - node
+id: projects-726f9260a8afa7bf3b24971
+group_type: projects
+content_plugin: 'group_node:crop_schedule'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

@@ -1,0 +1,17 @@
+uuid: ceef8811-d752-423a-9d2b-2cada75604ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'In-Field Assessment'
+type: in_field_assessment
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

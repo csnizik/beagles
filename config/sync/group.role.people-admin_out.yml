@@ -1,0 +1,15 @@
+uuid: 422a54a7-94a4-4668-bb69-de5ad863fdca
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.people
+    - user.role.administrator
+id: people-admin_out
+label: Administrator
+weight: 101
+admin: true
+scope: outsider
+global_role: administrator
+group_type: people
+permissions: {  }

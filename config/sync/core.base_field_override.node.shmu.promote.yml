@@ -1,0 +1,22 @@
+uuid: 2e041c8b-6754-4c81-b037-4f24aa13777a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shmu
+id: node.shmu.promote
+field_name: promote
+entity_type: node
+bundle: shmu
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

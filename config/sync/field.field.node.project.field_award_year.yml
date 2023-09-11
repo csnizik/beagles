@@ -1,0 +1,23 @@
+uuid: 5b22e59f-aecb-4761-97c6-c37481fed61a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_year
+    - node.type.project
+  module:
+    - yearonly
+id: node.project.field_award_year
+field_name: field_award_year
+entity_type: node
+bundle: project
+label: 'Award year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '2020'
+  yearonly_to: '2040'
+field_type: yearonly

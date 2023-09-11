@@ -1,0 +1,22 @@
+uuid: b6d7e42e-5f20-4f19-99cb-4e66c5bbbca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lab.field_street_address
+    - node.type.lab
+  module:
+    - user
+id: node.lab.teaser
+targetEntityType: node
+bundle: lab
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_street_address: true

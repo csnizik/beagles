@@ -1,0 +1,29 @@
+uuid: 57ae0453-fcc2-43a4-9bfa-5fe6a90fd95d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_treatment
+    - node.type.shmu
+    - taxonomy.vocabulary.treatments
+id: node.shmu.field_treatment
+field_name: field_treatment
+entity_type: node
+bundle: shmu
+label: Treatment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      treatments: treatments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

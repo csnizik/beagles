@@ -1,0 +1,14 @@
+uuid: fd5c4321-9d68-47f8-838f-ae50d9bfbe9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.projects
+id: projects-awardee
+label: Awardee
+weight: 105
+admin: false
+scope: individual
+global_role: null
+group_type: projects
+permissions: {  }

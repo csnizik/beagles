@@ -1,0 +1,23 @@
+uuid: cebd2410-d44b-40b1-91f8-94fe2f5ac0ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_relationship.people-group_membership.group_roles
+    - group.relationship_type.people-group_membership
+id: group_relationship.people-group_membership.default
+targetEntityType: group_relationship
+bundle: people-group_membership
+mode: default
+content:
+  group_roles:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: -4
+    region: content
+hidden:
+  entity_id: true
+  uid: true

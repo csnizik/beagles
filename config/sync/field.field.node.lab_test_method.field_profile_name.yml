@@ -1,0 +1,22 @@
+uuid: d65663ab-d92b-44b1-98df-e964df13f830
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_name
+    - node.type.lab_test_method
+  module:
+    - text
+id: node.lab_test_method.field_profile_name
+field_name: field_profile_name
+entity_type: node
+bundle: lab_test_method
+label: 'Profile name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text
