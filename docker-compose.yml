@@ -1,0 +1,31 @@
+version: '3'
+services:
+  drupal:
+    image: farmos/farmos:2.x
+    ports:
+      - 8080:80
+    volumes:
+    # /var/www/html is a sym link to /opt/drupal/web so make sure this mapping is correct
+      - ./:/opt/drupal
+      - ./custom_assets:/opt/drupal/web/modules/custom 
+      # - ./custom_themes:/web/themes/custom TODO
+    depends_on:
+      - db
+    environment:
+      - MYSQL_USER=drupal
+      - MYSQL_PASSWORD=drupal
+      - MYSQL_DATABASE=drupal
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=drupal
+      - MYSQL_USER=drupal
+      - MYSQL_PASSWORD=drupal
+      - MYSQL_DATABASE=drupal
+
+volumes:
+  db_data:
+  custom_assets:
