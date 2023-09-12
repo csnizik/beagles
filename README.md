@@ -88,9 +88,11 @@ Contains scripts that runs the PODS app and its dependencies.
 - `run()`
 - `pods_base` is a git repo, but when we run `./pods -u` we remove its `.git` file. This prevents us having nested repos. **If you are working directly on the `pods_base` project, comment out the line in `./pods` before running `./pods -u`.
 
-***TODOs and miscellany***
+***Removing farmOS***
 
-- To be able to access Manage Fields, Manage Display and Manage Form Display on content entities and their bundles (i.e. entity "asset-type", bundle "plant" etc) Drupal core's Field UI module needs to be enabled. 
-- (farmOS removed; documentation needs to be adjusted) for PODS-new: run `docker-compose up -d`. 
-- Next import the sql file: `docker exec -i pods-new-db-1 mysql -udrupal -pdrupal drupal < newpods.sql`
-- Then in drupal container's shell, run `composer require drush/drush`. (This is temporary until all setup and docs are changed to remove farmOS)
+- (farmOS removed; documentation needs to be adjusted)
+- temporary start-up instructions on GFE:
+  1. Run  `docker-compose up -d`
+  1. Next import the sql file: `docker exec -i pods-new-db-1 mysql -udrupal -pdrupal drupal < newpods.sql`
+  2. (if composer.json hasn't been run, or if dependencies need to be updated): either in the
+  3.
