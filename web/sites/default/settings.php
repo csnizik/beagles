@@ -75,20 +75,18 @@
  * The next section describes how to customize the $databases array for more
  * specific needs.
  *
- * @code
- * $databases['default']['default'] = [
- *   'database' => 'databasename',
- *   'username' => 'sqlusername',
- *   'password' => 'sqlpassword',
- *   'host' => 'localhost',
- *   'port' => '3306',
- *   'driver' => 'mysql',
- *   'prefix' => '',
- *   'collation' => 'utf8mb4_general_ci',
- * ];
- * @endcode
  */
-$databases = [];
+$databases['default']['default'] = [
+  'database' => 'drupal',
+  'username' => 'drupal',
+  'password' => 'drupal',
+  'host' => 'db',
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
+];
+
 
 /**
  * Customizing database settings.

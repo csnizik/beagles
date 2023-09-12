@@ -33,6 +33,12 @@ web/sites/*/files/php/
 *.zip
 *.log
 
+# Ignore database files
+db_data/
+
+# ...and backups
+*.sql
+
 
 # Ignore Composer vendor folder
 vendor/
