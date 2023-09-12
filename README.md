@@ -91,3 +91,6 @@ Contains scripts that runs the PODS app and its dependencies.
 ***TODOs and miscellany***
 
 - To be able to access Manage Fields, Manage Display and Manage Form Display on content entities and their bundles (i.e. entity "asset-type", bundle "plant" etc) Drupal core's Field UI module needs to be enabled. 
+- (farmOS removed; documentation needs to be adjusted) for PODS-new: run `docker-compose up -d`. 
+- Next import the sql file: `docker exec -i pods-new-db-1 mysql -udrupal -pdrupal drupal < newpods.sql`
+- Then in drupal container's shell, run `composer require drush/drush`. (This is temporary until all setup and docs are changed to remove farmOS)

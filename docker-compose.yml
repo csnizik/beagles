@@ -1,15 +1,12 @@
 version: '1'
 services:
   drupal:
-    image: drupal
+    image: drupal:10-apache
     ports:
       - 8080:80
-    # volumes:
-    # /var/www/html is a sym link to /opt/drupal/web so make sure this mapping is correct
-      # - ./:/opt/drupal
-      # - ./custom_assets:/opt/drupal/web/modules/custom
-      # - ./custom_themes:/web/themes/custom TODO
-      # - ./custom_assets:/web/modules/custo
+    volumes:
+      - ./:/opt/drupal
+      - ./config/sync:/var/www/html/config/sync
     depends_on:
       - db
     environment:
@@ -27,7 +24,3 @@ services:
       - MYSQL_USER=drupal
       - MYSQL_PASSWORD=drupal
       - MYSQL_DATABASE=drupal
-
-# volumes:
-  # db_data:
-  # custom_assets:
