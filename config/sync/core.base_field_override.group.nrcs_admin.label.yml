@@ -1,13 +1,13 @@
-uuid: 02a69c66-02f0-433c-853f-48686235b503
+uuid: b1860b88-9896-4fb5-80cd-11dbb1dd4a0e
 langcode: en
 status: true
 dependencies:
   config:
-    - group.type.people
-id: group.people.label
+    - group.type.nrcs_admin
+id: group.nrcs_admin.label
 field_name: label
 entity_type: group
-bundle: people
+bundle: nrcs_admin
 label: Title
 description: ''
 required: true

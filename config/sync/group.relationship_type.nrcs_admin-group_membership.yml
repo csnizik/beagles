@@ -1,13 +1,13 @@
-uuid: 00b4e149-f744-4665-b14d-94c04deae9ae
+uuid: 007db326-00e2-4562-bf32-399e2d4f780b
 langcode: en
 status: true
 dependencies:
   config:
-    - group.type.people
+    - group.type.nrcs_admin
   module:
     - user
-id: people-group_membership
-group_type: people
+id: nrcs_admin-group_membership
+group_type: nrcs_admin
 content_plugin: group_membership
 plugin_config:
   group_cardinality: 0

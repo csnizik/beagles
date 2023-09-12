@@ -1,13 +1,13 @@
-uuid: cebd2410-d44b-40b1-91f8-94fe2f5ac0ff
+uuid: 3fd1c759-c1db-4cca-af81-bea002ebe2ca
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.group_relationship.people-group_membership.group_roles
-    - group.relationship_type.people-group_membership
-id: group_relationship.people-group_membership.default
+    - field.field.group_relationship.nrcs_admin-group_membership.group_roles
+    - group.relationship_type.nrcs_admin-group_membership
+id: group_relationship.nrcs_admin-group_membership.default
 targetEntityType: group_relationship
-bundle: people-group_membership
+bundle: nrcs_admin-group_membership
 mode: default
 content:
   group_roles:
