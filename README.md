@@ -63,7 +63,6 @@ Then we will need to attach the container to our farmos container.
 
 Slow, adds unnecessary complexity.
 
-
 TODO: added podsbase.services.yml and settings.podsbase.php to a new ./config/ dir, and added their installation to composer.json. Should also add pods-
 specific data here i.e. db login, etc.
 
@@ -93,6 +92,7 @@ Contains scripts that runs the PODS app and its dependencies.
 - (farmOS removed; documentation needs to be adjusted)
 - temporary start-up instructions on GFE:
   1. Run  `docker-compose up -d`
-  1. Next import the sql file: `docker exec -i pods-new-db-1 mysql -udrupal -pdrupal drupal < newpods.sql`
-  2. (if composer.json hasn't been run, or if dependencies need to be updated): either in the
-  3.
+  1. Import the sql file: `docker exec -i pods-new-db-1 mysql -udrupal -pdrupal drupal < newpods.sql`
+  1. (if composer.json hasn't been run, or if dependencies need to be updated): `docker exec -i pods-new-drupal-1 composer install`
+  1. Run drush commands with the docker shell (using `docker exec -i`) or open the container's terminal.
+  1. TODO: finish updating the pods.sh script to reflect the shift from farmOS
