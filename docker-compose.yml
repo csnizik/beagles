@@ -4,7 +4,7 @@ services:
     image: drupal
     ports:
       - 8080:80
-    volumes:
+    # volumes:
     # /var/www/html is a sym link to /opt/drupal/web so make sure this mapping is correct
       # - ./:/opt/drupal
       # - ./custom_assets:/opt/drupal/web/modules/custom
@@ -28,6 +28,6 @@ services:
       - MYSQL_PASSWORD=drupal
       - MYSQL_DATABASE=drupal
 
-volumes:
+# volumes:
   # db_data:
   # custom_assets:
