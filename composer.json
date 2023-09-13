@@ -25,6 +25,8 @@
         "drupal/devel": "^5.1",
         "drupal/geofield": "^1.55",
         "drupal/group": "^3.2",
+        "drupal/masquerade": "^2.0@RC",
+        "drupal/uswds": "^2.7",
         "drupal/yearonly": "^9.1",
         "drush/drush": "^12.2"
     },
