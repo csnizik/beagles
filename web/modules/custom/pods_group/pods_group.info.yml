@@ -1,5 +1,0 @@
-name: PODS Group
-type: module
-description: 'Customize implementation of Groups module.'
-package: custom
-core_version_requirement: ^10

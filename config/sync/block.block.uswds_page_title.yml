@@ -1,16 +1,16 @@
-uuid: aabd415f-2e01-43be-898b-5c276d155fff
+uuid: 2618db9b-589c-4909-9a5e-1b70a9c5159e
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - olivero
+    - uswds
 _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
-id: olivero_page_title
-theme: olivero
-region: content_above
+id: uswds_page_title
+theme: uswds
+region: header_top
 weight: -5
 provider: null
 plugin: page_title_block

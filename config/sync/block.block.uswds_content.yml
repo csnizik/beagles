@@ -1,23 +1,23 @@
-uuid: ac509b15-7125-4bb6-807a-39e0edcc2766
+uuid: 8ebb7bea-5194-4ee7-b9a5-7b24d748a492
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - olivero
+    - uswds
 _core:
   default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
-id: olivero_content
-theme: olivero
+id: uswds_content
+theme: uswds
 region: content
-weight: -9
+weight: 0
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'PODS Demo'
-  label_display: visible
+  label: 'Main page content'
+  label_display: '0'
   provider: system
 visibility:
   request_path:

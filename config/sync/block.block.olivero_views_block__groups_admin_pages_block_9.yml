@@ -1,0 +1,29 @@
+uuid: 6f167e2b-3bdb-483d-971b-e8a42f187e76
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.groups_admin_pages
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__groups_admin_pages_block_9
+theme: olivero
+region: sidebar
+weight: -6
+provider: null
+plugin: 'views_block:groups_admin_pages-block_9'
+settings:
+  id: 'views_block:groups_admin_pages-block_9'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
