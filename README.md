@@ -96,3 +96,4 @@ Contains scripts that runs the PODS app and its dependencies.
   1. (if composer.json hasn't been run, or if dependencies need to be updated): `docker exec -i pods-new-drupal-1 composer install`
   1. Run drush commands with the docker shell (using `docker exec -i`) or open the container's terminal.
   1. TODO: finish updating the pods.sh script to reflect the shift from farmOS
+  1. Profit!
