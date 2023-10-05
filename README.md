@@ -1,6 +1,12 @@
 # Demo PODS Base project
 
-TODO: all of the documentations
+## Quick and dirty startup
+
+```sh
+ddev start
+ddev import-db src=./newpods.sql
+ddev drush cr
+```
 
 ## Running on a GFE
 
@@ -97,3 +103,5 @@ Contains scripts that runs the PODS app and its dependencies.
   1. Run drush commands with the docker shell (using `docker exec -i`) or open the container's terminal.
   1. TODO: finish updating the pods.sh script to reflect the shift from farmOS
   1. Profit!
+
+
