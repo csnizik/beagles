@@ -1,8 +1,0 @@
-uuid: b72a52c6-021c-490d-aea5-c7a05c8d8fd3
-langcode: en
-status: true
-dependencies: {  }
-name: 'Crop Types'
-vid: crop_types
-description: ''
-weight: 0
