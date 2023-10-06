@@ -1,0 +1,17 @@
+uuid: 412a89e8-1419-4793-a574-826d01bbf304
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.projects
+    - node.type.page
+  module:
+    - gnode
+    - node
+id: projects-group_node-page
+group_type: projects
+content_plugin: 'group_node:page'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

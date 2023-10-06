@@ -1,0 +1,14 @@
+uuid: e55301ad-ba71-4b9e-96e9-fb31e0df74ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: nrcs_administrator
+label: 'NRCS Administrator'
+weight: 4
+is_admin: null
+permissions:
+  - 'access group overview'
+  - 'create nrcs_admin group'
+  - 'create projects group'

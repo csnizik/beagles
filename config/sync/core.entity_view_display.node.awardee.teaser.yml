@@ -1,0 +1,26 @@
+uuid: d508e4cd-c3b2-4e91-b6ac-fd595f2a4365
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.awardee.field_acronym
+    - field.field.node.awardee.field_short_name
+    - field.field.node.awardee.field_state_territory
+    - node.type.awardee
+  module:
+    - user
+id: node.awardee.teaser
+targetEntityType: node
+bundle: awardee
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_acronym: true
+  field_short_name: true
+  field_state_territory: true

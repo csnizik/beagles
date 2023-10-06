@@ -1,0 +1,9 @@
+uuid: 8c36b702-c9f4-4736-87a5-d690da7ff5fb
+langcode: en
+status: true
+dependencies: {  }
+id: awardee
+label: Awardee
+weight: 5
+is_admin: null
+permissions: {  }

@@ -1,0 +1,31 @@
+uuid: 646326a3-ec17-493a-8d95-75f8a72d7204
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.crop.field_cost_per_acre
+    - node.type.crop
+  module:
+    - user
+id: node.crop.default
+targetEntityType: node
+bundle: crop
+mode: default
+content:
+  field_cost_per_acre:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,26 @@
+uuid: b4e51c29-abd4-4928-afa5-e0366e12bf9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sample.field_date_analysis
+    - field.field.node.sample.field_date_of_collection
+    - field.field.node.sample.field_shape_multipoint_
+    - node.type.sample
+  module:
+    - user
+id: node.sample.teaser
+targetEntityType: node
+bundle: sample
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_date_analysis: true
+  field_date_of_collection: true
+  field_shape_multipoint_: true

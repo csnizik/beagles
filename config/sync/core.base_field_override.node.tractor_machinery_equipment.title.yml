@@ -1,0 +1,18 @@
+uuid: b63a99de-5121-4378-b011-c171f188c44b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tractor_machinery_equipment
+id: node.tractor_machinery_equipment.title
+field_name: title
+entity_type: node
+bundle: tractor_machinery_equipment
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

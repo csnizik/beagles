@@ -1,0 +1,15 @@
+uuid: c5f9c7ba-5982-4d6d-8835-0e3b6efd16b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.nrcs_admin
+    - user.role.administrator
+id: nrcs_admin-admin_out
+label: Administrator
+weight: 101
+admin: true
+scope: outsider
+global_role: administrator
+group_type: nrcs_admin
+permissions: {  }

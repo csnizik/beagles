@@ -1,0 +1,55 @@
+uuid: 451bd22a-c369-4727-8c3f-098934b46d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.crop_schedule.field_award_year
+    - field.field.node.crop_schedule.field_crop
+    - field.field.node.crop_schedule.field_crop_type
+    - field.field.node.crop_schedule.field_months
+    - node.type.crop_schedule
+  module:
+    - user
+    - yearonly
+id: node.crop_schedule.default
+targetEntityType: node
+bundle: crop_schedule
+mode: default
+content:
+  field_award_year:
+    type: yearonly_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_crop:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_crop_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_months:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

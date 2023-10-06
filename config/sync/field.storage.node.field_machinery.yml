@@ -1,0 +1,19 @@
+uuid: 149c5284-63fe-4666-8909-245de98c8ec8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_machinery
+field_name: field_machinery
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

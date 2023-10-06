@@ -1,0 +1,19 @@
+uuid: 6497f844-5e16-4610-bfcb-dc2aab133bfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_eauth
+    - node.type.award
+id: node.award.field_contact_eauth
+field_name: field_contact_eauth
+entity_type: node
+bundle: award
+label: "Contact's Eauth ID"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

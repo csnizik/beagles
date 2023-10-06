@@ -1,0 +1,29 @@
+uuid: c75f78a7-0bc9-4902-9a94-d8261b790ab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_months
+    - node.type.crop_schedule
+    - taxonomy.vocabulary.months
+id: node.crop_schedule.field_months
+field_name: field_months
+entity_type: node
+bundle: crop_schedule
+label: Months
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      months: months
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

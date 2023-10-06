@@ -1,0 +1,17 @@
+uuid: a1bc9d3b-cb69-4e5b-ac6e-3a1dace070af
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Awardee Organization'
+type: awardee
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

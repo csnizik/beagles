@@ -1,0 +1,22 @@
+uuid: d2d47a8f-397f-4d12-97e0-0645fa059ac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tractor_machinery_equipment
+id: node.tractor_machinery_equipment.promote
+field_name: promote
+entity_type: node
+bundle: tractor_machinery_equipment
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,17 @@
+uuid: 5b2c8737-c1c9-466d-b163-f90f8f4bea1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.projects
+    - node.type.producer
+  module:
+    - gnode
+    - node
+id: projects-group_node-producer
+group_type: projects
+content_plugin: 'group_node:producer'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

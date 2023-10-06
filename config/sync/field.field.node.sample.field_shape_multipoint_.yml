@@ -1,0 +1,21 @@
+uuid: 8c6baf3b-9960-4625-ac5d-1a73c5a51f4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shape_multipoint_
+    - node.type.sample
+  module:
+    - geofield
+id: node.sample.field_shape_multipoint_
+field_name: field_shape_multipoint_
+entity_type: node
+bundle: sample
+label: 'Shape (multipoint)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

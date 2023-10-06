@@ -1,0 +1,28 @@
+uuid: fda29479-01a8-42d4-a1e8-7b78e23fbbb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.in_field_assessment.field_shmu
+    - node.type.in_field_assessment
+  module:
+    - user
+id: node.in_field_assessment.default
+targetEntityType: node
+bundle: in_field_assessment
+mode: default
+content:
+  field_shmu:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

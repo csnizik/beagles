@@ -1,0 +1,29 @@
+uuid: 33c046a4-41ca-4010-aa14-5cbcd5e4a016
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_crop
+    - node.type.crop
+    - node.type.crop_schedule
+id: node.crop_schedule.field_crop
+field_name: field_crop
+entity_type: node
+bundle: crop_schedule
+label: Crop
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      crop: crop
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

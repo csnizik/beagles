@@ -1,0 +1,18 @@
+uuid: 1ae15e71-0dc1-42d6-9461-88bf403f4ffe
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.operation
+id: node.operation.title
+field_name: title
+entity_type: node
+bundle: operation
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

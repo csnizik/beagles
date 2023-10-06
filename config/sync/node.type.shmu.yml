@@ -1,0 +1,17 @@
+uuid: 3a7eaeed-8af3-4bbd-b9ba-53e740cfd583
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Soil Health Management Unit (SHMU)'
+type: shmu
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

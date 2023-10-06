@@ -1,0 +1,28 @@
+uuid: 410248cf-6375-4825-95c0-9bb57f0fe927
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.producer.field_project
+    - node.type.producer
+  module:
+    - user
+id: node.producer.default
+targetEntityType: node
+bundle: producer
+mode: default
+content:
+  field_project:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

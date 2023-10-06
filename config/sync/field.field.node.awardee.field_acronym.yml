@@ -1,0 +1,19 @@
+uuid: ba3c8407-ffe9-4864-8607-f563b7116ae0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acronym
+    - node.type.awardee
+id: node.awardee.field_acronym
+field_name: field_acronym
+entity_type: node
+bundle: awardee
+label: Acronym
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 1a244a93-7f8a-4d65-a8cc-177090f0a653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agreement_number
+    - node.type.project
+id: node.project.field_agreement_number
+field_name: field_agreement_number
+entity_type: node
+bundle: project
+label: 'Agreement number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

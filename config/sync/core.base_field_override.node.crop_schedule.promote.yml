@@ -1,0 +1,22 @@
+uuid: d2b93061-3ac6-4cf5-b20b-842c68e049df
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.crop_schedule
+id: node.crop_schedule.promote
+field_name: promote
+entity_type: node
+bundle: crop_schedule
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

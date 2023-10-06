@@ -1,0 +1,18 @@
+uuid: 43016756-7789-4a85-a33c-ca1f8cff5c1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.in_field_assessment
+id: node.in_field_assessment.title
+field_name: title
+entity_type: node
+bundle: in_field_assessment
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: 7fe5e11d-6e4e-4194-948d-1bdef0850011
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lab_test_method
+id: node.lab_test_method.title
+field_name: title
+entity_type: node
+bundle: lab_test_method
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

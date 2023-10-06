@@ -1,0 +1,17 @@
+uuid: 729a699c-778d-4e06-920d-a9788c8456df
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.projects
+    - node.type.award
+  module:
+    - gnode
+    - node
+id: projects-group_node-award
+group_type: projects
+content_plugin: 'group_node:award'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false

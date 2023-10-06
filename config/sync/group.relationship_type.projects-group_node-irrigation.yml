@@ -1,0 +1,17 @@
+uuid: b7010672-84bb-45fb-a5c2-51bcac944590
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.projects
+    - node.type.irrigation
+  module:
+    - gnode
+    - node
+id: projects-group_node-irrigation
+group_type: projects
+content_plugin: 'group_node:irrigation'
+plugin_config:
+  group_cardinality: 1
+  entity_cardinality: 1
+  use_creation_wizard: false
