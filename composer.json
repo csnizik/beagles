@@ -26,6 +26,7 @@
         "drupal/devel": "^5.1",
         "drupal/entity_reference_display": "^2.0",
         "drupal/erd": "^2.0@alpha",
+        "drupal/flexible_permissions": "^1.1",
         "drupal/fontawesome": "^2.26",
         "drupal/geofield": "^1.55",
         "drupal/group": "^3.2",
