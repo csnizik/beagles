@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_local_tasks
-theme: uswds_base_subtheme
+    - pods
+id: pods_local_tasks
+theme: pods
 region: content
 weight: 20
 provider: null

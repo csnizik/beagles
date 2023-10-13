@@ -4,9 +4,9 @@ dependencies:
   module:
     - help
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_help
-theme: uswds_base_subtheme
+    - pods
+id: pods_help
+theme: pods
 region: help
 weight: -30
 provider: null

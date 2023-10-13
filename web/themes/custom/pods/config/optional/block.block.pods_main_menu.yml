@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_main_menu
-theme: uswds_base_subtheme
+    - pods
+id: pods_main_menu
+theme: pods
 region: primary_menu
 weight: 10
 provider: null

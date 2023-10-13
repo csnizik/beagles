@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_breadcrumbs
-theme: uswds_base_subtheme
+    - pods
+id: pods_breadcrumbs
+theme: pods
 region: breadcrumb
 weight: -100
 provider: null

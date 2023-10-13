@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_branding
-theme: uswds_base_subtheme
+    - pods
+id: pods_branding
+theme: pods
 region: header
 weight: 0
 provider: null

@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_search
-theme: uswds_base_subtheme
+    - pods
+id: pods_search
+theme: pods
 region: secondary_menu
 weight: 10
 provider: null

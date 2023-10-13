@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - uswds_base_subtheme
-id: uswds_base_subtheme_footer
-theme: uswds_base_subtheme
+    - pods
+id: pods_footer
+theme: pods
 region: footer_menu
 weight: 0
 provider: null
