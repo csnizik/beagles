@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e3b21bd37a6e0fb2d0322ca7414d9f3",
+    "content-hash": "b06c6abfe601a541dada3f9b3b0d1731",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1645,17 +1645,17 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "3.4.1",
+            "version": "3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.4.1"
+                "reference": "3.4.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.4.1.zip",
-                "reference": "3.4.1",
-                "shasum": "bcb15ab40016becdb3ac8f21d7d1a721f48f3577"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.4.2.zip",
+                "reference": "3.4.2",
+                "shasum": "f5a008e5c73f5a11c6c8067c0ea6ebb76aa33854"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10"
@@ -1666,8 +1666,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.4.1",
-                    "datestamp": "1684944156",
+                    "version": "3.4.2",
+                    "datestamp": "1696006195",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1722,60 +1722,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            }
-        },
-        {
-            "name": "drupal/classy",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/classy.git",
-                "reference": "1.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/classy-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "c2f4fbfd9ae7d4e0cbd952d96247d00a0759da06"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10",
-                "drupal/stable": "^2.0.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1663949784",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bnjmnm",
-                    "homepage": "https://www.drupal.org/user/2369194"
-                },
-                {
-                    "name": "davidhernandez",
-                    "homepage": "https://www.drupal.org/user/274559"
-                },
-                {
-                    "name": "lauriii",
-                    "homepage": "https://www.drupal.org/user/1078742"
-                }
-            ],
-            "description": "The Classy base theme from Drupal 8/9 moved to contrib",
-            "homepage": "https://drupal.org/project/classy",
-            "support": {
-                "source": "https://git.drupalcode.org/project/classy",
-                "issues": "https://drupal.org/project/issues/classy"
             }
         },
         {
@@ -1989,7 +1935,7 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "10.1.3",
+            "version": "10.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2023,6 +1969,7 @@
                     "Drupal\\Composer\\Plugin\\Scaffold\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -2030,11 +1977,15 @@
             "homepage": "https://www.drupal.org/project/drupal",
             "keywords": [
                 "drupal"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/10.1.5"
+            },
+            "time": "2023-04-30T16:15:32+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "10.1.3",
+            "version": "10.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -2059,6 +2010,7 @@
                     "Drupal\\Composer\\Plugin\\ProjectMessage\\": "."
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -2066,7 +2018,11 @@
             "homepage": "https://www.drupal.org/project/drupal",
             "keywords": [
                 "drupal"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/drupal/core-project-message/tree/10.1.5"
+            },
+            "time": "2022-07-01T08:32:39+00:00"
         },
         {
             "name": "drupal/core-recommended",
@@ -2613,17 +2569,17 @@
         },
         {
             "name": "drupal/group",
-            "version": "3.2.0",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/group.git",
-                "reference": "3.2.0"
+                "reference": "3.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/group-3.2.0.zip",
-                "reference": "3.2.0",
-                "shasum": "c2dd71b3a1735a5eea821a14716c972b027f713d"
+                "url": "https://ftp.drupal.org/files/projects/group-3.2.1.zip",
+                "reference": "3.2.1",
+                "shasum": "7774014794ad8cc39b1e22737e48cdbdd60513db"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10",
@@ -2633,8 +2589,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.2.0",
-                    "datestamp": "1692969097",
+                    "version": "3.2.1",
+                    "datestamp": "1697204379",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2661,102 +2617,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/group",
                 "issues": "https://drupal.org/project/issues/group"
-            }
-        },
-        {
-            "name": "drupal/guswds",
-            "version": "5.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/guswds.git",
-                "reference": "5.2.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/guswds-5.2.4.zip",
-                "reference": "5.2.4",
-                "shasum": "476d087eef6eabed61ed4e60f1ef173cd0672886"
-            },
-            "require": {
-                "drupal/components": "*",
-                "drupal/core": "^8.9 || ^9 || ^10",
-                "drupal/guswds-gesso_helper": "*",
-                "drupal/twig_tweak": "*"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "5.2.4",
-                    "datestamp": "1692544029",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "clafferty",
-                    "homepage": "https://www.drupal.org/user/1334864"
-                },
-                {
-                    "name": "dcmouyard",
-                    "homepage": "https://www.drupal.org/user/376907"
-                },
-                {
-                    "name": "kmonahan",
-                    "homepage": "https://www.drupal.org/user/3520348"
-                }
-            ],
-            "description": "Storybook-based starter theme based on Gesso and the United States Web Design System.",
-            "homepage": "https://www.drupal.org/project/guswds",
-            "support": {
-                "source": "https://git.drupalcode.org/project/guswds"
-            }
-        },
-        {
-            "name": "drupal/guswds-gesso_helper",
-            "version": "5.2.4",
-            "require": {
-                "drupal/core": "^8.9 || ^9 || ^10",
-                "drupal/guswds": "^5"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "5.2.4",
-                    "datestamp": "1692544029",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "clafferty",
-                    "homepage": "https://www.drupal.org/user/1334864"
-                },
-                {
-                    "name": "dcmouyard",
-                    "homepage": "https://www.drupal.org/user/376907"
-                },
-                {
-                    "name": "kmonahan",
-                    "homepage": "https://www.drupal.org/user/3520348"
-                }
-            ],
-            "homepage": "https://www.drupal.org/project/guswds",
-            "support": {
-                "source": "https://git.drupalcode.org/project/guswds"
             }
         },
         {
@@ -3119,177 +2979,6 @@
             }
         },
         {
-            "name": "drupal/stable",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/stable.git",
-                "reference": "2.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/stable-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "1d1ba799280bd6b9a3c46a158e6026663e080f3f"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1663102967",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bnjmnm",
-                    "homepage": "https://www.drupal.org/user/2369194"
-                },
-                {
-                    "name": "Cottser",
-                    "homepage": "https://www.drupal.org/user/1167326"
-                },
-                {
-                    "name": "lauriii",
-                    "homepage": "https://www.drupal.org/user/1078742"
-                }
-            ],
-            "description": "A base theme using Drupal 8.0.0's core markup and CSS.",
-            "homepage": "https://www.drupal.org/project/stable",
-            "support": {
-                "source": "https://git.drupalcode.org/project/stable"
-            }
-        },
-        {
-            "name": "drupal/twig_tweak",
-            "version": "3.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/twig_tweak.git",
-                "reference": "3.2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twig_tweak-3.2.1.zip",
-                "reference": "3.2.1",
-                "shasum": "89fc08b60f494a7d786251b6c2c493c536218222"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10.0",
-                "ext-json": "*",
-                "php": ">=7.3",
-                "symfony/polyfill-php80": "^1.17",
-                "twig/twig": "^2.12 || ^3.3.8"
-            },
-            "suggest": {
-                "symfony/var-dumper": "Better dump() function for debugging Twig variables"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.2.1",
-                    "datestamp": "1677404306",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10 || ^11"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Chi",
-                    "homepage": "https://www.drupal.org/user/556138"
-                }
-            ],
-            "description": "A Twig extension with some useful functions and filters for Drupal development.",
-            "homepage": "https://www.drupal.org/project/twig_tweak",
-            "keywords": [
-                "Drupal",
-                "Twig"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/twig_tweak",
-                "issues": "https://www.drupal.org/project/issues/twig_tweak"
-            }
-        },
-        {
-            "name": "drupal/uswds",
-            "version": "2.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/uswds.git",
-                "reference": "8.x-2.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/uswds-8.x-2.7.zip",
-                "reference": "8.x-2.7",
-                "shasum": "00f57e9136c61d3bda1d43f2057c92f5c17f1ffd"
-            },
-            "require": {
-                "drupal/classy": "^1.0",
-                "drupal/core": "^9.0 || ^10.0"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.7",
-                    "datestamp": "1674574146",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "brockfanning",
-                    "homepage": "https://www.drupal.org/user/709486"
-                },
-                {
-                    "name": "Irisibk",
-                    "homepage": "https://www.drupal.org/user/1175178"
-                },
-                {
-                    "name": "JayDarnell",
-                    "homepage": "https://www.drupal.org/user/667566"
-                },
-                {
-                    "name": "jrglasgow",
-                    "homepage": "https://www.drupal.org/user/36590"
-                }
-            ],
-            "description": "Drupal theme for the U.S. Web Design Standards library v2.x.",
-            "homepage": "https://www.drupal.org/project/uswds",
-            "support": {
-                "source": "http://cgit.drupalcode.org/uswds",
-                "issues": "https://www.drupal.org/project/issues/uswds?categories=All"
-            }
-        },
-        {
             "name": "drupal/uswds_base",
             "version": "3.4.1",
             "source": {
@@ -3494,16 +3183,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "12.2.0",
+            "version": "12.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "b924aa6cfad1c0eb3ae853ccc373422c16184b8e"
+                "reference": "a83c9ae56728dd6f99aa5d150c11e5e3656030a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/b924aa6cfad1c0eb3ae853ccc373422c16184b8e",
-                "reference": "b924aa6cfad1c0eb3ae853ccc373422c16184b8e",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/a83c9ae56728dd6f99aa5d150c11e5e3656030a5",
+                "reference": "a83c9ae56728dd6f99aa5d150c11e5e3656030a5",
                 "shasum": ""
             },
             "require": {
@@ -3626,7 +3315,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/12.2.0"
+                "source": "https://github.com/drush-ops/drush/tree/12.3.0"
             },
             "funding": [
                 {
@@ -3634,20 +3323,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-08T12:42:05+00:00"
+            "time": "2023-10-11T11:25:44+00:00"
         },
         {
             "name": "egulias/email-validator",
-            "version": "4.0.1",
+            "version": "4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "3a85486b709bc384dae8eb78fb2eec649bdb64ff"
+                "reference": "ebaaf5be6c0286928352e054f2d5125608e5405e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/3a85486b709bc384dae8eb78fb2eec649bdb64ff",
-                "reference": "3a85486b709bc384dae8eb78fb2eec649bdb64ff",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ebaaf5be6c0286928352e054f2d5125608e5405e",
+                "reference": "ebaaf5be6c0286928352e054f2d5125608e5405e",
                 "shasum": ""
             },
             "require": {
@@ -3656,8 +3345,8 @@
                 "symfony/polyfill-intl-idn": "^1.26"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5.27",
-                "vimeo/psalm": "^4.30"
+                "phpunit/phpunit": "^10.2",
+                "vimeo/psalm": "^5.12"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
@@ -3693,7 +3382,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/4.0.1"
+                "source": "https://github.com/egulias/EmailValidator/tree/4.0.2"
             },
             "funding": [
                 {
@@ -3701,7 +3390,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-14T14:17:03+00:00"
+            "time": "2023-10-06T06:47:41+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -5194,16 +4883,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.20",
+            "version": "v0.11.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "0fa27040553d1d280a67a4393194df5228afea5b"
+                "reference": "bcb22101107f3bf770523b65630c9d547f60c540"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0fa27040553d1d280a67a4393194df5228afea5b",
-                "reference": "0fa27040553d1d280a67a4393194df5228afea5b",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/bcb22101107f3bf770523b65630c9d547f60c540",
+                "reference": "bcb22101107f3bf770523b65630c9d547f60c540",
                 "shasum": ""
             },
             "require": {
@@ -5233,6 +4922,10 @@
             "extra": {
                 "branch-alias": {
                     "dev-main": "0.11.x-dev"
+                },
+                "bamarni-bin": {
+                    "bin-links": false,
+                    "forward-command": false
                 }
             },
             "autoload": {
@@ -5264,9 +4957,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.20"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.21"
             },
-            "time": "2023-07-31T14:32:22+00:00"
+            "time": "2023-09-17T21:15:54+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5911,16 +5604,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v6.3.3",
+            "version": "v6.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "9915db259f67d21eefee768c1abcf1cc61b1fc9e"
+                "reference": "a1b31d88c0e998168ca7792f222cbecee47428c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/9915db259f67d21eefee768c1abcf1cc61b1fc9e",
-                "reference": "9915db259f67d21eefee768c1abcf1cc61b1fc9e",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/a1b31d88c0e998168ca7792f222cbecee47428c4",
+                "reference": "a1b31d88c0e998168ca7792f222cbecee47428c4",
                 "shasum": ""
             },
             "require": {
@@ -5955,7 +5648,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v6.3.3"
+                "source": "https://github.com/symfony/finder/tree/v6.3.5"
             },
             "funding": [
                 {
@@ -5971,7 +5664,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-07-31T08:31:44+00:00"
+            "time": "2023-09-26T12:56:25+00:00"
         },
         {
             "name": "symfony/http-foundation",
