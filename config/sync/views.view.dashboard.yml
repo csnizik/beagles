@@ -1,10 +1,9 @@
-uuid: 21ad173e-fe64-4b6e-97a5-3ed865c7a634
+uuid: fa04c8d9-2b0e-4421-b5b0-858bf7491998
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
-    - field.storage.node.field_project
+    - field.storage.node.field_agreement_number
     - field.storage.node.field_status
     - node.type.award
   module:
@@ -92,19 +91,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
-          relationship: none
+        field_agreement_number:
+          id: field_agreement_number
+          table: node__field_agreement_number
+          field: field_agreement_number
+          relationship: field_project
           group_type: group
           admin_label: ''
-          plugin_id: custom
-          label: 'Agreement Number'
+          plugin_id: field
+          label: 'Agreement number'
           exclude: false
           alter:
-            alter_text: true
-            text: '3603867004958'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -133,14 +132,28 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_status:
           id: field_status
           table: node__field_status
@@ -203,19 +216,20 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_project:
-          id: field_project
-          table: node__field_project
-          field: field_project
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
+          entity_type: node
+          plugin_id: entity_link
           label: ''
           exclude: true
           alter:
             alter_text: false
-            text: View
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -252,32 +266,22 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        nothing_1:
-          id: nothing_1
+          text: View
+          output_url_as_text: false
+          absolute: false
+        nothing:
+          id: nothing
           table: views
           field: nothing
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: custom
-          label: Project
+          label: 'Award Details'
           exclude: false
           alter:
             alter_text: true
-            text: "{% if field_project %}\r\n<a href=\"/node/{{ field_project }}\">View</a>\r\n{% else %}\r\n<a href=\"/node/add/project\">Add Details</a>\r\n{% endif %}"
+            text: "{% if field_agreement_number %}\r\n{{ view_node }}\r\n{% else %}\r\n<a href=\"/node/add/project\">Add Details</a>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -314,83 +318,21 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-        uid:
-          id: uid
+        title_1:
+          id: title_1
           table: node_field_data
-          field: uid
-          relationship: field_project
+          field: title
+          relationship: reverse__node__field_project
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: uid
+          entity_field: title
           plugin_id: field
-          label: Owner
-          exclude: true
-          alter:
-            alter_text: false
-            text: "a-{{ field_project.value }}\r\n"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: '<a class="disabled">Continue ></a>'
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_id
-          settings: {  }
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        nothing_2:
-          id: nothing_2
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: custom
-          label: Producers
+          label: Title
           exclude: false
           alter:
-            alter_text: true
-            text: "{% if field_project %}\r\n<a href=\"/user/uid\">Continue ></a>\r\n{% else %}\r\n<a class=\"disabled\">Continue</a>\r\n{% endif %}"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -426,9 +368,23 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
-        type: full
+        type: mini
         options:
           offset: 0
           items_per_page: 10
@@ -437,8 +393,6 @@ display:
           tags:
             next: ››
             previous: ‹‹
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -447,7 +401,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -540,31 +493,8 @@ display:
             group_items: {  }
       style:
         type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          columns:
-            title: title
-          default: '-1'
-          info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          override: true
-          sticky: false
-          summary: ''
-          empty_table: false
-          caption: ''
-          description: ''
       row:
-        type: 'entity:node'
-        options:
-          view_mode: teaser
+        type: fields
       query:
         type: views_query
         options:
@@ -580,8 +510,18 @@ display:
           field: field_project
           relationship: none
           group_type: group
-          admin_label: 'field_project: Content'
+          admin_label: 'field_project on award'
           plugin_id: standard
+          required: false
+        reverse__node__field_project:
+          id: reverse__node__field_project
+          table: node_field_data
+          field: reverse__node__field_project
+          relationship: field_project
+          group_type: group
+          admin_label: 'content using field_project'
+          entity_type: node
+          plugin_id: entity_reverse
           required: false
       header: {  }
       footer: {  }
@@ -595,7 +535,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_project'
+        - 'config:field.storage.node.field_agreement_number'
         - 'config:field.storage.node.field_status'
   page_1:
     id: page_1
@@ -614,5 +554,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_project'
+        - 'config:field.storage.node.field_agreement_number'
         - 'config:field.storage.node.field_status'
