@@ -1,0 +1,11 @@
+@media screen and (min-width: 64em) {
+  .usa-header--extended .site-logo--pods {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+  }
+}
+
+.pods-logo {
+  max-width: 4.5rem;
+}

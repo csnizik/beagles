@@ -13,3 +13,11 @@ uswds_custom:
       css/uswds_base.css: {}
   js:
     js/uswds_base.js: {}
+
+pods_styles:
+  version: VERSION
+  css:
+    theme:
+      css/base.css: {}
+      css/components.css: {}
+      css/layout.css: {}

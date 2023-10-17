@@ -26,3 +26,5 @@ regions:
 
 libraries:
   - 'pods/assets'
+  - 'pods/uswds_custom'
+  - 'pods/pods_styles'
