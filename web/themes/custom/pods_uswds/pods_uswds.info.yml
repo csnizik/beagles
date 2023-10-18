@@ -1,23 +1,23 @@
-name: 'PODS (New) Theme'
+name: 'USWDS - PODS Theme'
 type: theme
 'base theme': stable9
 starterkit: true
 version: VERSION
 libraries:
-  - pods-new/base
-  - pods-new/messages
+  - pods_uswds/base
+  - pods_uswds/messages
   - core/normalize
 libraries-extend:
   user/drupal.user:
-    - pods-new/user
+    - pods_uswds/user
   core/drupal.dropbutton:
-    - pods-new/dropbutton
+    - pods_uswds/dropbutton
   core/drupal.dialog:
-    - pods-new/dialog
+    - pods_uswds/dialog
   file/drupal.file:
-    - pods-new/file
+    - pods_uswds/file
   core/drupal.progress:
-    - pods-new/progress
+    - pods_uswds/progress
 core_version_requirement: ^10
 generator: 'starterkit_theme:10.1.5'
-description: 'Custom theme for PODS'
+description: 'Custom theme for PODS based on USWDS'
