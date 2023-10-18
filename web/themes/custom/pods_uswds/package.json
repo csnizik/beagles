@@ -1,0 +1,19 @@
+{
+  "name": "pods_uswds",
+  "version": "1.0.0",
+  "description": "A Drupal Starterkit theme that implements the USWDS Design System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csnizik/uswds-pods.git"
+  },
+  "author": "csnizik@tulane.edu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csnizik/uswds-pods/issues"
+  },
+  "homepage": "https://github.com/csnizik/uswds-pods#readme"
+}
