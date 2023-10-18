@@ -7,6 +7,7 @@ libraries:
   - pods_uswds/base
   - pods_uswds/messages
   - pods_uswds/uswds
+  - pods_uswds/uswds-initializer
   - core/normalize
 libraries-extend:
   user/drupal.user:

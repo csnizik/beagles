@@ -114,4 +114,13 @@ uswds:
   dependencies:
     - core/jquery
 
+uswds-initializer:
+  version: VERSION
+  header: true
+  js:
+    dist/js/uswds-init.min.js: {}
+  dependencies:
+    - core/jquery
+    - pods_uswds/uswds
+
 

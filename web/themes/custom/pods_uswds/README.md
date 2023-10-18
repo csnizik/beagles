@@ -20,6 +20,12 @@
 
 1. Modify the `.info.yml` and `.libraries.yml`files to incorporate the USWDS libraries.
 
+1. Add dependencies required for SASS compilation:
+
+    ```sh
+    npm install --save-dev webpack webpack-cli sass-loader css-loader
+    style-loader mini-css-extract-plugin sass csso-webpack-plugin
+    ```
 
 
 ## Links
