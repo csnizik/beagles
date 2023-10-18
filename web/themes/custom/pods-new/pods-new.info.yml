@@ -1,0 +1,23 @@
+name: 'PODS (New) Theme'
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - pods-new/base
+  - pods-new/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - pods-new/user
+  core/drupal.dropbutton:
+    - pods-new/dropbutton
+  core/drupal.dialog:
+    - pods-new/dialog
+  file/drupal.file:
+    - pods-new/file
+  core/drupal.progress:
+    - pods-new/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.1.5'
+description: 'Custom theme for PODS'

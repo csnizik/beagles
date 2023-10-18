@@ -34,7 +34,7 @@
         "drupal/uswds_base": "^3.4",
         "drupal/views_field_view": "^1.0@beta",
         "drupal/yearonly": "^9.1",
-        "drush/drush": "^12.2"
+        "drush/drush": "^12.3"
     },
     "conflict": {
         "drupal/drupal": "*"
