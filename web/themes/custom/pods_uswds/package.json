@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/csnizik/uswds-pods/issues"
   },
-  "homepage": "https://github.com/csnizik/uswds-pods#readme"
+  "homepage": "https://github.com/csnizik/uswds-pods#readme",
+  "dependencies": {
+    "@uswds/uswds": "^3.6.1"
+  }
 }
