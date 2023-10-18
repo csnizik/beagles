@@ -12,6 +12,14 @@
 npm init
 ```
 
+3. Still in the theme root:
+
+```sh
+ npm install --save @uswds/uswds@latest
+ ```
+
+4. Modify the `.info.yml` and `.libraries.yml`files to incorporate the USWDS libraries.
+5.
 ## Links
 
 - [Starterkit documentation](https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme)
