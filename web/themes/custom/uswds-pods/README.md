@@ -1,1 +1,0 @@
-uswds-pods theme, generated from stable9. Additional information on generating themes can be found in the [Starterkit documentation](https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme).
