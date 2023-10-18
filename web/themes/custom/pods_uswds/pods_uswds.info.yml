@@ -6,6 +6,7 @@ version: VERSION
 libraries:
   - pods_uswds/base
   - pods_uswds/messages
+  - pods_uswds/uswds
   - core/normalize
 libraries-extend:
   user/drupal.user:

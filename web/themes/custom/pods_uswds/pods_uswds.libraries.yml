@@ -103,3 +103,15 @@ user:
     component:
       css/components/user.css:
         weight: -10
+
+uswds:
+  version: VERSION
+  css:
+    theme:
+      dist/uswds.min.css: {}
+  js:
+    dist/uswds.min.js: {}
+  dependencies:
+    - core/jquery
+
+
