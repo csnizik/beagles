@@ -5,19 +5,7 @@ starterkit: true
 version: VERSION
 libraries:
   - pods_fpac/base
-  - pods_fpac/messages
   - core/normalize
-libraries-extend:
-  user/drupal.user:
-    - pods_fpac/user
-  core/drupal.dropbutton:
-    - pods_fpac/dropbutton
-  core/drupal.dialog:
-    - pods_fpac/dialog
-  file/drupal.file:
-    - pods_fpac/file
-  core/drupal.progress:
-    - pods_fpac/progress
 core_version_requirement: ^10
 generator: 'starterkit_theme:10.1.5'
 description: 'Custom theme generated with starterkit.'
