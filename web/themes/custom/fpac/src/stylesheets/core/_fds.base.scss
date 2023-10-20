@@ -1,0 +1,207 @@
+/* fds-specific overrides/additions */
+
+.fds-browser-upgrade {
+  background-color: $color-fds-yellow;
+  margin: 0;
+  padding: $size-small $size-default;
+  border-bottom: 2px solid $color-fds-yellow;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: initial;
+  }
+}
+
+html { // http://bit.ly/1qk2tVR
+  box-sizing: border-box;
+}
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+    border:0 solid $color-fds-tertiary-200;
+  }
+}
+
+body {
+
+  overflow-x: initial;
+  background-color: $color-fds-base-bg;
+  line-height: $line-height-medium;
+  color: $color-fds-base;
+
+  @media print {
+    background-color: transparent;
+  }
+
+}
+
+#main-content {
+  min-height: 25vh;
+}
+
+@media print {
+  @page {
+    size: (8.5in * 1.75) (11in * 1.75);
+  }
+}
+
+main {
+  &,
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+pre,
+code,
+kbd,
+samp,
+var,
+tt {
+
+  font-size: 90%;
+  color: $color-fds-red-900;
+  font-family: $font-mono;
+  border-radius: math.div($radius-s, 2);
+  background-color: $color-fds-base-bg;
+  padding: math.div($size-base, 2);
+  // border: 1px solid $color-fds-tertiary-200;
+
+  code {
+
+    border-width: 0;
+    display: block;
+
+  }
+
+}
+
+kbd {
+  @include font-size(0);
+  background-color: white;
+  padding: ($size-base * .25) ($size-base + math.div($size-base, 2));
+  color: $color-fds-tertiary;
+  border: 1px solid $color-fds-tertiary-200;
+  box-shadow: 0 1px 0 $color-fds-tertiary-200;
+  border-radius: $radius-s;
+  font-weight: $font-bold;
+  display: inline-block;
+  white-space: nowrap;
+  min-width: 3ch;
+  text-align: center;
+}
+
+code strong {
+  color: black;
+}
+
+pre {
+  padding: $size-base;
+}
+
+// scss-lint:disable QualifyingElement
+abbr[title] {
+  cursor: default;
+  text-decoration: none;
+  border-bottom-color: tint($color-fds-tertiary, 60%);
+  a & {
+    cursor: pointer;
+  }
+}
+
+[for] {
+  cursor: pointer;
+}
+output,
+output[for] {
+  cursor: default;
+}
+
+// scss-lint:disable QualifyingElement PlaceholderInExtend
+acronym[title],
+dfn[title] {
+  @extend abbr;
+}
+
+ins {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+mark {
+  background-color: $color-fds-yellow-100;
+}
+
+blockquote {
+
+  @include font-size(2);
+  font-style: italic;
+  margin: 0;
+  padding-left: $size-default;
+  border-left: $size-base solid $color-fds-tertiary-200;
+  max-width: $text-max-width;
+
+  @include breakpoint(L) {
+    @include font-size(4);
+    padding-left: $size-medium;
+  }
+
+}
+
+hr {
+  margin-top: $size-medium;
+  margin-bottom: $size-medium;
+  border-width: 0;
+  height: 1px;
+  background: $color-fds-tertiary-200;
+  clear: both;
+}
+
+form,
+fieldset {
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset[disabled] {
+  opacity: .6;
+}
+
+[contentEditable=true]:focus,
+[href]:focus,
+[tabindex]:focus,
+button:not([disabled]):focus,
+iframe:focus,
+input:not([disabled]):focus,
+select:not([disabled]):focus,
+textarea:not([disabled]):focus {
+  @include fds-focus();
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: initial !important;
+  }
+}
+
+[hidden],
+template,
+html body [hidden],
+html body template {
+  display: none !important;
+}

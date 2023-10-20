@@ -1,0 +1,46 @@
+////////////////////////////////////////////////////////////////////////
+// FDS Grids
+
+// Customization and SCSS'ification of Pure Grids, formerly known as YUI Grids.
+
+.fds-grid {
+
+  @include fds-grid-row();
+
+  &--no-gutter {
+    margin-left: 0;
+  }
+
+  &__demo {
+
+    padding: 0;
+    background-color: rgba(0, 0, 0, .05);
+    box-shadow: 0 0 1px rgba(0,0,0,.7) inset;
+
+    code {
+
+      background-color: transparent;
+      border-width: 0;
+      padding: 0;
+      white-space: nowrap;
+
+    }
+
+  }
+
+}
+
+@include fds-grid();
+
+@include breakpoint(S) {
+  @include fds-grid(\@s);
+}
+@include breakpoint(M) {
+  @include fds-grid(\@m);
+}
+@include breakpoint(L) {
+  @include fds-grid(\@l);
+}
+@include breakpoint(XL) {
+  @include fds-grid(\@xl);
+}

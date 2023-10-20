@@ -4,7 +4,7 @@ Thumbs.db
 core
 
 # UN-ignore 'core' dir in custom theme
-!web/sites/themes/custom/*/core
+!web/themes/custom/fpac/src/stylesheets/core/
 
 
 # Ignore sensitive files
