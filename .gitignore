@@ -2,6 +2,11 @@
 .DS_Store
 Thumbs.db
 core
+
+# UN-ignore 'core' dir in custom theme
+!web/sites/themes/custom/*/core
+
+
 # Ignore sensitive files
 web/sites/settings*.php
 web/sites/services*.yml
