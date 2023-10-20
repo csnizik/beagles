@@ -34,7 +34,7 @@ gulp.task('ckeditor', function () {
 // Compile main SCSS files
 gulp.task('sass', function () {
   return gulp
-    .src('./sass/*.scss')
+    .src('./_sass/fsa-design-system.scss')
     .pipe(sassGlob())
     .pipe(sass()) // Compile SCSS to CSS
     .pipe(autoprefixer()) // Auto-prefix CSS for browser compatibility

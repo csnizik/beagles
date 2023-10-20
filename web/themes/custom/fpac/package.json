@@ -9,6 +9,7 @@
   "author": "csnizik@tulane.edu",
   "license": "ISC",
   "devDependencies": {
+    "fds-style": "^3.0.0",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
