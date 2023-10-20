@@ -1,0 +1,89 @@
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+
+const $ = window.jQuery = require('jquery');
+
+$('body').on('click', '[data-behavior~="fakeSystemTrackAddition"]', function(event) {
+
+  const $self = $(this);
+  const $target = $('#' + $self.attr('data-target'));
+  const updateValueBy = 10;
+  const $targetValue = $target.closest('.fds-progress').find('.fds-progress__value');
+  const currentValue = $targetValue.html().slice(0, -1);
+  const newValue = Number(updateValueBy) + Number(currentValue);
+
+  if (newValue >= 100) {
+    $target.css('transform','scaleX(1)');
+    $targetValue.html('100%');
+    $self.attr('disabled', true);
+  } else {
+    $target.css('transform','scaleX(.' + newValue + ')');
+    $targetValue.html(newValue + '%');
+  }
+
+})
+
+
+$('body').on('click', '[data-behavior~="toggleProgressBars"]', function(event) {
+
+  const $bars = $('.fds-progress');
+
+  if ($bars.is('[style]')) {
+    $bars.removeAttr('style');
+  } else {
+    $bars.css('visibility', 'hidden');
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="fakeSystemTrackLoop"]', function(event) {
+
+  const $self = $(this);
+  const $target = $('#' + $self.attr('data-target'));
+  const $targetBar = $target.find('.fds-progress__primary');
+  const $targetValue = $target.find('.fds-progress__value');
+
+  $self.attr('disabled', true);
+  $targetBar.css('transform','scaleX(.03)');
+  $targetValue.html('3%');
+
+  for (percentageComplete = 10; percentageComplete <= 97; ++percentageComplete) {
+    fakeProgressUpdate(percentageComplete);
+  }
+
+  function fakeProgressUpdate(percentageComplete) {
+
+    setTimeout(function(){
+      $targetBar.css('transform','scaleX(.' + percentageComplete +')');
+      $targetValue.html(percentageComplete + '%');
+    }, 66 * percentageComplete);
+
+  }
+
+  setTimeout(function(){
+    $targetValue.html('100%');
+    $targetBar.css('transform','scaleX(1)');
+    $self.removeAttr('disabled');
+
+    $('#UNIQUE-ID-ttfrancbra').attr('aria-hidden', 'false');
+
+  }, 7000);
+
+})
+
+$('body').on('click', '[data-behavior~="fakeTableDone"]', function(event) {
+  $('#tableProgress').attr('hidden', true);
+})
+
+$('body').on('click', '[data-behavior~="fakeTableShow"]', function(event) {
+  $('#tableProgress').removeAttr('hidden');
+})
+

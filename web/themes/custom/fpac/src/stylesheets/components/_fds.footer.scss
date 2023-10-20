@@ -1,0 +1,146 @@
+.fds-footer {
+
+  $bgcolor: $color-fds-tertiary-300;
+
+  & {
+
+    width: 100%;
+    padding-left: $size-default;
+    padding-right: $size-default;
+    background-color: $bgcolor;
+    box-shadow: 0 100vh 0 100vh $bgcolor;
+
+    @media print {
+      display: none;
+      box-shadow: none !important;
+    }
+
+    &--fullscreen {
+      @include breakpoint(L) {
+        padding-left: $size-medium;
+        padding-right: $size-medium;
+      }
+    }
+
+  }
+
+  a {
+
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      text-decoration: none;
+    }
+
+  }
+
+  &__bd {
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding: $size-medium 0;
+    color: white;
+    max-width: $site-max-width;
+
+    .fds-footer--fullscreen > & {
+      max-width: none;
+    }
+
+    @media print {
+      max-width: none;
+    }
+
+  }
+
+  &__primary {
+    padding-top: $size-default;
+    @include breakpoint(M) {
+    }
+  }
+
+  &__secondary {
+
+    padding-top: $size-default;
+    @include breakpoint(M) {
+    }
+
+    @include breakpoint(L) {
+      border-top: 0;
+      border-left: 1px solid tint($color-fds-tertiary, 50%);
+      padding-left: $size-large;
+    }
+
+  }
+
+  &__cat-header {
+    @include fds-header('3');
+    margin-top: 0;
+    font-family: $font-sans;
+    color: $color-fds-white !important;
+  }
+
+  &__list {
+
+    @include reset-ul();
+    margin-bottom: $size-medium;
+
+    @include breakpoint(L) {
+      margin-bottom: $size-medium;
+    }
+
+  }
+
+  &__list-item {
+    @include reset-li();
+    margin-bottom: $size-default;
+  }
+
+  &__secondary-list {
+
+    border-top: 1px solid tint($color-fds-tertiary, 50%);
+    padding-top: $size-large;
+
+    @include breakpoint(L) {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+  }
+
+  &__secondary-list-item {
+
+    @include breakpoint(M) {
+      display: inline-block;
+      margin-right: $size-medium;
+    }
+
+    @include breakpoint(L) {
+      display: block;
+      margin-right: initial;
+    }
+
+  }
+
+  &__btn {
+
+    background-color: $color-fds-tertiary;
+
+    &:visited {
+      background-color: $color-fds-tertiary;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $color-fds-tertiary-900 !important;
+    }
+
+  }
+
+}

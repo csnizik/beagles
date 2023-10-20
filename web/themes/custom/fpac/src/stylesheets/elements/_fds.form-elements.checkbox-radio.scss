@@ -1,0 +1,271 @@
+////////////////////////////////////////////////////////////////////////
+// Text Fields
+
+.fds-form-list {
+
+  @include reset-ul();
+
+  > * {
+
+    @include reset-li();
+    margin-top: $size-base;
+
+    > .fds-form-list {
+      margin-left: $size-medium;
+    }
+
+  }
+
+}
+
+// Mostly a straight copy of USWDS checkbox and radio elements,
+// with a few adjustments
+
+.fds-checkbox,
+.fds-radio {
+
+  // @include sr-only();
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+
+  &__other {
+    margin-top: $size-small;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .46s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    .fds-radio:checked ~ &,
+    .fds-checkbox:checked ~ & {
+      visibility: visible;
+      max-height: ($size-base * 38);
+      opacity: 1;
+    }
+  }
+
+  .lt-ie9 & {
+    border-width: 0;
+    float: left;
+    margin: .4em .4em 0 0;
+    position: static;
+    width: auto;
+    opacity: 1;
+  }
+
+}
+
+.fds-checkbox +  label,
+.fds-radio + label,
+.fds-checkbox + [type="hidden"] + label,
+.fds-radio + [type="hidden"] + label {
+
+  $indent-amount: 1.7em;
+  cursor: pointer;
+  font-weight: $font-normal;
+  text-indent: -$indent-amount;
+  margin-left: $indent-amount;
+  margin-right: $size-default;
+  display: inline-block;
+  position: relative;
+
+}
+
+.fds-checkbox--solo +  label,
+.fds-radio--solo + label,
+.fds-checkbox--solo + [type="hidden"] + label,
+.fds-radio--solo + [type="hidden"] + label {
+  $indent-amount: 1em;
+  text-indent: -$indent-amount;
+  margin-left: $indent-amount;
+  margin-right: 0;
+}
+
+.fds-radio--solo + label,
+.fds-radio--solo + [type="hidden"] + label {
+  $indent-amount: 1.3em;
+  text-indent: -$indent-amount;
+  margin-left: $indent-amount + .05em;
+}
+
+
+.fds-checkbox + :not(label),
+.fds-radio + :not(label) {
+  &:before {
+    display: block;
+    background-color: $color-fds-tertiary-200;
+    padding: $size-default;
+    margin-bottom: $size-small;
+    content: 'CSS ERROR: checkbox or radio requires a <label> element immediately following it. Refer to FDS Design System for guidance. ';
+    color: orangered;
+    border: 4px solid orangered;
+    font-size: $font-size-4;
+    font-weight: bold;
+  }
+}
+
+.fds-checkbox + label::before,
+.fds-radio + label::before,
+.fds-checkbox + [type="hidden"] + label::before,
+.fds-radio + [type="hidden"] + label::before {
+
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: 0 0 0 1px $form-checkbox-radio-outline-color;
+  content: '\a0';
+  display: inline-block;
+  height: 1.8rem;
+  line-height: .8;
+  margin-right: .6em;
+  text-indent: .15em;
+  vertical-align: .2em;
+  width: 1.8rem;
+  margin-left: .1rem;
+
+  .lt-ie9 & {
+    display: none;
+  }
+
+}
+
+.fds-radio:not(.fds-radio--solo) + label::before {
+  margin-left: 2px; // warning: magic number ¯\_(ツ)_/¯
+}
+
+.fds-checkbox--solo + label::before,
+.fds-radio--solo + label::before,
+.fds-checkbox--solo + [type="hidden"] + label::before,
+.fds-radio--solo + [type="hidden"] + label::before {
+  margin-right: 0;
+}
+
+.fds-checkbox + label::after,
+.fds-radio + label::after,
+.fds-checkbox + [type="hidden"] + label::after,
+.fds-radio + [type="hidden"] + label::after {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: -5px;
+  bottom: -2px;
+  width: 36px;
+}
+
+.fds-checkbox--solo + label::after,
+.fds-checkbox--solo + [type="hidden"] + label::after{
+  left: -18px;
+  top: 0;
+  bottom: 3px;
+  width: auto;
+  right: 0;
+}
+
+.fds-radio--solo + label::after,
+.fds-radio--solo + [type="hidden"] + label::after {
+  left: -25px;
+  top: 0;
+  bottom: 3px;
+  width: auto;
+  right: 2px;
+}
+
+.fds-radio + label::before,
+.fds-radio + [type="hidden"] + label::before {
+  box-shadow: 0 0 0 2px $color-white, 0 0 0 3px $form-checkbox-radio-outline-color;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 100%;
+}
+
+.fds-checkbox:indeterminate + label::before,
+.fds-checkbox:checked + label::before,
+.fds-radio:checked + label::before,
+.fds-checkbox:indeterminate + [type="hidden"] + label::before,
+.fds-checkbox:checked + [type="hidden"] + label::before,
+.fds-radio:checked + [type="hidden"] + label::before {
+  background-color: $form-checkbox-radio-fill;
+  box-shadow: 0 0 0 1px $form-checkbox-radio-fill;
+}
+
+.fds-radio:checked + label::before,
+.fds-radio:checked + [type="hidden"] + label::before {
+  // scss-lint:disable all
+  box-shadow:
+    0 0 0 2px $color-white,
+    0 0 0 4px $form-checkbox-radio-fill
+  ;
+}
+
+.fds-radio:focus + label::before,
+.fds-radio:focus + [type="hidden"] +  label::before {
+  box-shadow:
+    0 0 0 3px $color-white,
+    0 0 0 6px $color-focus
+  ;
+}
+
+.fds-checkbox:checked + label::before,
+.fds-checkbox:checked + [type="hidden"] + label::before {
+  background-image: url('#{$image-path}/correct8.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.fds-checkbox:indeterminate + label::before,
+.fds-checkbox:indeterminate + [type="hidden"] + label::before {
+  background-image: url('#{$image-path}/dash.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.fds-checkbox:focus + label::before,
+.fds-checkbox:focus + [type="hidden"] + label::before {
+  outline: 3px solid $color-focus;
+  outline-offset: 4px;
+}
+
+.fds-checkbox:disabled + label,
+.fds-radio:disabled + label,
+.fds-checkbox:disabled + [type="hidden"] + label,
+.fds-radio:disabled + [type="hidden"] + label {
+  color: $form-text-color-disabled;
+  cursor: not-allowed;
+}
+
+.fds-checkbox:disabled + label::before,
+.fds-radio:disabled + label::before,
+.fds-checkbox:disabled + [type="hidden"] + label::before,
+.fds-radio:disabled + [type="hidden"] + label::before {
+  background-color: $form-disabled-bg-color--check-radio;
+  cursor: text;
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.fds-radio:disabled + label::before,
+.fds-radio:disabled + [type="hidden"] + label::before {
+  // scss-lint:disable all
+  box-shadow:
+    0 0 0 2px $form-disabled-bg-color--check-radio,
+    0 0 0 3px $form-checkbox-radio-outline-color
+  ;
+}
+
+.fds-radio:disabled:checked + label::before,
+.fds-radio:disabled:checked + [type="hidden"] + label::before {
+  background-color: $form-checkbox-radio-fill;
+  // scss-lint:disable all
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px $form-checkbox-radio-fill
+  ;
+  opacity: .3;
+}
+
+.fds-checkbox:disabled:checked + label::before,
+.fds-checkbox:disabled:checked + [type="hidden"] + label::before {
+  background-color: $form-checkbox-radio-fill;
+  box-shadow: 0 0 0 1px $form-checkbox-radio-fill;
+  opacity: .3;
+}

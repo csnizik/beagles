@@ -1,0 +1,191 @@
+.fds-pagination {
+
+  $padding: $size-small;
+  $arrow-size: $icon-size-1;
+
+  & {
+
+    @include font-size(2);
+    margin: $size-large auto;
+    width: 100%;
+    position: relative;
+
+    @include breakpoint(S) {
+      text-align: center;
+    }
+
+    @include breakpoint(M) {
+      @include font-size(3);
+    }
+
+  }
+
+  &:before {
+
+    @media (min-width: 20em) {
+      content: attr(data-current) ' / ' attr(data-total);
+      display: block;
+      position: absolute;
+      padding: $padding;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include breakpoint(S) {
+      display: none;
+    }
+
+  }
+
+  &__list {
+
+    @include reset-ul();
+
+    @media (min-width: 20em) {
+      white-space: nowrap;
+      display: flex;
+    }
+
+    @include breakpoint(S) {
+      margin-left: -$size-default;
+      margin-right: -$size-default;
+    }
+
+    @include breakpoint(M) {
+      display: inline-block;
+      @supports (display: inline-flex) {
+        display: inline-flex;
+      }
+    }
+
+  }
+
+  &__item {
+
+    & {
+      @include reset-li();
+      display: none;
+      flex: 1;
+      @include breakpoint(S) {
+        display: inline-block;
+        width: auto;
+      }
+    }
+
+    &--previous,
+    &--next {
+      display: block;
+      @media (min-width: 20em) {
+        display: inline-block;
+      }
+    }
+
+    &--previous {
+      margin-bottom: $padding;
+      @media (min-width: 20em) {
+        margin-bottom: 0;
+        padding-right: $padding * 5;
+      }
+      @include breakpoint(S) {
+        padding-right: $padding;
+      }
+    }
+
+    &--next {
+      @media (min-width: 20em) {
+        padding-left: $padding * 5;
+      }
+      @include breakpoint(S) {
+        padding-left: $padding;
+      }
+    }
+
+  }
+
+  &__label {
+
+    & {
+
+      @include reset-button();
+      margin: auto;
+      cursor: text;
+      color: $color-fds-link;
+      background-color: white;
+      box-shadow: 0 0 0 1px $color-fds-tertiary-200 inset;
+      display: block;
+      width: 100%;
+      padding: $padding ($padding + math.div($padding, 2));
+      text-decoration: none;
+      border-radius: math.div($button-border-radius, 2);
+      text-align: center;
+      text-transform: uppercase;
+
+      @include breakpoint(S) {
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+        text-transform: none;
+      }
+
+    }
+
+    &:focus {
+      outline-offset: -3px;
+    }
+
+    &:not(span):hover {
+      cursor: pointer;
+      background-color: white;
+      box-shadow: 0 0 0 1px $color-fds-tertiary-200 inset;
+    }
+
+    &:not(span):active {
+      background-color: $color-fds-tertiary-100;
+    }
+
+    &--previous,
+    &--next {
+      display: flex;
+      align-items: center;
+      gap: ($size-base);
+      justify-content: center;
+      @include breakpoint(M) {
+        display: inline-flex;
+      }
+    }
+
+    &--current {
+      background-color: $color-fds-selection-bg;
+      color: $color-fds-base;
+      margin: 0 $size-small;
+    }
+
+    &--previous:before,
+    &--next:after {
+      content: '';
+      display: inline-block;
+      width: $arrow-size;
+      height: $arrow-size;
+      background-position: center;
+      background-repeat: no-repeat;
+      // background-size: ($arrow-size + $size-small);
+    }
+
+    &--previous:before {
+      background-image: url('#{$image-path}/material-design-icons/ic_navigate_before_24px.svg');
+    }
+
+    &--next:after {
+      background-image: url('#{$image-path}/material-design-icons/ic_navigate_next_24px.svg');
+    }
+
+    &--disabled {
+      color: $color-base;
+      filter: grayscale(100%);
+      cursor: text;
+      background-color: transparent;
+    }
+
+  }
+
+}

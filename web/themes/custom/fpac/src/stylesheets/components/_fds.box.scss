@@ -1,0 +1,72 @@
+$box-bgcolor-default: $white;
+$box-border-color: $color-fds-tertiary-200;
+$box-padding: $size-medium;
+
+@mixin fds-boxBase($boxBase-breakpoint:'') {
+  .fds-box#{$boxBase-breakpoint} {
+    border: 1px $box-border-color solid;
+    background-color: $box-bgcolor-default;
+    border-radius: 0;
+    padding: $box-padding;
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@mixin fds-box($box-breakpoint:'') {
+  .fds-box {
+
+    // Background Color
+    &--bg-0#{$box-breakpoint} { background-color: transparent; }
+    &--bg-1#{$box-breakpoint} { background-color: $color-fds-white; }
+    &--bg-2#{$box-breakpoint} { background-color: $color-fds-tertiary-100; }
+    &--bg-3#{$box-breakpoint} { background-color: $color-fds-tertiary-200; border-color: shade($box-border-color, 10%); }
+
+    // Border Width
+    &--bw-0#{$box-breakpoint} { border: none; }
+    &--bw-1#{$box-breakpoint} { border: 1px $box-border-color solid; }
+    &--bw-2#{$box-breakpoint} { border: 2px $box-border-color solid; }
+    &--bw-3#{$box-breakpoint} { border: 4px $box-border-color solid; }
+
+    // Background Radius
+    &--br-0#{$box-breakpoint} { border-radius: 0; }
+    &--br-1#{$box-breakpoint} { border-radius: $radius-s; }
+    &--br-2#{$box-breakpoint} { border-radius: $radius-m; }
+    &--br-3#{$box-breakpoint} { border-radius: $radius-l; }
+  }
+}
+
+// BASE ---------------------------------------------------------------------
+@include fds-boxBase;
+
+@include breakpoint(S) {
+  @include fds-boxBase(\@s);
+}
+@include breakpoint(M) {
+  @include fds-boxBase(\@m);
+}
+@include breakpoint(L) {
+  @include fds-boxBase(\@l);
+}
+@include breakpoint(XL) {
+  @include fds-boxBase(\@xl);
+}
+
+@include fds-box();
+
+@include breakpoint(S) {
+  @include fds-box(\@s);
+}
+@include breakpoint(M) {
+  @include fds-box(\@m);
+}
+@include breakpoint(L) {
+  @include fds-box(\@l);
+}
+@include breakpoint(XL) {
+  @include fds-box(\@xl);
+}

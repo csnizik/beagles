@@ -1,0 +1,2962 @@
+////////////////////////////////////////////////////////////////////////
+// Styling Utilities
+
+// TODO: almost all of these are repeatable, convert to MIXIN sometime, possibly making available as documented on DS site, i.e. similar in principle to Tailwind's @apply directive
+
+// scss-lint:disable ImportantRule SpaceBeforeBrace DeclarationOrder
+
+// Border ---------------------------------------------------------------------
+.fds-border {
+
+  // Border Width
+  & {
+
+    &--none   { border-width: $border-none !important; }
+    &--xxs    { border-width: $border-xxs !important; }
+    &--xs     { border-width: $border-xs !important; }
+    &--s      { border-width: $border-s !important; }
+    &--l      { border-width: $border-l !important; }
+    &--m      { border-width: $border-m !important; }
+    &--custom { --custom-border-width: #{$border-xxs}; border-width: var(--custom-border-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-width: $border-none !important; }
+      &--xxs\@s    { border-width: $border-xxs !important; }
+      &--xs\@s     { border-width: $border-xs !important; }
+      &--s\@s      { border-width: $border-s !important; }
+      &--m\@s      { border-width: $border-m !important; }
+      &--l\@s      { border-width: $border-l !important; }
+      &--custom\@s { --custom-border-width-s: #{$border-xxs}; border-width: var(--custom-border-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-width: $border-none !important; }
+      &--xxs\@m    { border-width: $border-xxs !important; }
+      &--xs\@m     { border-width: $border-xs !important; }
+      &--s\@m      { border-width: $border-s !important; }
+      &--m\@m      { border-width: $border-m !important; }
+      &--l\@m      { border-width: $border-l !important; }
+      &--custom\@m { --custom-border-width-m: #{$border-xxs}; border-width: var(--custom-border-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-width: $border-none !important; }
+      &--xxs\@l    { border-width: $border-xxs !important; }
+      &--xs\@l     { border-width: $border-xs !important; }
+      &--s\@l      { border-width: $border-s !important; }
+      &--m\@l      { border-width: $border-m !important; }
+      &--l\@l      { border-width: $border-l !important; }
+      &--custom\@l { --custom-border-width-l: #{$border-xxs}; border-width: var(--custom-border-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-width: $border-none !important; }
+      &--xxs\@xl    { border-width: $border-xxs !important; }
+      &--xs\@xl     { border-width: $border-xs !important; }
+      &--s\@xl      { border-width: $border-s !important; }
+      &--m\@xl      { border-width: $border-m !important; }
+      &--l\@xl      { border-width: $border-l !important; }
+      &--custom\@xl { --custom-border-width-xl: #{$border-xxs}; border-width: var(--custom-border-width-xl) !important; }
+    }
+
+  }
+  &-top {
+
+    &--none   { border-top-width: $border-none !important; }
+    &--xxs    { border-top-width: $border-xxs !important; }
+    &--xs     { border-top-width: $border-xs !important; }
+    &--s      { border-top-width: $border-s !important; }
+    &--m      { border-top-width: $border-m !important; }
+    &--l      { border-top-width: $border-l !important; }
+    &--custom { --custom-border-top-width: #{$border-xxs}; border-top-width: var(--custom-border-top-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-top-width: $border-none !important; }
+      &--xxs\@s    { border-top-width: $border-xxs !important; }
+      &--xs\@s     { border-top-width: $border-xs !important; }
+      &--s\@s      { border-top-width: $border-s !important; }
+      &--m\@s      { border-top-width: $border-m !important; }
+      &--l\@s      { border-top-width: $border-l !important; }
+      &--custom\@s { --custom-border-top-width-s: #{$border-xxs}; border-top-width: var(--custom-border-top-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-top-width: $border-none !important; }
+      &--xxs\@m    { border-top-width: $border-xxs !important; }
+      &--xs\@m     { border-top-width: $border-xs !important; }
+      &--s\@m      { border-top-width: $border-s !important; }
+      &--m\@m      { border-top-width: $border-m !important; }
+      &--l\@m      { border-top-width: $border-l !important; }
+      &--custom\@m { --custom-border-top-width-m: #{$border-xxs}; border-top-width: var(--custom-border-top-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-top-width: $border-none !important; }
+      &--xxs\@l    { border-top-width: $border-xxs !important; }
+      &--xs\@l     { border-top-width: $border-xs !important; }
+      &--s\@l      { border-top-width: $border-s !important; }
+      &--m\@l      { border-top-width: $border-m !important; }
+      &--l\@l      { border-top-width: $border-l !important; }
+      &--custom\@l { --custom-border-top-width-l: #{$border-xxs}; border-top-width: var(--custom-border-top-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-top-width: $border-none !important; }
+      &--xxs\@xl    { border-top-width: $border-xxs !important; }
+      &--xs\@xl     { border-top-width: $border-xs !important; }
+      &--s\@xl      { border-top-width: $border-s !important; }
+      &--m\@xl      { border-top-width: $border-m !important; }
+      &--l\@xl      { border-top-width: $border-l !important; }
+      &--custom\@xl { --custom-border-top-width-xl: #{$border-xxs}; border-top-width: var(--custom-border-top-width-xl) !important; }
+    }
+
+  }
+  &-right {
+
+    &--none   { border-right-width: $border-none !important; }
+    &--xxs    { border-right-width: $border-xxs !important; }
+    &--xs     { border-right-width: $border-xs !important; }
+    &--s      { border-right-width: $border-s !important; }
+    &--m      { border-right-width: $border-m !important; }
+    &--l      { border-right-width: $border-l !important; }
+    &--custom { --custom-border-right-width: #{$border-xxs}; border-right-width: var(--custom-border-right-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-right-width: $border-none !important; }
+      &--xxs\@s    { border-right-width: $border-xxs !important; }
+      &--xs\@s     { border-right-width: $border-xs !important; }
+      &--s\@s      { border-right-width: $border-s !important; }
+      &--m\@s      { border-right-width: $border-m !important; }
+      &--l\@s      { border-right-width: $border-l !important; }
+      &--custom\@s { --custom-border-right-width-s: #{$border-xxs}; border-right-width: var(--custom-border-right-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-right-width: $border-none !important; }
+      &--xxs\@m    { border-right-width: $border-xxs !important; }
+      &--xs\@m     { border-right-width: $border-xs !important; }
+      &--s\@m      { border-right-width: $border-s !important; }
+      &--m\@m      { border-right-width: $border-m !important; }
+      &--l\@m      { border-right-width: $border-l !important; }
+      &--custom\@m { --custom-border-right-width-m: #{$border-xxs}; border-right-width: var(--custom-border-right-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-right-width: $border-none !important; }
+      &--xxs\@l    { border-right-width: $border-xxs !important; }
+      &--xs\@l     { border-right-width: $border-xs !important; }
+      &--s\@l      { border-right-width: $border-s !important; }
+      &--m\@l      { border-right-width: $border-m !important; }
+      &--l\@l      { border-right-width: $border-l !important; }
+      &--custom\@l { --custom-border-right-width-l: #{$border-xxs}; border-right-width: var(--custom-border-right-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-right-width: $border-none !important; }
+      &--xxs\@xl    { border-right-width: $border-xxs !important; }
+      &--xs\@xl     { border-right-width: $border-xs !important; }
+      &--s\@xl      { border-right-width: $border-s !important; }
+      &--m\@xl      { border-right-width: $border-m !important; }
+      &--l\@xl      { border-right-width: $border-l !important; }
+      &--custom\@xl { --custom-border-right-width-xl: #{$border-xxs}; border-right-width: var(--custom-border-right-width-xl) !important; }
+    }
+
+  }
+  &-bottom {
+
+    &--none   { border-bottom-width: $border-none !important; }
+    &--xxs    { border-bottom-width: $border-xxs !important; }
+    &--xs     { border-bottom-width: $border-xs !important; }
+    &--s      { border-bottom-width: $border-s !important; }
+    &--m      { border-bottom-width: $border-m !important; }
+    &--l      { border-bottom-width: $border-l !important; }
+    &--custom { --custom-border-bottom-width: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-bottom-width: $border-none !important; }
+      &--xxs\@s    { border-bottom-width: $border-xxs !important; }
+      &--xs\@s     { border-bottom-width: $border-xs !important; }
+      &--s\@s      { border-bottom-width: $border-s !important; }
+      &--m\@s      { border-bottom-width: $border-m !important; }
+      &--l\@s      { border-bottom-width: $border-l !important; }
+      &--custom\@s { --custom-border-bottom-width-s: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-bottom-width: $border-none !important; }
+      &--xxs\@m    { border-bottom-width: $border-xxs !important; }
+      &--xs\@m     { border-bottom-width: $border-xs !important; }
+      &--s\@m      { border-bottom-width: $border-s !important; }
+      &--m\@m      { border-bottom-width: $border-m !important; }
+      &--l\@m      { border-bottom-width: $border-l !important; }
+      &--custom\@m { --custom-border-bottom-width-m: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-bottom-width: $border-none !important; }
+      &--xxs\@l    { border-bottom-width: $border-xxs !important; }
+      &--xs\@l     { border-bottom-width: $border-xs !important; }
+      &--s\@l      { border-bottom-width: $border-s !important; }
+      &--m\@l      { border-bottom-width: $border-m !important; }
+      &--l\@l      { border-bottom-width: $border-l !important; }
+      &--custom\@l { --custom-border-bottom-width-l: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-bottom-width: $border-none !important; }
+      &--xxs\@xl    { border-bottom-width: $border-xxs !important; }
+      &--xs\@xl     { border-bottom-width: $border-xs !important; }
+      &--s\@xl      { border-bottom-width: $border-s !important; }
+      &--m\@xl      { border-bottom-width: $border-m !important; }
+      &--l\@xl      { border-bottom-width: $border-l !important; }
+      &--custom\@xl { --custom-border-bottom-width-xl: #{$border-xxs}; border-bottom-width: var(--custom-border-bottom-width-xl) !important; }
+    }
+
+  }
+  &-left {
+
+    &--none   { border-left-width: $border-none !important; }
+    &--xxs    { border-left-width: $border-xxs !important; }
+    &--xs     { border-left-width: $border-xs !important; }
+    &--s      { border-left-width: $border-s !important; }
+    &--m      { border-left-width: $border-m !important; }
+    &--l      { border-left-width: $border-l !important; }
+    &--custom { --custom-border-left-width: #{$border-xxs}; border-left-width: var(--custom-border-left-width) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   { border-left-width: $border-none !important; }
+      &--xxs\@s    { border-left-width: $border-xxs !important; }
+      &--xs\@s     { border-left-width: $border-xs !important; }
+      &--s\@s      { border-left-width: $border-s !important; }
+      &--m\@s      { border-left-width: $border-m !important; }
+      &--l\@s      { border-left-width: $border-l !important; }
+      &--custom\@s { --custom-border-left-width-s: #{$border-xxs}; border-left-width: var(--custom-border-left-width-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   { border-left-width: $border-none !important; }
+      &--xxs\@m    { border-left-width: $border-xxs !important; }
+      &--xs\@m     { border-left-width: $border-xs !important; }
+      &--s\@m      { border-left-width: $border-s !important; }
+      &--m\@m      { border-left-width: $border-m !important; }
+      &--l\@m      { border-left-width: $border-l !important; }
+      &--custom\@m { --custom-border-left-width-m: #{$border-xxs}; border-left-width: var(--custom-border-left-width-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   { border-left-width: $border-none !important; }
+      &--xxs\@l    { border-left-width: $border-xxs !important; }
+      &--xs\@l     { border-left-width: $border-xs !important; }
+      &--s\@l      { border-left-width: $border-s !important; }
+      &--m\@l      { border-left-width: $border-m !important; }
+      &--l\@l      { border-left-width: $border-l !important; }
+      &--custom\@l { --custom-border-left-width-: #{$border-xxs}; border-left-width: var(--custom-border-left-width-) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   { border-left-width: $border-none !important; }
+      &--xxs\@xl    { border-left-width: $border-xxs !important; }
+      &--xs\@xl     { border-left-width: $border-xs !important; }
+      &--s\@xl      { border-left-width: $border-s !important; }
+      &--m\@xl      { border-left-width: $border-m !important; }
+      &--l\@xl      { border-left-width: $border-l !important; }
+      &--custom\@xl { --custom-border-left-width-xl: #{$border-xxs}; border-left-width: var(--custom-border-left-width-xl) !important; }
+    }
+
+  }
+
+  // Border Color
+  & {
+
+    // Default
+    & {
+      &--transparent    { border-color: transparent !important }
+      &--white          { border-color: $color-fds-white !important }
+      &--black          { border-color: $color-fds-black !important }
+      &--primary        { border-color: $color-fds-primary !important }
+      &--primary-300    { border-color: $color-fds-primary-300 !important }
+      &--primary-200    { border-color: $color-fds-primary-200 !important }
+      &--primary-100    { border-color: $color-fds-primary-100 !important }
+      &--primary-900    { border-color: $color-fds-primary-900 !important }
+      &--secondary      { border-color: $color-fds-secondary !important }
+      &--secondary-300  { border-color: $color-fds-secondary-300 !important }
+      &--secondary-200  { border-color: $color-fds-secondary-200 !important }
+      &--secondary-100  { border-color: $color-fds-secondary-100 !important }
+      &--secondary-900  { border-color: $color-fds-secondary-900 !important }
+      &--tertiary       { border-color: $color-fds-tertiary !important }
+      &--tertiary-300   { border-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200   { border-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100   { border-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900   { border-color: $color-fds-tertiary-900 !important }
+      &--aqua           { border-color: $color-fds-aqua !important }
+      &--aqua-300       { border-color: $color-fds-aqua-300 !important }
+      &--aqua-200       { border-color: $color-fds-aqua-200 !important }
+      &--aqua-100       { border-color: $color-fds-aqua-100 !important }
+      &--aqua-900       { border-color: $color-fds-aqua-900 !important }
+      &--red            { border-color: $color-fds-red !important }
+      &--red-300        { border-color: $color-fds-red-300 !important }
+      &--red-200        { border-color: $color-fds-red-200 !important }
+      &--red-100        { border-color: $color-fds-red-100 !important }
+      &--red-900        { border-color: $color-fds-red-900 !important }
+      &--yellow         { border-color: $color-fds-yellow !important }
+      &--yellow-300     { border-color: $color-fds-yellow-300 !important }
+      &--yellow-200     { border-color: $color-fds-yellow-200 !important }
+      &--yellow-100     { border-color: $color-fds-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--transparent:hover    { border-color: transparent !important }
+      &--white:hover          { border-color: $color-fds-white !important }
+      &--black:hover          { border-color: $color-fds-black !important }
+      &--primary:hover        { border-color: $color-fds-primary !important }
+      &--primary-300:hover    { border-color: $color-fds-primary-300 !important }
+      &--primary-200:hover    { border-color: $color-fds-primary-200 !important }
+      &--primary-100:hover    { border-color: $color-fds-primary-100 !important }
+      &--primary-900:hover    { border-color: $color-fds-primary-900 !important }
+      &--secondary:hover      { border-color: $color-fds-secondary !important }
+      &--secondary-300:hover  { border-color: $color-fds-secondary-300 !important }
+      &--secondary-200:hover  { border-color: $color-fds-secondary-200 !important }
+      &--secondary-100:hover  { border-color: $color-fds-secondary-100 !important }
+      &--secondary-900:hover  { border-color: $color-fds-secondary-900 !important }
+      &--tertiary:hover       { border-color: $color-fds-tertiary !important }
+      &--tertiary-300:hover   { border-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200:hover   { border-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100:hover   { border-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900:hover   { border-color: $color-fds-tertiary-900 !important }
+      &--aqua:hover           { border-color: $color-fds-aqua !important }
+      &--aqua-300:hover       { border-color: $color-fds-aqua-300 !important }
+      &--aqua-200:hover       { border-color: $color-fds-aqua-200 !important }
+      &--aqua-100:hover       { border-color: $color-fds-aqua-100 !important }
+      &--aqua-900:hover       { border-color: $color-fds-aqua-900 !important }
+      &--red:hover            { border-color: $color-fds-red !important }
+      &--red-300:hover        { border-color: $color-fds-red-300 !important }
+      &--red-200:hover        { border-color: $color-fds-red-200 !important }
+      &--red-100:hover        { border-color: $color-fds-red-100 !important }
+      &--red-900:hover        { border-color: $color-fds-red-900 !important }
+      &--yellow:hover         { border-color: $color-fds-yellow !important }
+      &--yellow-300:hover     { border-color: $color-fds-yellow-300 !important }
+      &--yellow-200:hover     { border-color: $color-fds-yellow-200 !important }
+      &--yellow-100:hover     { border-color: $color-fds-yellow-100 !important }
+    }
+
+    @include breakpoint(S) {
+
+      // Default
+      & {
+        &--transparent\@s    { border-color: transparent !important }
+        &--white\@s          { border-color: $color-fds-white !important }
+        &--black\@s          { border-color: $color-fds-black !important }
+        &--primary\@s        { border-color: $color-fds-primary !important }
+        &--primary-300\@s    { border-color: $color-fds-primary-300 !important }
+        &--primary-200\@s    { border-color: $color-fds-primary-200 !important }
+        &--primary-100\@s    { border-color: $color-fds-primary-100 !important }
+        &--primary-900\@s    { border-color: $color-fds-primary-900 !important }
+        &--secondary\@s      { border-color: $color-fds-secondary !important }
+        &--secondary-300\@s  { border-color: $color-fds-secondary-300 !important }
+        &--secondary-200\@s  { border-color: $color-fds-secondary-200 !important }
+        &--secondary-100\@s  { border-color: $color-fds-secondary-100 !important }
+        &--secondary-900\@s  { border-color: $color-fds-secondary-900 !important }
+        &--tertiary\@s       { border-color: $color-fds-tertiary !important }
+        &--tertiary-300\@s   { border-color: $color-fds-tertiary-300 !important }
+        &--tertiary-200\@s   { border-color: $color-fds-tertiary-200 !important }
+        &--tertiary-100\@s   { border-color: $color-fds-tertiary-100 !important }
+        &--tertiary-900\@s   { border-color: $color-fds-tertiary-900 !important }
+        &--aqua\@s           { border-color: $color-fds-aqua !important }
+        &--aqua-300\@s       { border-color: $color-fds-aqua-300 !important }
+        &--aqua-200\@s       { border-color: $color-fds-aqua-200 !important }
+        &--aqua-100\@s       { border-color: $color-fds-aqua-100 !important }
+        &--aqua-900\@s       { border-color: $color-fds-aqua-900 !important }
+        &--red\@s            { border-color: $color-fds-red !important }
+        &--red-300\@s        { border-color: $color-fds-red-300 !important }
+        &--red-200\@s        { border-color: $color-fds-red-200 !important }
+        &--red-100\@s        { border-color: $color-fds-red-100 !important }
+        &--red-900\@s        { border-color: $color-fds-red-900 !important }
+        &--yellow\@s         { border-color: $color-fds-yellow !important }
+        &--yellow-300\@s     { border-color: $color-fds-yellow-300 !important }
+        &--yellow-200\@s     { border-color: $color-fds-yellow-200 !important }
+        &--yellow-100\@s     { border-color: $color-fds-yellow-100 !important }
+      }
+
+      // Hover
+      &\:hover {
+        &--transparent\@s:hover    { border-color: transparent !important }
+        &--white\@s:hover          { border-color: $color-fds-white !important }
+        &--black\@s:hover          { border-color: $color-fds-black !important }
+        &--primary\@s:hover        { border-color: $color-fds-primary !important }
+        &--primary-300\@s:hover    { border-color: $color-fds-primary-300 !important }
+        &--primary-200\@s:hover    { border-color: $color-fds-primary-200 !important }
+        &--primary-100\@s:hover    { border-color: $color-fds-primary-100 !important }
+        &--primary-900\@s:hover    { border-color: $color-fds-primary-900 !important }
+        &--secondary\@s:hover      { border-color: $color-fds-secondary !important }
+        &--secondary-300\@s:hover  { border-color: $color-fds-secondary-300 !important }
+        &--secondary-200\@s:hover  { border-color: $color-fds-secondary-200 !important }
+        &--secondary-100\@s:hover  { border-color: $color-fds-secondary-100 !important }
+        &--secondary-900\@s:hover  { border-color: $color-fds-secondary-900 !important }
+        &--tertiary\@s:hover       { border-color: $color-fds-tertiary !important }
+        &--tertiary-300\@s:hover   { border-color: $color-fds-tertiary-300 !important }
+        &--tertiary-200\@s:hover   { border-color: $color-fds-tertiary-200 !important }
+        &--tertiary-100\@s:hover   { border-color: $color-fds-tertiary-100 !important }
+        &--tertiary-900\@s:hover   { border-color: $color-fds-tertiary-900 !important }
+        &--aqua\@s:hover           { border-color: $color-fds-aqua !important }
+        &--aqua-300\@s:hover       { border-color: $color-fds-aqua-300 !important }
+        &--aqua-200\@s:hover       { border-color: $color-fds-aqua-200 !important }
+        &--aqua-100\@s:hover       { border-color: $color-fds-aqua-100 !important }
+        &--aqua-900\@s:hover       { border-color: $color-fds-aqua-900 !important }
+        &--red\@s:hover            { border-color: $color-fds-red !important }
+        &--red-300\@s:hover        { border-color: $color-fds-red-300 !important }
+        &--red-200\@s:hover        { border-color: $color-fds-red-200 !important }
+        &--red-100\@s:hover        { border-color: $color-fds-red-100 !important }
+        &--red-900\@s:hover        { border-color: $color-fds-red-900 !important }
+        &--yellow\@s:hover         { border-color: $color-fds-yellow !important }
+        &--yellow-300\@s:hover     { border-color: $color-fds-yellow-300 !important }
+        &--yellow-200\@s:hover     { border-color: $color-fds-yellow-200 !important }
+        &--yellow-100\@s:hover     { border-color: $color-fds-yellow-100 !important }
+      }
+
+    }
+
+    @include breakpoint(M) {
+
+      // Default
+      & {
+        &--transparent\@m    { border-color: transparent !important }
+        &--white\@m          { border-color: $color-fds-white !important }
+        &--black\@m          { border-color: $color-fds-black !important }
+        &--primary\@m        { border-color: $color-fds-primary !important }
+        &--primary-300\@m    { border-color: $color-fds-primary-300 !important }
+        &--primary-200\@m    { border-color: $color-fds-primary-200 !important }
+        &--primary-100\@m    { border-color: $color-fds-primary-100 !important }
+        &--primary-900\@m    { border-color: $color-fds-primary-900 !important }
+        &--secondary\@m      { border-color: $color-fds-secondary !important }
+        &--secondary-300\@m  { border-color: $color-fds-secondary-300 !important }
+        &--secondary-200\@m  { border-color: $color-fds-secondary-200 !important }
+        &--secondary-100\@m  { border-color: $color-fds-secondary-100 !important }
+        &--secondary-900\@m  { border-color: $color-fds-secondary-900 !important }
+        &--tertiary\@m       { border-color: $color-fds-tertiary !important }
+        &--tertiary-300\@m   { border-color: $color-fds-tertiary-300 !important }
+        &--tertiary-200\@m   { border-color: $color-fds-tertiary-200 !important }
+        &--tertiary-100\@m   { border-color: $color-fds-tertiary-100 !important }
+        &--tertiary-900\@m   { border-color: $color-fds-tertiary-900 !important }
+        &--aqua\@m           { border-color: $color-fds-aqua !important }
+        &--aqua-300\@m       { border-color: $color-fds-aqua-300 !important }
+        &--aqua-200\@m       { border-color: $color-fds-aqua-200 !important }
+        &--aqua-100\@m       { border-color: $color-fds-aqua-100 !important }
+        &--aqua-900\@m       { border-color: $color-fds-aqua-900 !important }
+        &--red\@m            { border-color: $color-fds-red !important }
+        &--red-300\@m        { border-color: $color-fds-red-300 !important }
+        &--red-200\@m        { border-color: $color-fds-red-200 !important }
+        &--red-100\@m        { border-color: $color-fds-red-100 !important }
+        &--red-900\@m        { border-color: $color-fds-red-900 !important }
+        &--yellow\@m         { border-color: $color-fds-yellow !important }
+        &--yellow-300\@m     { border-color: $color-fds-yellow-300 !important }
+        &--yellow-200\@m     { border-color: $color-fds-yellow-200 !important }
+        &--yellow-100\@m     { border-color: $color-fds-yellow-100 !important }
+      }
+
+      // Hover
+      &\:hover {
+        &--transparent\@m:hover    { border-color: transparent !important }
+        &--white\@m:hover          { border-color: $color-fds-white !important }
+        &--black\@m:hover          { border-color: $color-fds-black !important }
+        &--primary\@m:hover        { border-color: $color-fds-primary !important }
+        &--primary-300\@m:hover    { border-color: $color-fds-primary-300 !important }
+        &--primary-200\@m:hover    { border-color: $color-fds-primary-200 !important }
+        &--primary-100\@m:hover    { border-color: $color-fds-primary-100 !important }
+        &--primary-900\@m:hover    { border-color: $color-fds-primary-900 !important }
+        &--secondary\@m:hover      { border-color: $color-fds-secondary !important }
+        &--secondary-300\@m:hover  { border-color: $color-fds-secondary-300 !important }
+        &--secondary-200\@m:hover  { border-color: $color-fds-secondary-200 !important }
+        &--secondary-100\@m:hover  { border-color: $color-fds-secondary-100 !important }
+        &--secondary-900\@m:hover  { border-color: $color-fds-secondary-900 !important }
+        &--tertiary\@m:hover       { border-color: $color-fds-tertiary !important }
+        &--tertiary-300\@m:hover   { border-color: $color-fds-tertiary-300 !important }
+        &--tertiary-200\@m:hover   { border-color: $color-fds-tertiary-200 !important }
+        &--tertiary-100\@m:hover   { border-color: $color-fds-tertiary-100 !important }
+        &--tertiary-900\@m:hover   { border-color: $color-fds-tertiary-900 !important }
+        &--aqua\@m:hover           { border-color: $color-fds-aqua !important }
+        &--aqua-300\@m:hover       { border-color: $color-fds-aqua-300 !important }
+        &--aqua-200\@m:hover       { border-color: $color-fds-aqua-200 !important }
+        &--aqua-100\@m:hover       { border-color: $color-fds-aqua-100 !important }
+        &--aqua-900\@m:hover       { border-color: $color-fds-aqua-900 !important }
+        &--red\@m:hover            { border-color: $color-fds-red !important }
+        &--red-300\@m:hover        { border-color: $color-fds-red-300 !important }
+        &--red-200\@m:hover        { border-color: $color-fds-red-200 !important }
+        &--red-100\@m:hover        { border-color: $color-fds-red-100 !important }
+        &--red-900\@m:hover        { border-color: $color-fds-red-900 !important }
+        &--yellow\@m:hover         { border-color: $color-fds-yellow !important }
+        &--yellow-300\@m:hover     { border-color: $color-fds-yellow-300 !important }
+        &--yellow-200\@m:hover     { border-color: $color-fds-yellow-200 !important }
+        &--yellow-100\@m:hover     { border-color: $color-fds-yellow-100 !important }
+      }
+
+    }
+
+    @include breakpoint(L) {
+
+      // Default
+      & {
+        &--transparent\@l    { border-color: transparent !important }
+        &--white\@l          { border-color: $color-fds-white !important }
+        &--black\@l          { border-color: $color-fds-black !important }
+        &--primary\@l        { border-color: $color-fds-primary !important }
+        &--primary-300\@l    { border-color: $color-fds-primary-300 !important }
+        &--primary-200\@l    { border-color: $color-fds-primary-200 !important }
+        &--primary-100\@l    { border-color: $color-fds-primary-100 !important }
+        &--primary-900\@l    { border-color: $color-fds-primary-900 !important }
+        &--secondary\@l      { border-color: $color-fds-secondary !important }
+        &--secondary-300\@l  { border-color: $color-fds-secondary-300 !important }
+        &--secondary-200\@l  { border-color: $color-fds-secondary-200 !important }
+        &--secondary-100\@l  { border-color: $color-fds-secondary-100 !important }
+        &--secondary-900\@l  { border-color: $color-fds-secondary-900 !important }
+        &--tertiary\@l       { border-color: $color-fds-tertiary !important }
+        &--tertiary-300\@l   { border-color: $color-fds-tertiary-300 !important }
+        &--tertiary-200\@l   { border-color: $color-fds-tertiary-200 !important }
+        &--tertiary-100\@l   { border-color: $color-fds-tertiary-100 !important }
+        &--tertiary-900\@l   { border-color: $color-fds-tertiary-900 !important }
+        &--aqua\@l           { border-color: $color-fds-aqua !important }
+        &--aqua-300\@l       { border-color: $color-fds-aqua-300 !important }
+        &--aqua-200\@l       { border-color: $color-fds-aqua-200 !important }
+        &--aqua-100\@l       { border-color: $color-fds-aqua-100 !important }
+        &--aqua-900\@l       { border-color: $color-fds-aqua-900 !important }
+        &--red\@l            { border-color: $color-fds-red !important }
+        &--red-300\@l        { border-color: $color-fds-red-300 !important }
+        &--red-200\@l        { border-color: $color-fds-red-200 !important }
+        &--red-100\@l        { border-color: $color-fds-red-100 !important }
+        &--red-900\@l        { border-color: $color-fds-red-900 !important }
+        &--yellow\@l         { border-color: $color-fds-yellow !important }
+        &--yellow-300\@l     { border-color: $color-fds-yellow-300 !important }
+        &--yellow-200\@l     { border-color: $color-fds-yellow-200 !important }
+        &--yellow-100\@l     { border-color: $color-fds-yellow-100 !important }
+      }
+
+      // Hover
+      &\:hover {
+        &--transparent\@l:hover    { border-color: transparent !important }
+        &--white\@l:hover          { border-color: $color-fds-white !important }
+        &--black\@l:hover          { border-color: $color-fds-black !important }
+        &--primary\@l:hover        { border-color: $color-fds-primary !important }
+        &--primary-300\@l:hover    { border-color: $color-fds-primary-300 !important }
+        &--primary-200\@l:hover    { border-color: $color-fds-primary-200 !important }
+        &--primary-100\@l:hover    { border-color: $color-fds-primary-100 !important }
+        &--primary-900\@l:hover    { border-color: $color-fds-primary-900 !important }
+        &--secondary\@l:hover      { border-color: $color-fds-secondary !important }
+        &--secondary-300\@l:hover  { border-color: $color-fds-secondary-300 !important }
+        &--secondary-200\@l:hover  { border-color: $color-fds-secondary-200 !important }
+        &--secondary-100\@l:hover  { border-color: $color-fds-secondary-100 !important }
+        &--secondary-900\@l:hover  { border-color: $color-fds-secondary-900 !important }
+        &--tertiary\@l:hover       { border-color: $color-fds-tertiary !important }
+        &--tertiary-300\@l:hover   { border-color: $color-fds-tertiary-300 !important }
+        &--tertiary-200\@l:hover   { border-color: $color-fds-tertiary-200 !important }
+        &--tertiary-100\@l:hover   { border-color: $color-fds-tertiary-100 !important }
+        &--tertiary-900\@l:hover   { border-color: $color-fds-tertiary-900 !important }
+        &--aqua\@l:hover           { border-color: $color-fds-aqua !important }
+        &--aqua-300\@l:hover       { border-color: $color-fds-aqua-300 !important }
+        &--aqua-200\@l:hover       { border-color: $color-fds-aqua-200 !important }
+        &--aqua-100\@l:hover       { border-color: $color-fds-aqua-100 !important }
+        &--aqua-900\@l:hover       { border-color: $color-fds-aqua-900 !important }
+        &--red\@l:hover            { border-color: $color-fds-red !important }
+        &--red-300\@l:hover        { border-color: $color-fds-red-300 !important }
+        &--red-200\@l:hover        { border-color: $color-fds-red-200 !important }
+        &--red-100\@l:hover        { border-color: $color-fds-red-100 !important }
+        &--red-900\@l:hover        { border-color: $color-fds-red-900 !important }
+        &--yellow\@l:hover         { border-color: $color-fds-yellow !important }
+        &--yellow-300\@l:hover     { border-color: $color-fds-yellow-300 !important }
+        &--yellow-200\@l:hover     { border-color: $color-fds-yellow-200 !important }
+        &--yellow-100\@l:hover     { border-color: $color-fds-yellow-100 !important }
+      }
+
+    }
+
+    @include breakpoint(XL) {
+
+      // Default
+      & {
+        &--transparent\@xl    { border-color: transparent !important }
+        &--white\@xl          { border-color: $color-fds-white !important }
+        &--black\@xl          { border-color: $color-fds-black !important }
+        &--primary\@xl        { border-color: $color-fds-primary !important }
+        &--primary-300\@xl    { border-color: $color-fds-primary-300 !important }
+        &--primary-200\@xl    { border-color: $color-fds-primary-200 !important }
+        &--primary-100\@xl    { border-color: $color-fds-primary-100 !important }
+        &--primary-900\@xl    { border-color: $color-fds-primary-900 !important }
+        &--secondary\@xl      { border-color: $color-fds-secondary !important }
+        &--secondary-300\@xl  { border-color: $color-fds-secondary-300 !important }
+        &--secondary-200\@xl  { border-color: $color-fds-secondary-200 !important }
+        &--secondary-100\@xl  { border-color: $color-fds-secondary-100 !important }
+        &--secondary-900\@xl  { border-color: $color-fds-secondary-900 !important }
+        &--tertiary\@xl       { border-color: $color-fds-tertiary !important }
+        &--tertiary-300\@xl   { border-color: $color-fds-tertiary-300 !important }
+        &--tertiary-200\@xl   { border-color: $color-fds-tertiary-200 !important }
+        &--tertiary-100\@xl   { border-color: $color-fds-tertiary-100 !important }
+        &--tertiary-900\@xl   { border-color: $color-fds-tertiary-900 !important }
+        &--aqua\@xl           { border-color: $color-fds-aqua !important }
+        &--aqua-300\@xl       { border-color: $color-fds-aqua-300 !important }
+        &--aqua-200\@xl       { border-color: $color-fds-aqua-200 !important }
+        &--aqua-100\@xl       { border-color: $color-fds-aqua-100 !important }
+        &--aqua-900\@xl       { border-color: $color-fds-aqua-900 !important }
+        &--red\@xl            { border-color: $color-fds-red !important }
+        &--red-300\@xl        { border-color: $color-fds-red-300 !important }
+        &--red-200\@xl        { border-color: $color-fds-red-200 !important }
+        &--red-100\@xl        { border-color: $color-fds-red-100 !important }
+        &--red-900\@xl        { border-color: $color-fds-red-900 !important }
+        &--yellow\@xl         { border-color: $color-fds-yellow !important }
+        &--yellow-300\@xl     { border-color: $color-fds-yellow-300 !important }
+        &--yellow-200\@xl     { border-color: $color-fds-yellow-200 !important }
+        &--yellow-100\@xl     { border-color: $color-fds-yellow-100 !important }
+      }
+
+      // Hover
+      &\:hover {
+        &--transparent\@xl:hover    { border-color: transparent !important }
+        &--white\@xl:hover          { border-color: $color-fds-white !important }
+        &--black\@xl:hover          { border-color: $color-fds-black !important }
+        &--primary\@xl:hover        { border-color: $color-fds-primary !important }
+        &--primary-300\@xl:hover    { border-color: $color-fds-primary-300 !important }
+        &--primary-200\@xl:hover    { border-color: $color-fds-primary-200 !important }
+        &--primary-100\@xl:hover    { border-color: $color-fds-primary-100 !important }
+        &--primary-900\@xl:hover    { border-color: $color-fds-primary-900 !important }
+        &--secondary\@xl:hover      { border-color: $color-fds-secondary !important }
+        &--secondary-300\@xl:hover  { border-color: $color-fds-secondary-300 !important }
+        &--secondary-200\@xl:hover  { border-color: $color-fds-secondary-200 !important }
+        &--secondary-100\@xl:hover  { border-color: $color-fds-secondary-100 !important }
+        &--secondary-900\@xl:hover  { border-color: $color-fds-secondary-900 !important }
+        &--tertiary\@xl:hover       { border-color: $color-fds-tertiary !important }
+        &--tertiary-300\@xl:hover   { border-color: $color-fds-tertiary-300 !important }
+        &--tertiary-200\@xl:hover   { border-color: $color-fds-tertiary-200 !important }
+        &--tertiary-100\@xl:hover   { border-color: $color-fds-tertiary-100 !important }
+        &--tertiary-900\@xl:hover   { border-color: $color-fds-tertiary-900 !important }
+        &--aqua\@xl:hover           { border-color: $color-fds-aqua !important }
+        &--aqua-300\@xl:hover       { border-color: $color-fds-aqua-300 !important }
+        &--aqua-200\@xl:hover       { border-color: $color-fds-aqua-200 !important }
+        &--aqua-100\@xl:hover       { border-color: $color-fds-aqua-100 !important }
+        &--aqua-900\@xl:hover       { border-color: $color-fds-aqua-900 !important }
+        &--red\@xl:hover            { border-color: $color-fds-red !important }
+        &--red-300\@xl:hover        { border-color: $color-fds-red-300 !important }
+        &--red-200\@xl:hover        { border-color: $color-fds-red-200 !important }
+        &--red-100\@xl:hover        { border-color: $color-fds-red-100 !important }
+        &--red-900\@xl:hover        { border-color: $color-fds-red-900 !important }
+        &--yellow\@xl:hover         { border-color: $color-fds-yellow !important }
+        &--yellow-300\@xl:hover     { border-color: $color-fds-yellow-300 !important }
+        &--yellow-200\@xl:hover     { border-color: $color-fds-yellow-200 !important }
+        &--yellow-100\@xl:hover     { border-color: $color-fds-yellow-100 !important }
+      }
+
+    }
+
+
+  }
+
+  // Border Between Color
+  &-between-vertical,
+  &-between-horizontal {
+
+    &--transparent   > * + * { border-color: transparent !important }
+    &--white         > * + * { border-color: $color-fds-white !important }
+    &--black         > * + * { border-color: $color-fds-black !important }
+    &--primary       > * + * { border-color: $color-fds-primary !important }
+    &--primary-300   > * + * { border-color: $color-fds-primary-300 !important }
+    &--primary-200   > * + * { border-color: $color-fds-primary-200 !important }
+    &--primary-100   > * + * { border-color: $color-fds-primary-100 !important }
+    &--primary-900   > * + * { border-color: $color-fds-primary-900 !important }
+    &--secondary     > * + * { border-color: $color-fds-secondary !important }
+    &--secondary-300 > * + * { border-color: $color-fds-secondary-300 !important }
+    &--secondary-200 > * + * { border-color: $color-fds-secondary-200 !important }
+    &--secondary-100 > * + * { border-color: $color-fds-secondary-100 !important }
+    &--secondary-900 > * + * { border-color: $color-fds-secondary-900 !important }
+    &--tertiary      > * + * { border-color: $color-fds-tertiary !important }
+    &--tertiary-300  > * + * { border-color: $color-fds-tertiary-300 !important }
+    &--tertiary-200  > * + * { border-color: $color-fds-tertiary-200 !important }
+    &--tertiary-100  > * + * { border-color: $color-fds-tertiary-100 !important }
+    &--tertiary-900  > * + * { border-color: $color-fds-tertiary-900 !important }
+    &--aqua          > * + * { border-color: $color-fds-aqua !important }
+    &--aqua-300      > * + * { border-color: $color-fds-aqua-300 !important }
+    &--aqua-200      > * + * { border-color: $color-fds-aqua-200 !important }
+    &--aqua-100      > * + * { border-color: $color-fds-aqua-100 !important }
+    &--aqua-900      > * + * { border-color: $color-fds-aqua-900 !important }
+    &--red           > * + * { border-color: $color-fds-red !important }
+    &--red-300       > * + * { border-color: $color-fds-red-300 !important }
+    &--red-200       > * + * { border-color: $color-fds-red-200 !important }
+    &--red-100       > * + * { border-color: $color-fds-red-100 !important }
+    &--red-900       > * + * { border-color: $color-fds-red-900 !important }
+    &--yellow        > * + * { border-color: $color-fds-yellow !important }
+    &--yellow-300    > * + * { border-color: $color-fds-yellow-300 !important }
+    &--yellow-200    > * + * { border-color: $color-fds-yellow-200 !important }
+    &--yellow-100    > * + * { border-color: $color-fds-yellow-100 !important }
+
+    @include breakpoint(S) {
+      &--transparent\@s    > * + * { border-color: transparent !important }
+      &--white\@s          > * + * { border-color: $color-fds-white !important }
+      &--black\@s          > * + * { border-color: $color-fds-black !important }
+      &--primary\@s        > * + * { border-color: $color-fds-primary !important }
+      &--primary-300\@s    > * + * { border-color: $color-fds-primary-300 !important }
+      &--primary-200\@s    > * + * { border-color: $color-fds-primary-200 !important }
+      &--primary-100\@s    > * + * { border-color: $color-fds-primary-100 !important }
+      &--primary-900\@s    > * + * { border-color: $color-fds-primary-900 !important }
+      &--secondary\@s      > * + * { border-color: $color-fds-secondary !important }
+      &--secondary-300\@s  > * + * { border-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@s  > * + * { border-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@s  > * + * { border-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@s  > * + * { border-color: $color-fds-secondary-900 !important }
+      &--tertiary\@s       > * + * { border-color: $color-fds-tertiary !important }
+      &--tertiary-300\@s   > * + * { border-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@s   > * + * { border-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@s   > * + * { border-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@s   > * + * { border-color: $color-fds-tertiary-900 !important }
+      &--aqua\@s           > * + * { border-color: $color-fds-aqua !important }
+      &--aqua-300\@s       > * + * { border-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@s       > * + * { border-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@s       > * + * { border-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@s       > * + * { border-color: $color-fds-aqua-900 !important }
+      &--red\@s            > * + * { border-color: $color-fds-red !important }
+      &--red-300\@s        > * + * { border-color: $color-fds-red-300 !important }
+      &--red-200\@s        > * + * { border-color: $color-fds-red-200 !important }
+      &--red-100\@s        > * + * { border-color: $color-fds-red-100 !important }
+      &--red-900\@s        > * + * { border-color: $color-fds-red-900 !important }
+      &--yellow\@s         > * + * { border-color: $color-fds-yellow !important }
+      &--yellow-300\@s     > * + * { border-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@s     > * + * { border-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@s     > * + * { border-color: $color-fds-yellow-100 !important }
+    }
+
+    @include breakpoint(M) {
+      &--transparent\@m    > * + * { border-color: transparent !important }
+      &--white\@m          > * + * { border-color: $color-fds-white !important }
+      &--black\@m          > * + * { border-color: $color-fds-black !important }
+      &--primary\@m        > * + * { border-color: $color-fds-primary !important }
+      &--primary-300\@m    > * + * { border-color: $color-fds-primary-300 !important }
+      &--primary-200\@m    > * + * { border-color: $color-fds-primary-200 !important }
+      &--primary-100\@m    > * + * { border-color: $color-fds-primary-100 !important }
+      &--primary-900\@m    > * + * { border-color: $color-fds-primary-900 !important }
+      &--secondary\@m      > * + * { border-color: $color-fds-secondary !important }
+      &--secondary-300\@m  > * + * { border-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@m  > * + * { border-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@m  > * + * { border-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@m  > * + * { border-color: $color-fds-secondary-900 !important }
+      &--tertiary\@m       > * + * { border-color: $color-fds-tertiary !important }
+      &--tertiary-300\@m   > * + * { border-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@m   > * + * { border-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@m   > * + * { border-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@m   > * + * { border-color: $color-fds-tertiary-900 !important }
+      &--aqua\@m           > * + * { border-color: $color-fds-aqua !important }
+      &--aqua-300\@m       > * + * { border-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@m       > * + * { border-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@m       > * + * { border-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@m       > * + * { border-color: $color-fds-aqua-900 !important }
+      &--red\@m            > * + * { border-color: $color-fds-red !important }
+      &--red-300\@m        > * + * { border-color: $color-fds-red-300 !important }
+      &--red-200\@m        > * + * { border-color: $color-fds-red-200 !important }
+      &--red-100\@m        > * + * { border-color: $color-fds-red-100 !important }
+      &--red-900\@m        > * + * { border-color: $color-fds-red-900 !important }
+      &--yellow\@m         > * + * { border-color: $color-fds-yellow !important }
+      &--yellow-300\@m     > * + * { border-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@m     > * + * { border-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@m     > * + * { border-color: $color-fds-yellow-100 !important }
+    }
+
+    @include breakpoint(L) {
+      &--transparent\@l    > * + * { border-color: transparent !important }
+      &--white\@l          > * + * { border-color: $color-fds-white !important }
+      &--black\@l          > * + * { border-color: $color-fds-black !important }
+      &--primary\@l        > * + * { border-color: $color-fds-primary !important }
+      &--primary-300\@l    > * + * { border-color: $color-fds-primary-300 !important }
+      &--primary-200\@l    > * + * { border-color: $color-fds-primary-200 !important }
+      &--primary-100\@l    > * + * { border-color: $color-fds-primary-100 !important }
+      &--primary-900\@l    > * + * { border-color: $color-fds-primary-900 !important }
+      &--secondary\@l      > * + * { border-color: $color-fds-secondary !important }
+      &--secondary-300\@l  > * + * { border-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@l  > * + * { border-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@l  > * + * { border-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@l  > * + * { border-color: $color-fds-secondary-900 !important }
+      &--tertiary\@l       > * + * { border-color: $color-fds-tertiary !important }
+      &--tertiary-300\@l   > * + * { border-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@l   > * + * { border-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@l   > * + * { border-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@l   > * + * { border-color: $color-fds-tertiary-900 !important }
+      &--aqua\@l           > * + * { border-color: $color-fds-aqua !important }
+      &--aqua-300\@l       > * + * { border-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@l       > * + * { border-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@l       > * + * { border-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@l       > * + * { border-color: $color-fds-aqua-900 !important }
+      &--red\@l            > * + * { border-color: $color-fds-red !important }
+      &--red-300\@l        > * + * { border-color: $color-fds-red-300 !important }
+      &--red-200\@l        > * + * { border-color: $color-fds-red-200 !important }
+      &--red-100\@l        > * + * { border-color: $color-fds-red-100 !important }
+      &--red-900\@l        > * + * { border-color: $color-fds-red-900 !important }
+      &--yellow\@l         > * + * { border-color: $color-fds-yellow !important }
+      &--yellow-300\@l     > * + * { border-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@l     > * + * { border-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@l     > * + * { border-color: $color-fds-yellow-100 !important }
+    }
+
+    @include breakpoint(XL) {
+      &--transparent\@xl    > * + * { border-color: transparent !important }
+      &--white\@xl          > * + * { border-color: $color-fds-white !important }
+      &--black\@xl          > * + * { border-color: $color-fds-black !important }
+      &--primary\@xl        > * + * { border-color: $color-fds-primary !important }
+      &--primary-300\@xl    > * + * { border-color: $color-fds-primary-300 !important }
+      &--primary-200\@xl    > * + * { border-color: $color-fds-primary-200 !important }
+      &--primary-100\@xl    > * + * { border-color: $color-fds-primary-100 !important }
+      &--primary-900\@xl    > * + * { border-color: $color-fds-primary-900 !important }
+      &--secondary\@xl      > * + * { border-color: $color-fds-secondary !important }
+      &--secondary-300\@xl  > * + * { border-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@xl  > * + * { border-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@xl  > * + * { border-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@xl  > * + * { border-color: $color-fds-secondary-900 !important }
+      &--tertiary\@xl       > * + * { border-color: $color-fds-tertiary !important }
+      &--tertiary-300\@xl   > * + * { border-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@xl   > * + * { border-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@xl   > * + * { border-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@xl   > * + * { border-color: $color-fds-tertiary-900 !important }
+      &--aqua\@xl           > * + * { border-color: $color-fds-aqua !important }
+      &--aqua-300\@xl       > * + * { border-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@xl       > * + * { border-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@xl       > * + * { border-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@xl       > * + * { border-color: $color-fds-aqua-900 !important }
+      &--red\@xl            > * + * { border-color: $color-fds-red !important }
+      &--red-300\@xl        > * + * { border-color: $color-fds-red-300 !important }
+      &--red-200\@xl        > * + * { border-color: $color-fds-red-200 !important }
+      &--red-100\@xl        > * + * { border-color: $color-fds-red-100 !important }
+      &--red-900\@xl        > * + * { border-color: $color-fds-red-900 !important }
+      &--yellow\@xl         > * + * { border-color: $color-fds-yellow !important }
+      &--yellow-300\@xl     > * + * { border-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@xl     > * + * { border-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@xl     > * + * { border-color: $color-fds-yellow-100 !important }
+    }
+
+  }
+
+  // Border Between Width
+  &-between-vertical {
+
+    &--none   > * + * { border-left-width: $border-none !important; }
+    &--xxs    > * + * { border-left-width: $border-xxs !important;  }
+    &--xs     > * + * { border-left-width: $border-xs !important;   }
+    &--s      > * + * { border-left-width: $border-s !important;    }
+    &--l      > * + * { border-left-width: $border-l !important;    }
+    &--m      > * + * { border-left-width: $border-m !important;    }
+    &--custom > * + * { --custom-border-between-vertical: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@s    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@s     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@s      > * + * { border-left-width: $border-s !important;    }
+      &--m\@s      > * + * { border-left-width: $border-m !important;    }
+      &--l\@s      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@s > * + * { --custom-border-between-vertical-s: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@m    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@m     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@m      > * + * { border-left-width: $border-s !important;    }
+      &--m\@m      > * + * { border-left-width: $border-m !important;    }
+      &--l\@m      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@m > * + * { --custom-border-between-vertical-m: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@l    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@l     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@l      > * + * { border-left-width: $border-s !important;    }
+      &--m\@l      > * + * { border-left-width: $border-m !important;    }
+      &--l\@l      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@l > * + * { --custom-border-between-vertical-l: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   > * + * { border-left-width: $border-none !important; }
+      &--xxs\@xl    > * + * { border-left-width: $border-xxs !important;  }
+      &--xs\@xl     > * + * { border-left-width: $border-xs !important;   }
+      &--s\@xl      > * + * { border-left-width: $border-s !important;    }
+      &--m\@xl      > * + * { border-left-width: $border-m !important;    }
+      &--l\@xl      > * + * { border-left-width: $border-l !important;    }
+      &--custom\@xl > * + * { --custom-border-between-vertical-xl: #{$border-xxs}; border-left-width: var(--custom-border-between-vertical-xl) !important; }
+    }
+
+  }
+  &-between-horizontal {
+
+    &--none   > * + * { border-top-width: $border-none !important; }
+    &--xxs    > * + * { border-top-width: $border-xxs !important; }
+    &--xs     > * + * { border-top-width: $border-xs !important; }
+    &--s      > * + * { border-top-width: $border-s !important; }
+    &--m      > * + * { border-top-width: $border-m !important; }
+    &--l      > * + * { border-top-width: $border-l !important; }
+    &--custom > * + * { --custom-border-between-horizontal: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal) !important; }
+
+    @include breakpoint(S) {
+      &--none\@s   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@s    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@s     > * + * { border-top-width: $border-xs !important; }
+      &--s\@s      > * + * { border-top-width: $border-s !important; }
+      &--m\@s      > * + * { border-top-width: $border-m !important; }
+      &--l\@s      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-s: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-s) !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@m    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@m     > * + * { border-top-width: $border-xs !important; }
+      &--s\@m      > * + * { border-top-width: $border-s !important; }
+      &--m\@m      > * + * { border-top-width: $border-m !important; }
+      &--l\@m      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-m: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-m) !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@l    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@l     > * + * { border-top-width: $border-xs !important; }
+      &--s\@l      > * + * { border-top-width: $border-s !important; }
+      &--m\@l      > * + * { border-top-width: $border-m !important; }
+      &--l\@l      > * + * { border-top-width: $border-l !important; }
+      &--custom\@s > * + * { --custom-border-between-horizontal-l: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-l) !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl   > * + * { border-top-width: $border-none !important; }
+      &--xxs\@xl    > * + * { border-top-width: $border-xxs !important; }
+      &--xs\@xl     > * + * { border-top-width: $border-xs !important; }
+      &--s\@xl      > * + * { border-top-width: $border-s !important; }
+      &--m\@xl      > * + * { border-top-width: $border-m !important; }
+      &--l\@xl      > * + * { border-top-width: $border-l !important; }
+      &--custom\@xl > * + * { --custom-border-between-horizontal-xl: #{$border-xxs}; border-top-width: var(--custom-border-between-horizontal-xl) !important; }
+    }
+
+  }
+
+}
+
+// Border Radius --------------------------------------------------------------
+.fds-radius {
+
+  &--none   { border-radius: $radius-none; }
+  &--s      { border-radius: $radius-s; }
+  &--m      { border-radius: $radius-m; }
+  &--l      { border-radius: $radius-l; }
+  &--full   { border-radius: $radius-full; }
+  &--oval   { border-radius: $radius-oval; }
+
+  @include breakpoint(S) {
+    &--none\@s   { border-radius: $radius-none; }
+    &--s\@s      { border-radius: $radius-s; }
+    &--m\@s      { border-radius: $radius-m; }
+    &--l\@s      { border-radius: $radius-l; }
+    &--full\@s   { border-radius: $radius-full; }
+    &--oval\@s   { border-radius: $radius-oval; }
+  }
+
+  @include breakpoint(M) {
+    &--none\@m   { border-radius: $radius-none; }
+    &--s\@m      { border-radius: $radius-s; }
+    &--m\@m      { border-radius: $radius-m; }
+    &--l\@m      { border-radius: $radius-l; }
+    &--full\@m   { border-radius: $radius-full; }
+    &--oval\@m   { border-radius: $radius-oval; }
+  }
+
+  @include breakpoint(L) {
+    &--none\@l   { border-radius: $radius-none; }
+    &--s\@l      { border-radius: $radius-s; }
+    &--m\@l      { border-radius: $radius-m; }
+    &--l\@l      { border-radius: $radius-l; }
+    &--full\@l   { border-radius: $radius-full; }
+    &--oval\@l   { border-radius: $radius-oval; }
+  }
+
+  @include breakpoint(XL) {
+    &--none\@xl   { border-radius: $radius-none; }
+    &--s\@xl      { border-radius: $radius-s; }
+    &--m\@xl      { border-radius: $radius-m; }
+    &--l\@xl      { border-radius: $radius-l; }
+    &--full\@xl   { border-radius: $radius-full; }
+    &--oval\@xl   { border-radius: $radius-oval; }
+  }
+
+}
+
+// Shadow / Elevation ---------------------------------------------------------
+.fds-shadow {
+
+  // Default
+  & {
+    &--popout  { box-shadow: $shadow-size-popout; }
+    &--overlay { box-shadow: $shadow-size-overlay ; }
+    &--raised  { box-shadow: $shadow-size-raised; }
+    &--none    { box-shadow: none; }
+  }
+
+  // Hover
+  &\:hover {
+    &--popout:hover  { box-shadow: $shadow-size-popout; }
+    &--overlay:hover { box-shadow: $shadow-size-overlay ; }
+    &--raised:hover  { box-shadow: $shadow-size-raised; }
+    &--none:hover    { box-shadow: none; }
+  }
+
+  @include breakpoint(S) {
+
+    // Default
+    & {
+      &--popout\@s  { box-shadow: $shadow-size-popout; }
+      &--overlay\@s { box-shadow: $shadow-size-overlay ; }
+      &--raised\@s  { box-shadow: $shadow-size-raised; }
+      &--none\@s    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@s:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@s:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@s:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@s:hover    { box-shadow: none; }
+    }
+
+  }
+
+  @include breakpoint(M) {
+
+    // Default
+    & {
+      &--popout\@m  { box-shadow: $shadow-size-popout; }
+      &--overlay\@m { box-shadow: $shadow-size-overlay ; }
+      &--raised\@m  { box-shadow: $shadow-size-raised; }
+      &--none\@m    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@m:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@m:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@m:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@m:hover    { box-shadow: none; }
+    }
+
+  }
+
+  @include breakpoint(L) {
+
+    // Default
+    & {
+      &--popout\@l  { box-shadow: $shadow-size-popout; }
+      &--overlay\@l { box-shadow: $shadow-size-overlay ; }
+      &--raised\@l  { box-shadow: $shadow-size-raised; }
+      &--none\@l    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@l:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@l:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@l:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@l:hover    { box-shadow: none; }
+    }
+
+  }
+
+  @include breakpoint(XL) {
+
+    // Default
+    & {
+      &--popout\@xl  { box-shadow: $shadow-size-popout; }
+      &--overlay\@xl { box-shadow: $shadow-size-overlay ; }
+      &--raised\@xl  { box-shadow: $shadow-size-raised; }
+      &--none\@xl    { box-shadow: none; }
+    }
+
+    // Hover
+    &\:hover {
+      &--popout\@xl:hover  { box-shadow: $shadow-size-popout; }
+      &--overlay\@xl:hover { box-shadow: $shadow-size-overlay ; }
+      &--raised\@xl:hover  { box-shadow: $shadow-size-raised; }
+      &--none\@xl:hover    { box-shadow: none; }
+    }
+
+  }
+
+}
+
+// Links ----------------------------------------------------------------------
+.fds-link {
+
+  &--inline       { display: inline !important; width: auto !important; }
+  &--inline-block { display: inline-block !important; width: auto !important; }
+  &--fill,
+  &--block        { display: block !important; width: 100%; }
+
+  // Default
+  & {
+
+    &--underline      { text-decoration: underline !important; }
+    &--underline-none { text-decoration: none !important; }
+
+    &--white         { &,&:visited { color: $color-fds-white !important;         }  &:hover { color: shade($color-fds-white, 10%) !important} }
+    &--black         { &,&:visited { color: $color-fds-black !important;         }  &:hover { color: shade($color-fds-black, 20%) !important} }
+    &--primary-900   { &,&:visited { color: $color-fds-primary-900 !important;   }  &:hover { color: $color-fds-black             !important} }
+    &--primary       { &,&:visited { color: $color-fds-primary !important;       }  &:hover { color: $color-fds-black             !important} }
+    &--primary-300   { &,&:visited { color: $color-fds-primary-300 !important;   }  &:hover { color: $color-fds-black             !important} }
+    &--primary-200   { &,&:visited { color: $color-fds-primary-200 !important;   }  &:hover { color: $color-fds-white             !important} }
+    &--primary-100   { &,&:visited { color: $color-fds-primary-100 !important;   }  &:hover { color: $color-fds-white             !important} }
+    &--secondary-900 { &,&:visited { color: $color-fds-secondary-900 !important; }  &:hover { color: $color-fds-black             !important} }
+    &--secondary     { &,&:visited { color: $color-fds-secondary !important;     }  &:hover { color: $color-fds-black             !important} }
+    &--secondary-300 { &,&:visited { color: $color-fds-secondary-300 !important; }  &:hover { color: $color-fds-black             !important} }
+    &--secondary-200 { &,&:visited { color: $color-fds-secondary-200 !important; }  &:hover { color: $color-fds-white             !important} }
+    &--secondary-100 { &,&:visited { color: $color-fds-secondary-100 !important; }  &:hover { color: $color-fds-white             !important} }
+    &--tertiary-900  { &,&:visited { color: $color-fds-tertiary-900 !important;  }  &:hover { color: $color-fds-black             !important} }
+    &--tertiary      { &,&:visited { color: $color-fds-tertiary !important;      }  &:hover { color: $color-fds-black             !important} }
+    &--tertiary-300  { &,&:visited { color: $color-fds-tertiary-300 !important;  }  &:hover { color: $color-fds-black             !important} }
+    &--tertiary-200  { &,&:visited { color: $color-fds-tertiary-200 !important;  }  &:hover { color: $color-fds-white             !important} }
+    &--tertiary-100  { &,&:visited { color: $color-fds-tertiary-100 !important;  }  &:hover { color: $color-fds-white             !important} }
+    &--aqua-900      { &,&:visited { color: $color-fds-aqua-900 !important;      }  &:hover { color: $color-fds-black             !important} }
+    &--aqua          { &,&:visited { color: $color-fds-aqua !important;          }  &:hover { color: $color-fds-black             !important} }
+    &--aqua-300      { &,&:visited { color: $color-fds-aqua-300 !important;      }  &:hover { color: $color-fds-black             !important} }
+    &--aqua-200      { &,&:visited { color: $color-fds-aqua-200 !important;      }  &:hover { color: $color-fds-white             !important} }
+    &--aqua-100      { &,&:visited { color: $color-fds-aqua-100 !important;      }  &:hover { color: $color-fds-white             !important} }
+    &--red-900       { &,&:visited { color: $color-fds-red-900 !important;       }  &:hover { color: $color-fds-black             !important} }
+    &--red           { &,&:visited { color: $color-fds-red !important;           }  &:hover { color: $color-fds-black             !important} }
+    &--red-300       { &,&:visited { color: $color-fds-red-300 !important;       }  &:hover { color: $color-fds-black             !important} }
+    &--red-200       { &,&:visited { color: $color-fds-red-200 !important;       }  &:hover { color: $color-fds-white             !important} }
+    &--red-100       { &,&:visited { color: $color-fds-red-100 !important;       }  &:hover { color: $color-fds-white             !important} }
+    &--yellow        { &,&:visited { color: $color-fds-yellow !important;        }  &:hover { color: $color-fds-white             !important} }
+    &--yellow-300    { &,&:visited { color: $color-fds-yellow-300 !important;    }  &:hover { color: $color-fds-white             !important} }
+    &--yellow-200    { &,&:visited { color: $color-fds-yellow-200 !important;    }  &:hover { color: $color-fds-white             !important} }
+    &--yellow-100    { &,&:visited { color: $color-fds-yellow-100 !important;    }  &:hover { color: $color-fds-white             !important} }
+
+  }
+
+  // Hover
+  &\:hover {
+
+    &--underline:hover      { text-decoration: underline !important; }
+    &--underline-none:hover { text-decoration: none !important; }
+
+    &--white:hover         { &,&:visited { color: $color-fds-white !important;         } }
+    &--black:hover         { &,&:visited { color: $color-fds-black !important;         } }
+    &--primary-900:hover   { &,&:visited { color: $color-fds-primary-900 !important;   } }
+    &--primary:hover       { &,&:visited { color: $color-fds-primary !important;       } }
+    &--primary-300:hover   { &,&:visited { color: $color-fds-primary-300 !important;   } }
+    &--primary-200:hover   { &,&:visited { color: $color-fds-primary-200 !important;   } }
+    &--primary-100:hover   { &,&:visited { color: $color-fds-primary-100 !important;   } }
+    &--secondary-900:hover { &,&:visited { color: $color-fds-secondary-900 !important; } }
+    &--secondary:hover     { &,&:visited { color: $color-fds-secondary !important;     } }
+    &--secondary-300:hover { &,&:visited { color: $color-fds-secondary-300 !important; } }
+    &--secondary-200:hover { &,&:visited { color: $color-fds-secondary-200 !important; } }
+    &--secondary-100:hover { &,&:visited { color: $color-fds-secondary-100 !important; } }
+    &--tertiary-900:hover  { &,&:visited { color: $color-fds-tertiary-900 !important;  } }
+    &--tertiary:hover      { &,&:visited { color: $color-fds-tertiary !important;      } }
+    &--tertiary-300:hover  { &,&:visited { color: $color-fds-tertiary-300 !important;  } }
+    &--tertiary-200:hover  { &,&:visited { color: $color-fds-tertiary-200 !important;  } }
+    &--tertiary-100:hover  { &,&:visited { color: $color-fds-tertiary-100 !important;  } }
+    &--aqua-900:hover      { &,&:visited { color: $color-fds-aqua-900 !important;      } }
+    &--aqua:hover          { &,&:visited { color: $color-fds-aqua !important;          } }
+    &--aqua-300:hover      { &,&:visited { color: $color-fds-aqua-300 !important;      } }
+    &--aqua-200:hover      { &,&:visited { color: $color-fds-aqua-200 !important;      } }
+    &--aqua-100:hover      { &,&:visited { color: $color-fds-aqua-100 !important;      } }
+    &--red-900:hover       { &,&:visited { color: $color-fds-red-900 !important;       } }
+    &--red:hover           { &,&:visited { color: $color-fds-red !important;           } }
+    &--red-300:hover       { &,&:visited { color: $color-fds-red-300 !important;       } }
+    &--red-200:hover       { &,&:visited { color: $color-fds-red-200 !important;       } }
+    &--red-100:hover       { &,&:visited { color: $color-fds-red-100 !important;       } }
+    &--yellow:hover        { &,&:visited { color: $color-fds-yellow !important;        } }
+    &--yellow-300:hover    { &,&:visited { color: $color-fds-yellow-300 !important;    } }
+    &--yellow-200:hover    { &,&:visited { color: $color-fds-yellow-200 !important;    } }
+    &--yellow-100:hover    { &,&:visited { color: $color-fds-yellow-100 !important;    } }
+
+  }
+
+  @include breakpoint(S) {
+
+    &--inline\@s       { display: inline !important; width: auto !important; }
+    &--inline-block\@s { display: inline-block !important; width: auto !important; }
+    &--fill\@s,
+    &--block\@s        { display: block !important; width: 100% !important; }
+
+    // Default
+    & {
+
+      &--underline\@s      { text-decoration: underline !important; }
+      &--underline-none\@s { text-decoration: none !important; }
+
+      &--white\@s         { &,&:visited { color: $color-fds-white !important;         }  &:hover { color: shade($color-fds-white, 10%) !important} }
+      &--black\@s         { &,&:visited { color: $color-fds-black !important;         }  &:hover { color: shade($color-fds-black, 20%) !important} }
+      &--primary-900\@s   { &,&:visited { color: $color-fds-primary-900 !important;   }  &:hover { color: $color-fds-black             !important} }
+      &--primary\@s       { &,&:visited { color: $color-fds-primary !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--primary-300\@s   { &,&:visited { color: $color-fds-primary-300 !important;   }  &:hover { color: $color-fds-black             !important} }
+      &--primary-200\@s   { &,&:visited { color: $color-fds-primary-200 !important;   }  &:hover { color: $color-fds-white             !important} }
+      &--primary-100\@s   { &,&:visited { color: $color-fds-primary-100 !important;   }  &:hover { color: $color-fds-white             !important} }
+      &--secondary-900\@s { &,&:visited { color: $color-fds-secondary-900 !important; }  &:hover { color: $color-fds-black             !important} }
+      &--secondary\@s     { &,&:visited { color: $color-fds-secondary !important;     }  &:hover { color: $color-fds-black             !important} }
+      &--secondary-300\@s { &,&:visited { color: $color-fds-secondary-300 !important; }  &:hover { color: $color-fds-black             !important} }
+      &--secondary-200\@s { &,&:visited { color: $color-fds-secondary-200 !important; }  &:hover { color: $color-fds-white             !important} }
+      &--secondary-100\@s { &,&:visited { color: $color-fds-secondary-100 !important; }  &:hover { color: $color-fds-white             !important} }
+      &--tertiary-900\@s  { &,&:visited { color: $color-fds-tertiary-900 !important;  }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary\@s      { &,&:visited { color: $color-fds-tertiary !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary-300\@s  { &,&:visited { color: $color-fds-tertiary-300 !important;  }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary-200\@s  { &,&:visited { color: $color-fds-tertiary-200 !important;  }  &:hover { color: $color-fds-white             !important} }
+      &--tertiary-100\@s  { &,&:visited { color: $color-fds-tertiary-100 !important;  }  &:hover { color: $color-fds-white             !important} }
+      &--aqua-900\@s      { &,&:visited { color: $color-fds-aqua-900 !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--aqua\@s          { &,&:visited { color: $color-fds-aqua !important;          }  &:hover { color: $color-fds-black             !important} }
+      &--aqua-300\@s      { &,&:visited { color: $color-fds-aqua-300 !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--aqua-200\@s      { &,&:visited { color: $color-fds-aqua-200 !important;      }  &:hover { color: $color-fds-white             !important} }
+      &--aqua-100\@s      { &,&:visited { color: $color-fds-aqua-100 !important;      }  &:hover { color: $color-fds-white             !important} }
+      &--red-900\@s       { &,&:visited { color: $color-fds-red-900 !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--red\@s           { &,&:visited { color: $color-fds-red !important;           }  &:hover { color: $color-fds-black             !important} }
+      &--red-300\@s       { &,&:visited { color: $color-fds-red-300 !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--red-200\@s       { &,&:visited { color: $color-fds-red-200 !important;       }  &:hover { color: $color-fds-white             !important} }
+      &--red-100\@s       { &,&:visited { color: $color-fds-red-100 !important;       }  &:hover { color: $color-fds-white             !important} }
+      &--yellow\@s        { &,&:visited { color: $color-fds-yellow !important;        }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-300\@s    { &,&:visited { color: $color-fds-yellow-300 !important;    }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-200\@s    { &,&:visited { color: $color-fds-yellow-200 !important;    }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-100\@s    { &,&:visited { color: $color-fds-yellow-100 !important;    }  &:hover { color: $color-fds-white             !important} }
+
+    }
+
+    // Hover
+    &\:hover {
+
+      &--underline\@s:hover      { text-decoration: underline !important; }
+      &--underline-none\@s:hover { text-decoration: none !important; }
+
+      &--white\@s:hover         { &,&:visited { color: $color-fds-white !important;         } }
+      &--black\@s:hover         { &,&:visited { color: $color-fds-black !important;         } }
+      &--primary-900\@s:hover   { &,&:visited { color: $color-fds-primary-900 !important;   } }
+      &--primary\@s:hover       { &,&:visited { color: $color-fds-primary !important;       } }
+      &--primary-300\@s:hover   { &,&:visited { color: $color-fds-primary-300 !important;   } }
+      &--primary-200\@s:hover   { &,&:visited { color: $color-fds-primary-200 !important;   } }
+      &--primary-100\@s:hover   { &,&:visited { color: $color-fds-primary-100 !important;   } }
+      &--secondary-900\@s:hover { &,&:visited { color: $color-fds-secondary-900 !important; } }
+      &--secondary\@s:hover     { &,&:visited { color: $color-fds-secondary !important;     } }
+      &--secondary-300\@s:hover { &,&:visited { color: $color-fds-secondary-300 !important; } }
+      &--secondary-200\@s:hover { &,&:visited { color: $color-fds-secondary-200 !important; } }
+      &--secondary-100\@s:hover { &,&:visited { color: $color-fds-secondary-100 !important; } }
+      &--tertiary-900\@s:hover  { &,&:visited { color: $color-fds-tertiary-900 !important;  } }
+      &--tertiary\@s:hover      { &,&:visited { color: $color-fds-tertiary !important;      } }
+      &--tertiary-300\@s:hover  { &,&:visited { color: $color-fds-tertiary-300 !important;  } }
+      &--tertiary-200\@s:hover  { &,&:visited { color: $color-fds-tertiary-200 !important;  } }
+      &--tertiary-100\@s:hover  { &,&:visited { color: $color-fds-tertiary-100 !important;  } }
+      &--aqua-900\@s:hover      { &,&:visited { color: $color-fds-aqua-900 !important;      } }
+      &--aqua\@s:hover          { &,&:visited { color: $color-fds-aqua !important;          } }
+      &--aqua-300\@s:hover      { &,&:visited { color: $color-fds-aqua-300 !important;      } }
+      &--aqua-200\@s:hover      { &,&:visited { color: $color-fds-aqua-200 !important;      } }
+      &--aqua-100\@s:hover      { &,&:visited { color: $color-fds-aqua-100 !important;      } }
+      &--red-900\@s:hover       { &,&:visited { color: $color-fds-red-900 !important;       } }
+      &--red\@s:hover           { &,&:visited { color: $color-fds-red !important;           } }
+      &--red-300\@s:hover       { &,&:visited { color: $color-fds-red-300 !important;       } }
+      &--red-200\@s:hover       { &,&:visited { color: $color-fds-red-200 !important;       } }
+      &--red-100\@s:hover       { &,&:visited { color: $color-fds-red-100 !important;       } }
+      &--yellow\@s:hover        { &,&:visited { color: $color-fds-yellow !important;        } }
+      &--yellow-300\@s:hover    { &,&:visited { color: $color-fds-yellow-300 !important;    } }
+      &--yellow-200\@s:hover    { &,&:visited { color: $color-fds-yellow-200 !important;    } }
+      &--yellow-100\@s:hover    { &,&:visited { color: $color-fds-yellow-100 !important;    } }
+
+    }
+
+  }
+
+  @include breakpoint(M) {
+
+    &--inline\@m       { display: inline !important; width: auto !important; }
+    &--inline-block\@m { display: inline-block !important; width: auto !important; }
+    &--fill\@m,
+    &--block\@m        { display: block !important; width: 100% !important; }
+
+    // Default
+    & {
+
+      &--underline\@m      { text-decoration: underline !important; }
+      &--underline-none\@m { text-decoration: none !important; }
+
+      &--white\@m         { &,&:visited { color: $color-fds-white !important;         }  &:hover { color: shade($color-fds-white, 10%) !important} }
+      &--black\@m         { &,&:visited { color: $color-fds-black !important;         }  &:hover { color: shade($color-fds-black, 20%) !important} }
+      &--primary-900\@m   { &,&:visited { color: $color-fds-primary-900 !important;   }  &:hover { color: $color-fds-black             !important} }
+      &--primary\@m       { &,&:visited { color: $color-fds-primary !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--primary-300\@m   { &,&:visited { color: $color-fds-primary-300 !important;   }  &:hover { color: $color-fds-black             !important} }
+      &--primary-200\@m   { &,&:visited { color: $color-fds-primary-200 !important;   }  &:hover { color: $color-fds-white             !important} }
+      &--primary-100\@m   { &,&:visited { color: $color-fds-primary-100 !important;   }  &:hover { color: $color-fds-white             !important} }
+      &--secondary-900\@m { &,&:visited { color: $color-fds-secondary-900 !important; }  &:hover { color: $color-fds-black             !important} }
+      &--secondary\@m     { &,&:visited { color: $color-fds-secondary !important;     }  &:hover { color: $color-fds-black             !important} }
+      &--secondary-300\@m { &,&:visited { color: $color-fds-secondary-300 !important; }  &:hover { color: $color-fds-black             !important} }
+      &--secondary-200\@m { &,&:visited { color: $color-fds-secondary-200 !important; }  &:hover { color: $color-fds-white             !important} }
+      &--secondary-100\@m { &,&:visited { color: $color-fds-secondary-100 !important; }  &:hover { color: $color-fds-white             !important} }
+      &--tertiary-900\@m  { &,&:visited { color: $color-fds-tertiary-900 !important;  }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary\@m      { &,&:visited { color: $color-fds-tertiary !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary-300\@m  { &,&:visited { color: $color-fds-tertiary-300 !important;  }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary-200\@m  { &,&:visited { color: $color-fds-tertiary-200 !important;  }  &:hover { color: $color-fds-white             !important} }
+      &--tertiary-100\@m  { &,&:visited { color: $color-fds-tertiary-100 !important;  }  &:hover { color: $color-fds-white             !important} }
+      &--aqua-900\@m      { &,&:visited { color: $color-fds-aqua-900 !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--aqua\@m          { &,&:visited { color: $color-fds-aqua !important;          }  &:hover { color: $color-fds-black             !important} }
+      &--aqua-300\@m      { &,&:visited { color: $color-fds-aqua-300 !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--aqua-200\@m      { &,&:visited { color: $color-fds-aqua-200 !important;      }  &:hover { color: $color-fds-white             !important} }
+      &--aqua-100\@m      { &,&:visited { color: $color-fds-aqua-100 !important;      }  &:hover { color: $color-fds-white             !important} }
+      &--red-900\@m       { &,&:visited { color: $color-fds-red-900 !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--red\@m           { &,&:visited { color: $color-fds-red !important;           }  &:hover { color: $color-fds-black             !important} }
+      &--red-300\@m       { &,&:visited { color: $color-fds-red-300 !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--red-200\@m       { &,&:visited { color: $color-fds-red-200 !important;       }  &:hover { color: $color-fds-white             !important} }
+      &--red-100\@m       { &,&:visited { color: $color-fds-red-100 !important;       }  &:hover { color: $color-fds-white             !important} }
+      &--yellow\@m        { &,&:visited { color: $color-fds-yellow !important;        }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-300\@m    { &,&:visited { color: $color-fds-yellow-300 !important;    }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-200\@m    { &,&:visited { color: $color-fds-yellow-200 !important;    }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-100\@m    { &,&:visited { color: $color-fds-yellow-100 !important;    }  &:hover { color: $color-fds-white             !important} }
+
+    }
+
+    // Hover
+    &\:hover {
+
+      &--underline\@m:hover      { text-decoration: underline !important; }
+      &--underline-none\@m:hover { text-decoration: none !important; }
+
+      &--white\@m:hover         { &,&:visited { color: $color-fds-white !important;         } }
+      &--black\@m:hover         { &,&:visited { color: $color-fds-black !important;         } }
+      &--primary-900\@m:hover   { &,&:visited { color: $color-fds-primary-900 !important;   } }
+      &--primary\@m:hover       { &,&:visited { color: $color-fds-primary !important;       } }
+      &--primary-300\@m:hover   { &,&:visited { color: $color-fds-primary-300 !important;   } }
+      &--primary-200\@m:hover   { &,&:visited { color: $color-fds-primary-200 !important;   } }
+      &--primary-100\@m:hover   { &,&:visited { color: $color-fds-primary-100 !important;   } }
+      &--secondary-900\@m:hover { &,&:visited { color: $color-fds-secondary-900 !important; } }
+      &--secondary\@m:hover     { &,&:visited { color: $color-fds-secondary !important;     } }
+      &--secondary-300\@m:hover { &,&:visited { color: $color-fds-secondary-300 !important; } }
+      &--secondary-200\@m:hover { &,&:visited { color: $color-fds-secondary-200 !important; } }
+      &--secondary-100\@m:hover { &,&:visited { color: $color-fds-secondary-100 !important; } }
+      &--tertiary-900\@m:hover  { &,&:visited { color: $color-fds-tertiary-900 !important;  } }
+      &--tertiary\@m:hover      { &,&:visited { color: $color-fds-tertiary !important;      } }
+      &--tertiary-300\@m:hover  { &,&:visited { color: $color-fds-tertiary-300 !important;  } }
+      &--tertiary-200\@m:hover  { &,&:visited { color: $color-fds-tertiary-200 !important;  } }
+      &--tertiary-100\@m:hover  { &,&:visited { color: $color-fds-tertiary-100 !important;  } }
+      &--aqua-900\@m:hover      { &,&:visited { color: $color-fds-aqua-900 !important;      } }
+      &--aqua\@m:hover          { &,&:visited { color: $color-fds-aqua !important;          } }
+      &--aqua-300\@m:hover      { &,&:visited { color: $color-fds-aqua-300 !important;      } }
+      &--aqua-200\@m:hover      { &,&:visited { color: $color-fds-aqua-200 !important;      } }
+      &--aqua-100\@m:hover      { &,&:visited { color: $color-fds-aqua-100 !important;      } }
+      &--red-900\@m:hover       { &,&:visited { color: $color-fds-red-900 !important;       } }
+      &--red\@m:hover           { &,&:visited { color: $color-fds-red !important;           } }
+      &--red-300\@m:hover       { &,&:visited { color: $color-fds-red-300 !important;       } }
+      &--red-200\@m:hover       { &,&:visited { color: $color-fds-red-200 !important;       } }
+      &--red-100\@m:hover       { &,&:visited { color: $color-fds-red-100 !important;       } }
+      &--yellow\@m:hover        { &,&:visited { color: $color-fds-yellow !important;        } }
+      &--yellow-300\@m:hover    { &,&:visited { color: $color-fds-yellow-300 !important;    } }
+      &--yellow-200\@m:hover    { &,&:visited { color: $color-fds-yellow-200 !important;    } }
+      &--yellow-100\@m:hover    { &,&:visited { color: $color-fds-yellow-100 !important;    } }
+
+    }
+
+  }
+
+  @include breakpoint(L) {
+
+    &--inline\@l       { display: inline !important; width: auto !important; }
+    &--inline-block\@l { display: inline-block !important; width: auto !important; }
+    &--fill\@l,
+    &--block\@l        { display: block !important; width: 100% !important; }
+
+    // Default
+    & {
+
+      &--underline\@l      { text-decoration: underline !important; }
+      &--underline-none\@l { text-decoration: none !important; }
+
+      &--white\@l         { &,&:visited { color: $color-fds-white !important;         }  &:hover { color: shade($color-fds-white, 10%) !important} }
+      &--black\@l         { &,&:visited { color: $color-fds-black !important;         }  &:hover { color: shade($color-fds-black, 20%) !important} }
+      &--primary-900\@l   { &,&:visited { color: $color-fds-primary-900 !important;   }  &:hover { color: $color-fds-black             !important} }
+      &--primary\@l       { &,&:visited { color: $color-fds-primary !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--primary-300\@l   { &,&:visited { color: $color-fds-primary-300 !important;   }  &:hover { color: $color-fds-black             !important} }
+      &--primary-200\@l   { &,&:visited { color: $color-fds-primary-200 !important;   }  &:hover { color: $color-fds-white             !important} }
+      &--primary-100\@l   { &,&:visited { color: $color-fds-primary-100 !important;   }  &:hover { color: $color-fds-white             !important} }
+      &--secondary-900\@l { &,&:visited { color: $color-fds-secondary-900 !important; }  &:hover { color: $color-fds-black             !important} }
+      &--secondary\@l     { &,&:visited { color: $color-fds-secondary !important;     }  &:hover { color: $color-fds-black             !important} }
+      &--secondary-300\@l { &,&:visited { color: $color-fds-secondary-300 !important; }  &:hover { color: $color-fds-black             !important} }
+      &--secondary-200\@l { &,&:visited { color: $color-fds-secondary-200 !important; }  &:hover { color: $color-fds-white             !important} }
+      &--secondary-100\@l { &,&:visited { color: $color-fds-secondary-100 !important; }  &:hover { color: $color-fds-white             !important} }
+      &--tertiary-900\@l  { &,&:visited { color: $color-fds-tertiary-900 !important;  }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary\@l      { &,&:visited { color: $color-fds-tertiary !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary-300\@l  { &,&:visited { color: $color-fds-tertiary-300 !important;  }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary-200\@l  { &,&:visited { color: $color-fds-tertiary-200 !important;  }  &:hover { color: $color-fds-white             !important} }
+      &--tertiary-100\@l  { &,&:visited { color: $color-fds-tertiary-100 !important;  }  &:hover { color: $color-fds-white             !important} }
+      &--aqua-900\@l      { &,&:visited { color: $color-fds-aqua-900 !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--aqua\@l          { &,&:visited { color: $color-fds-aqua !important;          }  &:hover { color: $color-fds-black             !important} }
+      &--aqua-300\@l      { &,&:visited { color: $color-fds-aqua-300 !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--aqua-200\@l      { &,&:visited { color: $color-fds-aqua-200 !important;      }  &:hover { color: $color-fds-white             !important} }
+      &--aqua-100\@l      { &,&:visited { color: $color-fds-aqua-100 !important;      }  &:hover { color: $color-fds-white             !important} }
+      &--red-900\@l       { &,&:visited { color: $color-fds-red-900 !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--red\@l           { &,&:visited { color: $color-fds-red !important;           }  &:hover { color: $color-fds-black             !important} }
+      &--red-300\@l       { &,&:visited { color: $color-fds-red-300 !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--red-200\@l       { &,&:visited { color: $color-fds-red-200 !important;       }  &:hover { color: $color-fds-white             !important} }
+      &--red-100\@l       { &,&:visited { color: $color-fds-red-100 !important;       }  &:hover { color: $color-fds-white             !important} }
+      &--yellow\@l        { &,&:visited { color: $color-fds-yellow !important;        }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-300\@l    { &,&:visited { color: $color-fds-yellow-300 !important;    }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-200\@l    { &,&:visited { color: $color-fds-yellow-200 !important;    }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-100\@l    { &,&:visited { color: $color-fds-yellow-100 !important;    }  &:hover { color: $color-fds-white             !important} }
+
+    }
+
+    // Hover
+    &\:hover {
+
+      &--underline\@l:hover      { text-decoration: underline !important; }
+      &--underline-none\@l:hover { text-decoration: none !important; }
+
+      &--white\@l:hover         { &,&:visited { color: $color-fds-white !important;         } }
+      &--black\@l:hover         { &,&:visited { color: $color-fds-black !important;         } }
+      &--primary-900\@l:hover   { &,&:visited { color: $color-fds-primary-900 !important;   } }
+      &--primary\@l:hover       { &,&:visited { color: $color-fds-primary !important;       } }
+      &--primary-300\@l:hover   { &,&:visited { color: $color-fds-primary-300 !important;   } }
+      &--primary-200\@l:hover   { &,&:visited { color: $color-fds-primary-200 !important;   } }
+      &--primary-100\@l:hover   { &,&:visited { color: $color-fds-primary-100 !important;   } }
+      &--secondary-900\@l:hover { &,&:visited { color: $color-fds-secondary-900 !important; } }
+      &--secondary\@l:hover     { &,&:visited { color: $color-fds-secondary !important;     } }
+      &--secondary-300\@l:hover { &,&:visited { color: $color-fds-secondary-300 !important; } }
+      &--secondary-200\@l:hover { &,&:visited { color: $color-fds-secondary-200 !important; } }
+      &--secondary-100\@l:hover { &,&:visited { color: $color-fds-secondary-100 !important; } }
+      &--tertiary-900\@l:hover  { &,&:visited { color: $color-fds-tertiary-900 !important;  } }
+      &--tertiary\@l:hover      { &,&:visited { color: $color-fds-tertiary !important;      } }
+      &--tertiary-300\@l:hover  { &,&:visited { color: $color-fds-tertiary-300 !important;  } }
+      &--tertiary-200\@l:hover  { &,&:visited { color: $color-fds-tertiary-200 !important;  } }
+      &--tertiary-100\@l:hover  { &,&:visited { color: $color-fds-tertiary-100 !important;  } }
+      &--aqua-900\@l:hover      { &,&:visited { color: $color-fds-aqua-900 !important;      } }
+      &--aqua\@l:hover          { &,&:visited { color: $color-fds-aqua !important;          } }
+      &--aqua-300\@l:hover      { &,&:visited { color: $color-fds-aqua-300 !important;      } }
+      &--aqua-200\@l:hover      { &,&:visited { color: $color-fds-aqua-200 !important;      } }
+      &--aqua-100\@l:hover      { &,&:visited { color: $color-fds-aqua-100 !important;      } }
+      &--red-900\@l:hover       { &,&:visited { color: $color-fds-red-900 !important;       } }
+      &--red\@l:hover           { &,&:visited { color: $color-fds-red !important;           } }
+      &--red-300\@l:hover       { &,&:visited { color: $color-fds-red-300 !important;       } }
+      &--red-200\@l:hover       { &,&:visited { color: $color-fds-red-200 !important;       } }
+      &--red-100\@l:hover       { &,&:visited { color: $color-fds-red-100 !important;       } }
+      &--yellow\@l:hover        { &,&:visited { color: $color-fds-yellow !important;        } }
+      &--yellow-300\@l:hover    { &,&:visited { color: $color-fds-yellow-300 !important;    } }
+      &--yellow-200\@l:hover    { &,&:visited { color: $color-fds-yellow-200 !important;    } }
+      &--yellow-100\@l:hover    { &,&:visited { color: $color-fds-yellow-100 !important;    } }
+
+    }
+
+  }
+
+  @include breakpoint(XL) {
+
+    &--inline\@xl       { display: inline !important; width: auto !important; }
+    &--inline-block\@xl { display: inline-block !important; width: auto !important; }
+    &--fill\@xl,
+    &--block\@xl        { display: block !important; width: 100% !important; }
+
+    // Default
+    & {
+
+      &--underline\@xl      { text-decoration: underline !important; }
+      &--underline-none\@xl { text-decoration: none !important; }
+
+      &--white\@xl         { &,&:visited { color: $color-fds-white !important;         }  &:hover { color: shade($color-fds-white, 10%) !important} }
+      &--black\@xl         { &,&:visited { color: $color-fds-black !important;         }  &:hover { color: shade($color-fds-black, 20%) !important} }
+      &--primary-900\@xl   { &,&:visited { color: $color-fds-primary-900 !important;   }  &:hover { color: $color-fds-black             !important} }
+      &--primary\@xl       { &,&:visited { color: $color-fds-primary !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--primary-300\@xl   { &,&:visited { color: $color-fds-primary-300 !important;   }  &:hover { color: $color-fds-black             !important} }
+      &--primary-200\@xl   { &,&:visited { color: $color-fds-primary-200 !important;   }  &:hover { color: $color-fds-white             !important} }
+      &--primary-100\@xl   { &,&:visited { color: $color-fds-primary-100 !important;   }  &:hover { color: $color-fds-white             !important} }
+      &--secondary-900\@xl { &,&:visited { color: $color-fds-secondary-900 !important; }  &:hover { color: $color-fds-black             !important} }
+      &--secondary\@xl     { &,&:visited { color: $color-fds-secondary !important;     }  &:hover { color: $color-fds-black             !important} }
+      &--secondary-300\@xl { &,&:visited { color: $color-fds-secondary-300 !important; }  &:hover { color: $color-fds-black             !important} }
+      &--secondary-200\@xl { &,&:visited { color: $color-fds-secondary-200 !important; }  &:hover { color: $color-fds-white             !important} }
+      &--secondary-100\@xl { &,&:visited { color: $color-fds-secondary-100 !important; }  &:hover { color: $color-fds-white             !important} }
+      &--tertiary-900\@xl  { &,&:visited { color: $color-fds-tertiary-900 !important;  }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary\@xl      { &,&:visited { color: $color-fds-tertiary !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary-300\@xl  { &,&:visited { color: $color-fds-tertiary-300 !important;  }  &:hover { color: $color-fds-black             !important} }
+      &--tertiary-200\@xl  { &,&:visited { color: $color-fds-tertiary-200 !important;  }  &:hover { color: $color-fds-white             !important} }
+      &--tertiary-100\@xl  { &,&:visited { color: $color-fds-tertiary-100 !important;  }  &:hover { color: $color-fds-white             !important} }
+      &--aqua-900\@xl      { &,&:visited { color: $color-fds-aqua-900 !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--aqua\@xl          { &,&:visited { color: $color-fds-aqua !important;          }  &:hover { color: $color-fds-black             !important} }
+      &--aqua-300\@xl      { &,&:visited { color: $color-fds-aqua-300 !important;      }  &:hover { color: $color-fds-black             !important} }
+      &--aqua-200\@xl      { &,&:visited { color: $color-fds-aqua-200 !important;      }  &:hover { color: $color-fds-white             !important} }
+      &--aqua-100\@xl      { &,&:visited { color: $color-fds-aqua-100 !important;      }  &:hover { color: $color-fds-white             !important} }
+      &--red-900\@xl       { &,&:visited { color: $color-fds-red-900 !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--red\@xl           { &,&:visited { color: $color-fds-red !important;           }  &:hover { color: $color-fds-black             !important} }
+      &--red-300\@xl       { &,&:visited { color: $color-fds-red-300 !important;       }  &:hover { color: $color-fds-black             !important} }
+      &--red-200\@xl       { &,&:visited { color: $color-fds-red-200 !important;       }  &:hover { color: $color-fds-white             !important} }
+      &--red-100\@xl       { &,&:visited { color: $color-fds-red-100 !important;       }  &:hover { color: $color-fds-white             !important} }
+      &--yellow\@xl        { &,&:visited { color: $color-fds-yellow !important;        }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-300\@xl    { &,&:visited { color: $color-fds-yellow-300 !important;    }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-200\@xl    { &,&:visited { color: $color-fds-yellow-200 !important;    }  &:hover { color: $color-fds-white             !important} }
+      &--yellow-100\@xl    { &,&:visited { color: $color-fds-yellow-100 !important;    }  &:hover { color: $color-fds-white             !important} }
+
+    }
+
+    // Hover
+    &\:hover {
+
+      &--underline\@xl:hover      { text-decoration: underline !important; }
+      &--underline-none\@xl:hover { text-decoration: none !important; }
+
+      &--white\@xl:hover         { &,&:visited { color: $color-fds-white !important;         } }
+      &--black\@xl:hover         { &,&:visited { color: $color-fds-black !important;         } }
+      &--primary-900\@xl:hover   { &,&:visited { color: $color-fds-primary-900 !important;   } }
+      &--primary\@xl:hover       { &,&:visited { color: $color-fds-primary !important;       } }
+      &--primary-300\@xl:hover   { &,&:visited { color: $color-fds-primary-300 !important;   } }
+      &--primary-200\@xl:hover   { &,&:visited { color: $color-fds-primary-200 !important;   } }
+      &--primary-100\@xl:hover   { &,&:visited { color: $color-fds-primary-100 !important;   } }
+      &--secondary-900\@xl:hover { &,&:visited { color: $color-fds-secondary-900 !important; } }
+      &--secondary\@xl:hover     { &,&:visited { color: $color-fds-secondary !important;     } }
+      &--secondary-300\@xl:hover { &,&:visited { color: $color-fds-secondary-300 !important; } }
+      &--secondary-200\@xl:hover { &,&:visited { color: $color-fds-secondary-200 !important; } }
+      &--secondary-100\@xl:hover { &,&:visited { color: $color-fds-secondary-100 !important; } }
+      &--tertiary-900\@xl:hover  { &,&:visited { color: $color-fds-tertiary-900 !important;  } }
+      &--tertiary\@xl:hover      { &,&:visited { color: $color-fds-tertiary !important;      } }
+      &--tertiary-300\@xl:hover  { &,&:visited { color: $color-fds-tertiary-300 !important;  } }
+      &--tertiary-200\@xl:hover  { &,&:visited { color: $color-fds-tertiary-200 !important;  } }
+      &--tertiary-100\@xl:hover  { &,&:visited { color: $color-fds-tertiary-100 !important;  } }
+      &--aqua-900\@xl:hover      { &,&:visited { color: $color-fds-aqua-900 !important;      } }
+      &--aqua\@xl:hover          { &,&:visited { color: $color-fds-aqua !important;          } }
+      &--aqua-300\@xl:hover      { &,&:visited { color: $color-fds-aqua-300 !important;      } }
+      &--aqua-200\@xl:hover      { &,&:visited { color: $color-fds-aqua-200 !important;      } }
+      &--aqua-100\@xl:hover      { &,&:visited { color: $color-fds-aqua-100 !important;      } }
+      &--red-900\@xl:hover       { &,&:visited { color: $color-fds-red-900 !important;       } }
+      &--red\@xl:hover           { &,&:visited { color: $color-fds-red !important;           } }
+      &--red-300\@xl:hover       { &,&:visited { color: $color-fds-red-300 !important;       } }
+      &--red-200\@xl:hover       { &,&:visited { color: $color-fds-red-200 !important;       } }
+      &--red-100\@xl:hover       { &,&:visited { color: $color-fds-red-100 !important;       } }
+      &--yellow\@xl:hover        { &,&:visited { color: $color-fds-yellow !important;        } }
+      &--yellow-300\@xl:hover    { &,&:visited { color: $color-fds-yellow-300 !important;    } }
+      &--yellow-200\@xl:hover    { &,&:visited { color: $color-fds-yellow-200 !important;    } }
+      &--yellow-100\@xl:hover    { &,&:visited { color: $color-fds-yellow-100 !important;    } }
+
+    }
+
+  }
+
+}
+
+// Background -----------------------------------------------------------------
+.fds-bg {
+
+  // Default
+  & {
+    &--white          { background-color: $color-fds-white !important }
+    &--black          { background-color: $color-fds-black !important }
+    &--base           { background-color: $color-fds-base-bg !important }
+    &--transparent    { background-color: transparent !important }
+    &--primary        { background-color: $color-fds-primary !important }
+    &--primary-300    { background-color: $color-fds-primary-300 !important }
+    &--primary-200    { background-color: $color-fds-primary-200 !important }
+    &--primary-100    { background-color: $color-fds-primary-100 !important }
+    &--primary-900    { background-color: $color-fds-primary-900 !important }
+    &--secondary      { background-color: $color-fds-secondary !important }
+    &--secondary-300  { background-color: $color-fds-secondary-300 !important }
+    &--secondary-200  { background-color: $color-fds-secondary-200 !important }
+    &--secondary-100  { background-color: $color-fds-secondary-100 !important }
+    &--secondary-900  { background-color: $color-fds-secondary-900 !important }
+    &--tertiary       { background-color: $color-fds-tertiary !important }
+    &--tertiary-300   { background-color: $color-fds-tertiary-300 !important }
+    &--tertiary-200   { background-color: $color-fds-tertiary-200 !important }
+    &--tertiary-100   { background-color: $color-fds-tertiary-100 !important }
+    &--tertiary-900   { background-color: $color-fds-tertiary-900 !important }
+    &--aqua           { background-color: $color-fds-aqua !important }
+    &--aqua-300       { background-color: $color-fds-aqua-300 !important }
+    &--aqua-200       { background-color: $color-fds-aqua-200 !important }
+    &--aqua-100       { background-color: $color-fds-aqua-100 !important }
+    &--aqua-900       { background-color: $color-fds-aqua-900 !important }
+    &--red            { background-color: $color-fds-red !important }
+    &--red-300        { background-color: $color-fds-red-300 !important }
+    &--red-200        { background-color: $color-fds-red-200 !important }
+    &--red-100        { background-color: $color-fds-red-100 !important }
+    &--red-900        { background-color: $color-fds-red-900 !important }
+    &--yellow         { background-color: $color-fds-yellow !important }
+    &--yellow-300     { background-color: $color-fds-yellow-300 !important }
+    &--yellow-200     { background-color: $color-fds-yellow-200 !important }
+    &--yellow-100     { background-color: $color-fds-yellow-100 !important }
+  }
+
+  // Hover
+  &\:hover {
+    &--white:hover          { background-color: $color-fds-white !important }
+    &--black:hover          { background-color: $color-fds-black !important }
+    &--base:hover           { background-color: $color-fds-base-bg !important }
+    &--transparent:hover    { background-color: transparent !important }
+    &--primary:hover        { background-color: $color-fds-primary !important }
+    &--primary-300:hover    { background-color: $color-fds-primary-300 !important }
+    &--primary-200:hover    { background-color: $color-fds-primary-200 !important }
+    &--primary-100:hover    { background-color: $color-fds-primary-100 !important }
+    &--primary-900:hover    { background-color: $color-fds-primary-900 !important }
+    &--secondary:hover      { background-color: $color-fds-secondary !important }
+    &--secondary-300:hover  { background-color: $color-fds-secondary-300 !important }
+    &--secondary-200:hover  { background-color: $color-fds-secondary-200 !important }
+    &--secondary-100:hover  { background-color: $color-fds-secondary-100 !important }
+    &--secondary-900:hover  { background-color: $color-fds-secondary-900 !important }
+    &--tertiary:hover       { background-color: $color-fds-tertiary !important }
+    &--tertiary-300:hover   { background-color: $color-fds-tertiary-300 !important }
+    &--tertiary-200:hover   { background-color: $color-fds-tertiary-200 !important }
+    &--tertiary-100:hover   { background-color: $color-fds-tertiary-100 !important }
+    &--tertiary-900:hover   { background-color: $color-fds-tertiary-900 !important }
+    &--aqua:hover           { background-color: $color-fds-aqua !important }
+    &--aqua-300:hover       { background-color: $color-fds-aqua-300 !important }
+    &--aqua-200:hover       { background-color: $color-fds-aqua-200 !important }
+    &--aqua-100:hover       { background-color: $color-fds-aqua-100 !important }
+    &--aqua-900:hover       { background-color: $color-fds-aqua-900 !important }
+    &--red:hover            { background-color: $color-fds-red !important }
+    &--red-300:hover        { background-color: $color-fds-red-300 !important }
+    &--red-200:hover        { background-color: $color-fds-red-200 !important }
+    &--red-100:hover        { background-color: $color-fds-red-100 !important }
+    &--red-900:hover        { background-color: $color-fds-red-900 !important }
+    &--yellow:hover         { background-color: $color-fds-yellow !important }
+    &--yellow-300:hover     { background-color: $color-fds-yellow-300 !important }
+    &--yellow-200:hover     { background-color: $color-fds-yellow-200 !important }
+    &--yellow-100:hover     { background-color: $color-fds-yellow-100 !important }
+  }
+
+  // Responsive
+  @include breakpoint(S) {
+
+    // Default
+    & {
+      &--white\@s          { background-color: $color-fds-white !important }
+      &--black\@s          { background-color: $color-fds-black !important }
+      &--base\@s           { background-color: $color-fds-base-bg !important }
+      &--transparent\@s    { background-color: transparent !important }
+      &--primary\@s        { background-color: $color-fds-primary !important }
+      &--primary-300\@s    { background-color: $color-fds-primary-300 !important }
+      &--primary-200\@s    { background-color: $color-fds-primary-200 !important }
+      &--primary-100\@s    { background-color: $color-fds-primary-100 !important }
+      &--primary-900\@s    { background-color: $color-fds-primary-900 !important }
+      &--secondary\@s      { background-color: $color-fds-secondary !important }
+      &--secondary-300\@s  { background-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@s  { background-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@s  { background-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@s  { background-color: $color-fds-secondary-900 !important }
+      &--tertiary\@s       { background-color: $color-fds-tertiary !important }
+      &--tertiary-300\@s   { background-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@s   { background-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@s   { background-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@s   { background-color: $color-fds-tertiary-900 !important }
+      &--aqua\@s           { background-color: $color-fds-aqua !important }
+      &--aqua-300\@s       { background-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@s       { background-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@s       { background-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@s       { background-color: $color-fds-aqua-900 !important }
+      &--red\@s            { background-color: $color-fds-red !important }
+      &--red-300\@s        { background-color: $color-fds-red-300 !important }
+      &--red-200\@s        { background-color: $color-fds-red-200 !important }
+      &--red-100\@s        { background-color: $color-fds-red-100 !important }
+      &--red-900\@s        { background-color: $color-fds-red-900 !important }
+      &--yellow\@s         { background-color: $color-fds-yellow !important }
+      &--yellow-300\@s     { background-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@s     { background-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@s     { background-color: $color-fds-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--white\@s:hover          { background-color: $color-fds-white !important }
+      &--black\@s:hover          { background-color: $color-fds-black !important }
+      &--base\@s:hover           { background-color: $color-fds-base-bg !important }
+      &--transparent\@s:hover    { background-color: transparent !important }
+      &--primary\@s:hover        { background-color: $color-fds-primary !important }
+      &--primary-300\@s:hover    { background-color: $color-fds-primary-300 !important }
+      &--primary-200\@s:hover    { background-color: $color-fds-primary-200 !important }
+      &--primary-100\@s:hover    { background-color: $color-fds-primary-100 !important }
+      &--primary-900\@s:hover    { background-color: $color-fds-primary-900 !important }
+      &--secondary\@s:hover      { background-color: $color-fds-secondary !important }
+      &--secondary-300\@s:hover  { background-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@s:hover  { background-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@s:hover  { background-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@s:hover  { background-color: $color-fds-secondary-900 !important }
+      &--tertiary\@s:hover       { background-color: $color-fds-tertiary !important }
+      &--tertiary-300\@s:hover   { background-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@s:hover   { background-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@s:hover   { background-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@s:hover   { background-color: $color-fds-tertiary-900 !important }
+      &--aqua\@s:hover           { background-color: $color-fds-aqua !important }
+      &--aqua-300\@s:hover       { background-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@s:hover       { background-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@s:hover       { background-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@s:hover       { background-color: $color-fds-aqua-900 !important }
+      &--red\@s:hover            { background-color: $color-fds-red !important }
+      &--red-300\@s:hover        { background-color: $color-fds-red-300 !important }
+      &--red-200\@s:hover        { background-color: $color-fds-red-200 !important }
+      &--red-100\@s:hover        { background-color: $color-fds-red-100 !important }
+      &--red-900\@s:hover        { background-color: $color-fds-red-900 !important }
+      &--yellow\@s:hover         { background-color: $color-fds-yellow !important }
+      &--yellow-300\@s:hover     { background-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@s:hover     { background-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@s:hover     { background-color: $color-fds-yellow-100 !important }
+    }
+
+  }
+
+  @include breakpoint(M) {
+
+    // Default
+    & {
+      &--white\@m          { background-color: $color-fds-white !important }
+      &--black\@m          { background-color: $color-fds-black !important }
+      &--base\@m           { background-color: $color-fds-base-bg !important }
+      &--transparent\@m    { background-color: transparent !important }
+      &--primary\@m        { background-color: $color-fds-primary !important }
+      &--primary-300\@m    { background-color: $color-fds-primary-300 !important }
+      &--primary-200\@m    { background-color: $color-fds-primary-200 !important }
+      &--primary-100\@m    { background-color: $color-fds-primary-100 !important }
+      &--primary-900\@m    { background-color: $color-fds-primary-900 !important }
+      &--secondary\@m      { background-color: $color-fds-secondary !important }
+      &--secondary-300\@m  { background-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@m  { background-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@m  { background-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@m  { background-color: $color-fds-secondary-900 !important }
+      &--tertiary\@m       { background-color: $color-fds-tertiary !important }
+      &--tertiary-300\@m   { background-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@m   { background-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@m   { background-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@m   { background-color: $color-fds-tertiary-900 !important }
+      &--aqua\@m           { background-color: $color-fds-aqua !important }
+      &--aqua-300\@m       { background-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@m       { background-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@m       { background-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@m       { background-color: $color-fds-aqua-900 !important }
+      &--red\@m            { background-color: $color-fds-red !important }
+      &--red-300\@m        { background-color: $color-fds-red-300 !important }
+      &--red-200\@m        { background-color: $color-fds-red-200 !important }
+      &--red-100\@m        { background-color: $color-fds-red-100 !important }
+      &--red-900\@m        { background-color: $color-fds-red-900 !important }
+      &--yellow\@m         { background-color: $color-fds-yellow !important }
+      &--yellow-300\@m     { background-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@m     { background-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@m     { background-color: $color-fds-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--white\@m:hover          { background-color: $color-fds-white !important }
+      &--black\@m:hover          { background-color: $color-fds-black !important }
+      &--base\@m:hover           { background-color: $color-fds-base-bg !important }
+      &--transparent\@m:hover    { background-color: transparent !important }
+      &--primary\@m:hover        { background-color: $color-fds-primary !important }
+      &--primary-300\@m:hover    { background-color: $color-fds-primary-300 !important }
+      &--primary-200\@m:hover    { background-color: $color-fds-primary-200 !important }
+      &--primary-100\@m:hover    { background-color: $color-fds-primary-100 !important }
+      &--primary-900\@m:hover    { background-color: $color-fds-primary-900 !important }
+      &--secondary\@m:hover      { background-color: $color-fds-secondary !important }
+      &--secondary-300\@m:hover  { background-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@m:hover  { background-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@m:hover  { background-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@m:hover  { background-color: $color-fds-secondary-900 !important }
+      &--tertiary\@m:hover       { background-color: $color-fds-tertiary !important }
+      &--tertiary-300\@m:hover   { background-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@m:hover   { background-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@m:hover   { background-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@m:hover   { background-color: $color-fds-tertiary-900 !important }
+      &--aqua\@m:hover           { background-color: $color-fds-aqua !important }
+      &--aqua-300\@m:hover       { background-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@m:hover       { background-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@m:hover       { background-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@m:hover       { background-color: $color-fds-aqua-900 !important }
+      &--red\@m:hover            { background-color: $color-fds-red !important }
+      &--red-300\@m:hover        { background-color: $color-fds-red-300 !important }
+      &--red-200\@m:hover        { background-color: $color-fds-red-200 !important }
+      &--red-100\@m:hover        { background-color: $color-fds-red-100 !important }
+      &--red-900\@m:hover        { background-color: $color-fds-red-900 !important }
+      &--yellow\@m:hover         { background-color: $color-fds-yellow !important }
+      &--yellow-300\@m:hover     { background-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@m:hover     { background-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@m:hover     { background-color: $color-fds-yellow-100 !important }
+    }
+
+  }
+
+  @include breakpoint(L) {
+
+    // Default
+    & {
+      &--white\@l          { background-color: $color-fds-white !important }
+      &--black\@l          { background-color: $color-fds-black !important }
+      &--base\@l           { background-color: $color-fds-base-bg !important }
+      &--transparent\@l    { background-color: transparent !important }
+      &--primary\@l        { background-color: $color-fds-primary !important }
+      &--primary-300\@l    { background-color: $color-fds-primary-300 !important }
+      &--primary-200\@l    { background-color: $color-fds-primary-200 !important }
+      &--primary-100\@l    { background-color: $color-fds-primary-100 !important }
+      &--primary-900\@l    { background-color: $color-fds-primary-900 !important }
+      &--secondary\@l      { background-color: $color-fds-secondary !important }
+      &--secondary-300\@l  { background-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@l  { background-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@l  { background-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@l  { background-color: $color-fds-secondary-900 !important }
+      &--tertiary\@l       { background-color: $color-fds-tertiary !important }
+      &--tertiary-300\@l   { background-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@l   { background-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@l   { background-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@l   { background-color: $color-fds-tertiary-900 !important }
+      &--aqua\@l           { background-color: $color-fds-aqua !important }
+      &--aqua-300\@l       { background-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@l       { background-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@l       { background-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@l       { background-color: $color-fds-aqua-900 !important }
+      &--red\@l            { background-color: $color-fds-red !important }
+      &--red-300\@l        { background-color: $color-fds-red-300 !important }
+      &--red-200\@l        { background-color: $color-fds-red-200 !important }
+      &--red-100\@l        { background-color: $color-fds-red-100 !important }
+      &--red-900\@l        { background-color: $color-fds-red-900 !important }
+      &--yellow\@l         { background-color: $color-fds-yellow !important }
+      &--yellow-300\@l     { background-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@l     { background-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@l     { background-color: $color-fds-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--white\@l:hover          { background-color: $color-fds-white !important }
+      &--black\@l:hover          { background-color: $color-fds-black !important }
+      &--base\@l:hover           { background-color: $color-fds-base-bg !important }
+      &--transparent\@l:hover    { background-color: transparent !important }
+      &--primary\@l:hover        { background-color: $color-fds-primary !important }
+      &--primary-300\@l:hover    { background-color: $color-fds-primary-300 !important }
+      &--primary-200\@l:hover    { background-color: $color-fds-primary-200 !important }
+      &--primary-100\@l:hover    { background-color: $color-fds-primary-100 !important }
+      &--primary-900\@l:hover    { background-color: $color-fds-primary-900 !important }
+      &--secondary\@l:hover      { background-color: $color-fds-secondary !important }
+      &--secondary-300\@l:hover  { background-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@l:hover  { background-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@l:hover  { background-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@l:hover  { background-color: $color-fds-secondary-900 !important }
+      &--tertiary\@l:hover       { background-color: $color-fds-tertiary !important }
+      &--tertiary-300\@l:hover   { background-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@l:hover   { background-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@l:hover   { background-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@l:hover   { background-color: $color-fds-tertiary-900 !important }
+      &--aqua\@l:hover           { background-color: $color-fds-aqua !important }
+      &--aqua-300\@l:hover       { background-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@l:hover       { background-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@l:hover       { background-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@l:hover       { background-color: $color-fds-aqua-900 !important }
+      &--red\@l:hover            { background-color: $color-fds-red !important }
+      &--red-300\@l:hover        { background-color: $color-fds-red-300 !important }
+      &--red-200\@l:hover        { background-color: $color-fds-red-200 !important }
+      &--red-100\@l:hover        { background-color: $color-fds-red-100 !important }
+      &--red-900\@l:hover        { background-color: $color-fds-red-900 !important }
+      &--yellow\@l:hover         { background-color: $color-fds-yellow !important }
+      &--yellow-300\@l:hover     { background-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@l:hover     { background-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@l:hover     { background-color: $color-fds-yellow-100 !important }
+    }
+
+  }
+
+  @include breakpoint(XL) {
+
+    // Default
+    & {
+      &--white\@xl          { background-color: $color-fds-white !important }
+      &--black\@xl          { background-color: $color-fds-black !important }
+      &--base\@xl           { background-color: $color-fds-base-bg !important }
+      &--transparent\@xl    { background-color: transparent !important }
+      &--primary\@xl        { background-color: $color-fds-primary !important }
+      &--primary-300\@xl    { background-color: $color-fds-primary-300 !important }
+      &--primary-200\@xl    { background-color: $color-fds-primary-200 !important }
+      &--primary-100\@xl    { background-color: $color-fds-primary-100 !important }
+      &--primary-900\@xl    { background-color: $color-fds-primary-900 !important }
+      &--secondary\@xl      { background-color: $color-fds-secondary !important }
+      &--secondary-300\@xl  { background-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@xl  { background-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@xl  { background-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@xl  { background-color: $color-fds-secondary-900 !important }
+      &--tertiary\@xl       { background-color: $color-fds-tertiary !important }
+      &--tertiary-300\@xl   { background-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@xl   { background-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@xl   { background-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@xl   { background-color: $color-fds-tertiary-900 !important }
+      &--aqua\@xl           { background-color: $color-fds-aqua !important }
+      &--aqua-300\@xl       { background-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@xl       { background-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@xl       { background-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@xl       { background-color: $color-fds-aqua-900 !important }
+      &--red\@xl            { background-color: $color-fds-red !important }
+      &--red-300\@xl        { background-color: $color-fds-red-300 !important }
+      &--red-200\@xl        { background-color: $color-fds-red-200 !important }
+      &--red-100\@xl        { background-color: $color-fds-red-100 !important }
+      &--red-900\@xl        { background-color: $color-fds-red-900 !important }
+      &--yellow\@xl         { background-color: $color-fds-yellow !important }
+      &--yellow-300\@xl     { background-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@xl     { background-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@xl     { background-color: $color-fds-yellow-100 !important }
+    }
+
+    // Hover
+    &\:hover {
+      &--white\@xl:hover          { background-color: $color-fds-white !important }
+      &--black\@xl:hover          { background-color: $color-fds-black !important }
+      &--base\@xl:hover           { background-color: $color-fds-base-bg !important }
+      &--transparent\@xl:hover    { background-color: transparent !important }
+      &--primary\@xl:hover        { background-color: $color-fds-primary !important }
+      &--primary-300\@xl:hover    { background-color: $color-fds-primary-300 !important }
+      &--primary-200\@xl:hover    { background-color: $color-fds-primary-200 !important }
+      &--primary-100\@xl:hover    { background-color: $color-fds-primary-100 !important }
+      &--primary-900\@xl:hover    { background-color: $color-fds-primary-900 !important }
+      &--secondary\@xl:hover      { background-color: $color-fds-secondary !important }
+      &--secondary-300\@xl:hover  { background-color: $color-fds-secondary-300 !important }
+      &--secondary-200\@xl:hover  { background-color: $color-fds-secondary-200 !important }
+      &--secondary-100\@xl:hover  { background-color: $color-fds-secondary-100 !important }
+      &--secondary-900\@xl:hover  { background-color: $color-fds-secondary-900 !important }
+      &--tertiary\@xl:hover       { background-color: $color-fds-tertiary !important }
+      &--tertiary-300\@xl:hover   { background-color: $color-fds-tertiary-300 !important }
+      &--tertiary-200\@xl:hover   { background-color: $color-fds-tertiary-200 !important }
+      &--tertiary-100\@xl:hover   { background-color: $color-fds-tertiary-100 !important }
+      &--tertiary-900\@xl:hover   { background-color: $color-fds-tertiary-900 !important }
+      &--aqua\@xl:hover           { background-color: $color-fds-aqua !important }
+      &--aqua-300\@xl:hover       { background-color: $color-fds-aqua-300 !important }
+      &--aqua-200\@xl:hover       { background-color: $color-fds-aqua-200 !important }
+      &--aqua-100\@xl:hover       { background-color: $color-fds-aqua-100 !important }
+      &--aqua-900\@xl:hover       { background-color: $color-fds-aqua-900 !important }
+      &--red\@xl:hover            { background-color: $color-fds-red !important }
+      &--red-300\@xl:hover        { background-color: $color-fds-red-300 !important }
+      &--red-200\@xl:hover        { background-color: $color-fds-red-200 !important }
+      &--red-100\@xl:hover        { background-color: $color-fds-red-100 !important }
+      &--red-900\@xl:hover        { background-color: $color-fds-red-900 !important }
+      &--yellow\@xl:hover         { background-color: $color-fds-yellow !important }
+      &--yellow-300\@xl:hover     { background-color: $color-fds-yellow-300 !important }
+      &--yellow-200\@xl:hover     { background-color: $color-fds-yellow-200 !important }
+      &--yellow-100\@xl:hover     { background-color: $color-fds-yellow-100 !important }
+    }
+
+  }
+
+}
+
+// Margins --------------------------------------------------------------------
+.fds-m {
+
+  &--none { margin: 0 !important; }
+  &--xxs  { margin: $size-base !important; }
+  &--xs   { margin: $size-small !important; }
+  &--s    { margin: $size-default !important; }
+  &--m    { margin: $size-medium !important; }
+  &--l    { margin: $size-large !important; }
+  &--xl   { margin: $size-extra-large !important; }
+
+  @include breakpoint(S) {
+    &--none\@s { margin: 0 !important; }
+    &--xxs\@s  { margin: $size-base !important; }
+    &--xs\@s   { margin: $size-small !important; }
+    &--s\@s    { margin: $size-default !important; }
+    &--m\@s    { margin: $size-medium !important; }
+    &--l\@s    { margin: $size-large !important; }
+    &--xl\@s   { margin: $size-extra-large !important; }
+  }
+
+  @include breakpoint(M) {
+    &--none\@m { margin: 0 !important; }
+    &--xxs\@m  { margin: $size-base !important; }
+    &--xs\@m   { margin: $size-small !important; }
+    &--s\@m    { margin: $size-default !important; }
+    &--m\@m    { margin: $size-medium !important; }
+    &--l\@m    { margin: $size-large !important; }
+    &--xl\@m   { margin: $size-extra-large !important; }
+  }
+
+  @include breakpoint(L) {
+    &--none\@l { margin: 0 !important; }
+    &--xxs\@l  { margin: $size-base !important; }
+    &--xs\@l   { margin: $size-small !important; }
+    &--s\@l    { margin: $size-default !important; }
+    &--m\@l    { margin: $size-medium !important; }
+    &--l\@l    { margin: $size-large !important; }
+    &--xl\@l   { margin: $size-extra-large !important; }
+  }
+
+  @include breakpoint(XL) {
+    &--none\@xl { margin: 0 !important; }
+    &--xxs\@xl  { margin: $size-base !important; }
+    &--xs\@xl   { margin: $size-small !important; }
+    &--s\@xl    { margin: $size-default !important; }
+    &--m\@xl    { margin: $size-medium !important; }
+    &--l\@xl    { margin: $size-large !important; }
+    &--xl\@xl   { margin: $size-extra-large !important; }
+  }
+
+  &-t {
+
+    &--none { margin-top: 0 !important; }
+    &--xxs  { margin-top: $size-base !important; }
+    &--xs   { margin-top: $size-small !important; }
+    &--s    { margin-top: $size-default !important; }
+    &--m    { margin-top: $size-medium !important; }
+    &--l    { margin-top: $size-large !important; }
+    &--xl   { margin-top: $size-extra-large !important; }
+
+    @include breakpoint(S) {
+      &--none\@s { margin-top: 0 !important; }
+      &--xxs\@s  { margin-top: $size-base !important; }
+      &--xs\@s   { margin-top: $size-small !important; }
+      &--s\@s    { margin-top: $size-default !important; }
+      &--m\@s    { margin-top: $size-medium !important; }
+      &--l\@s    { margin-top: $size-large !important; }
+      &--xl\@s   { margin-top: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { margin-top: 0 !important; }
+      &--xxs\@m  { margin-top: $size-base !important; }
+      &--xs\@m   { margin-top: $size-small !important; }
+      &--s\@m    { margin-top: $size-default !important; }
+      &--m\@m    { margin-top: $size-medium !important; }
+      &--l\@m    { margin-top: $size-large !important; }
+      &--xl\@m   { margin-top: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { margin-top: 0 !important; }
+      &--xxs\@l  { margin-top: $size-base !important; }
+      &--xs\@l   { margin-top: $size-small !important; }
+      &--s\@l    { margin-top: $size-default !important; }
+      &--m\@l    { margin-top: $size-medium !important; }
+      &--l\@l    { margin-top: $size-large !important; }
+      &--xl\@l   { margin-top: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { margin-top: 0 !important; }
+      &--xxs\@xl  { margin-top: $size-base !important; }
+      &--xs\@xl   { margin-top: $size-small !important; }
+      &--s\@xl    { margin-top: $size-default !important; }
+      &--m\@xl    { margin-top: $size-medium !important; }
+      &--l\@xl    { margin-top: $size-large !important; }
+      &--xl\@xl   { margin-top: $size-extra-large !important; }
+    }
+
+  }
+
+  &-r {
+
+    &--none { margin-right: 0 !important; }
+    &--xxs  { margin-right: $size-base !important; }
+    &--xs   { margin-right: $size-small !important; }
+    &--s    { margin-right: $size-default !important; }
+    &--m    { margin-right: $size-medium !important; }
+    &--l    { margin-right: $size-large !important; }
+    &--xl   { margin-right: $size-extra-large !important; }
+
+    @include breakpoint(S) {
+      &--none\@s { margin-right: 0 !important; }
+      &--xxs\@s  { margin-right: $size-base !important; }
+      &--xs\@s   { margin-right: $size-small !important; }
+      &--s\@s    { margin-right: $size-default !important; }
+      &--m\@s    { margin-right: $size-medium !important; }
+      &--l\@s    { margin-right: $size-large !important; }
+      &--xl\@s   { margin-right: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { margin-right: 0 !important; }
+      &--xxs\@m  { margin-right: $size-base !important; }
+      &--xs\@m   { margin-right: $size-small !important; }
+      &--s\@m    { margin-right: $size-default !important; }
+      &--m\@m    { margin-right: $size-medium !important; }
+      &--l\@m    { margin-right: $size-large !important; }
+      &--xl\@m   { margin-right: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { margin-right: 0 !important; }
+      &--xxs\@l  { margin-right: $size-base !important; }
+      &--xs\@l   { margin-right: $size-small !important; }
+      &--s\@l    { margin-right: $size-default !important; }
+      &--m\@l    { margin-right: $size-medium !important; }
+      &--l\@l    { margin-right: $size-large !important; }
+      &--xl\@l   { margin-right: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { margin-right: 0 !important; }
+      &--xxs\@xl  { margin-right: $size-base !important; }
+      &--xs\@xl   { margin-right: $size-small !important; }
+      &--s\@xl    { margin-right: $size-default !important; }
+      &--m\@xl    { margin-right: $size-medium !important; }
+      &--l\@xl    { margin-right: $size-large !important; }
+      &--xl\@xl   { margin-right: $size-extra-large !important; }
+    }
+
+  }
+
+  &-b {
+
+    &--none { margin-bottom: 0 !important; }
+    &--xxs  { margin-bottom: $size-base !important; }
+    &--xs   { margin-bottom: $size-small !important; }
+    &--s    { margin-bottom: $size-default !important; }
+    &--m    { margin-bottom: $size-medium !important; }
+    &--l    { margin-bottom: $size-large !important; }
+    &--xl   { margin-bottom: $size-extra-large !important; }
+
+    @include breakpoint(S) {
+      &--none\@s { margin-bottom: 0 !important; }
+      &--xxs\@s  { margin-bottom: $size-base !important; }
+      &--xs\@s   { margin-bottom: $size-small !important; }
+      &--s\@s    { margin-bottom: $size-default !important; }
+      &--m\@s    { margin-bottom: $size-medium !important; }
+      &--l\@s    { margin-bottom: $size-large !important; }
+      &--xl\@s   { margin-bottom: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { margin-bottom: 0 !important; }
+      &--xxs\@m  { margin-bottom: $size-base !important; }
+      &--xs\@m   { margin-bottom: $size-small !important; }
+      &--s\@m    { margin-bottom: $size-default !important; }
+      &--m\@m    { margin-bottom: $size-medium !important; }
+      &--l\@m    { margin-bottom: $size-large !important; }
+      &--xl\@m   { margin-bottom: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { margin-bottom: 0 !important; }
+      &--xxs\@l  { margin-bottom: $size-base !important; }
+      &--xs\@l   { margin-bottom: $size-small !important; }
+      &--s\@l    { margin-bottom: $size-default !important; }
+      &--m\@l    { margin-bottom: $size-medium !important; }
+      &--l\@l    { margin-bottom: $size-large !important; }
+      &--xl\@l   { margin-bottom: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { margin-bottom: 0 !important; }
+      &--xxs\@xl  { margin-bottom: $size-base !important; }
+      &--xs\@xl   { margin-bottom: $size-small !important; }
+      &--s\@xl    { margin-bottom: $size-default !important; }
+      &--m\@xl    { margin-bottom: $size-medium !important; }
+      &--l\@xl    { margin-bottom: $size-large !important; }
+      &--xl\@xl   { margin-bottom: $size-extra-large !important; }
+    }
+
+  }
+
+  &-l {
+
+    &--none { margin-left: 0 !important; }
+    &--xxs  { margin-left: $size-base !important; }
+    &--xs   { margin-left: $size-small !important; }
+    &--s    { margin-left: $size-default !important; }
+    &--m    { margin-left: $size-medium !important; }
+    &--l    { margin-left: $size-large !important; }
+    &--xl   { margin-left: $size-extra-large !important; }
+
+    @include breakpoint(S) {
+      &--none\@s { margin-left: 0 !important; }
+      &--xxs\@s  { margin-left: $size-base !important; }
+      &--xs\@s   { margin-left: $size-small !important; }
+      &--s\@s    { margin-left: $size-default !important; }
+      &--m\@s    { margin-left: $size-medium !important; }
+      &--l\@s    { margin-left: $size-large !important; }
+      &--xl\@s   { margin-left: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { margin-left: 0 !important; }
+      &--xxs\@m  { margin-left: $size-base !important; }
+      &--xs\@m   { margin-left: $size-small !important; }
+      &--s\@m    { margin-left: $size-default !important; }
+      &--m\@m    { margin-left: $size-medium !important; }
+      &--l\@m    { margin-left: $size-large !important; }
+      &--xl\@m   { margin-left: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { margin-left: 0 !important; }
+      &--xxs\@l  { margin-left: $size-base !important; }
+      &--xs\@l   { margin-left: $size-small !important; }
+      &--s\@l    { margin-left: $size-default !important; }
+      &--m\@l    { margin-left: $size-medium !important; }
+      &--l\@l    { margin-left: $size-large !important; }
+      &--xl\@l   { margin-left: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { margin-left: 0 !important; }
+      &--xxs\@xl  { margin-left: $size-base !important; }
+      &--xs\@xl   { margin-left: $size-small !important; }
+      &--s\@xl    { margin-left: $size-default !important; }
+      &--m\@xl    { margin-left: $size-medium !important; }
+      &--l\@xl    { margin-left: $size-large !important; }
+      &--xl\@xl   { margin-left: $size-extra-large !important; }
+    }
+
+  }
+
+}
+
+// Padding --------------------------------------------------------------------
+.fds-p {
+
+  &--none { padding: 0 !important; }
+  &--xxs  { padding: $size-base !important; }
+  &--xs   { padding: $size-small !important; }
+  &--s    { padding: $size-default !important; }
+  &--m    { padding: $size-medium !important; }
+  &--l    { padding: $size-large !important; }
+  &--xl   { padding: $size-extra-large !important; }
+
+  @include breakpoint(S) {
+    &--none\@s { padding: 0 !important; }
+    &--xxs\@s  { padding: $size-base !important; }
+    &--xs\@s   { padding: $size-small !important; }
+    &--s\@s    { padding: $size-default !important; }
+    &--m\@s    { padding: $size-medium !important; }
+    &--l\@s    { padding: $size-large !important; }
+    &--xl\@s   { padding: $size-extra-large !important; }
+  }
+
+  @include breakpoint(M) {
+    &--none\@m { padding: 0 !important; }
+    &--xxs\@m  { padding: $size-base !important; }
+    &--xs\@m   { padding: $size-small !important; }
+    &--s\@m    { padding: $size-default !important; }
+    &--m\@m    { padding: $size-medium !important; }
+    &--l\@m    { padding: $size-large !important; }
+    &--xl\@m   { padding: $size-extra-large !important; }
+  }
+
+  @include breakpoint(L) {
+    &--none\@l { padding: 0 !important; }
+    &--xxs\@l  { padding: $size-base !important; }
+    &--xs\@l   { padding: $size-small !important; }
+    &--s\@l    { padding: $size-default !important; }
+    &--m\@l    { padding: $size-medium !important; }
+    &--l\@l    { padding: $size-large !important; }
+    &--xl\@l   { padding: $size-extra-large !important; }
+  }
+
+  @include breakpoint(XL) {
+    &--none\@xl { padding: 0 !important; }
+    &--xxs\@xl  { padding: $size-base !important; }
+    &--xs\@xl   { padding: $size-small !important; }
+    &--s\@xl    { padding: $size-default !important; }
+    &--m\@xl    { padding: $size-medium !important; }
+    &--l\@xl    { padding: $size-large !important; }
+    &--xl\@xl   { padding: $size-extra-large !important; }
+  }
+
+  &-t {
+
+    &--none { padding-top: 0 !important; }
+    &--xxs  { padding-top: $size-base !important; }
+    &--xs   { padding-top: $size-small !important; }
+    &--s    { padding-top: $size-default !important; }
+    &--m    { padding-top: $size-medium !important; }
+    &--l    { padding-top: $size-large !important; }
+    &--xl   { padding-top: $size-extra-large !important; }
+
+    @include breakpoint(S) {
+      &--none\@s { padding-top: 0 !important; }
+      &--xxs\@s  { padding-top: $size-base !important; }
+      &--xs\@s   { padding-top: $size-small !important; }
+      &--s\@s    { padding-top: $size-default !important; }
+      &--m\@s    { padding-top: $size-medium !important; }
+      &--l\@s    { padding-top: $size-large !important; }
+      &--xl\@s   { padding-top: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { padding-top: 0 !important; }
+      &--xxs\@m  { padding-top: $size-base !important; }
+      &--xs\@m   { padding-top: $size-small !important; }
+      &--s\@m    { padding-top: $size-default !important; }
+      &--m\@m    { padding-top: $size-medium !important; }
+      &--l\@m    { padding-top: $size-large !important; }
+      &--xl\@m   { padding-top: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { padding-top: 0 !important; }
+      &--xxs\@l  { padding-top: $size-base !important; }
+      &--xs\@l   { padding-top: $size-small !important; }
+      &--s\@l    { padding-top: $size-default !important; }
+      &--m\@l    { padding-top: $size-medium !important; }
+      &--l\@l    { padding-top: $size-large !important; }
+      &--xl\@l   { padding-top: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { padding-top: 0 !important; }
+      &--xxs\@xl  { padding-top: $size-base !important; }
+      &--xs\@xl   { padding-top: $size-small !important; }
+      &--s\@xl    { padding-top: $size-default !important; }
+      &--m\@xl    { padding-top: $size-medium !important; }
+      &--l\@xl    { padding-top: $size-large !important; }
+      &--xl\@xl   { padding-top: $size-extra-large !important; }
+    }
+
+  }
+
+  &-r {
+
+    &--none { padding-right: 0 !important; }
+    &--xxs  { padding-right: $size-base !important; }
+    &--xs   { padding-right: $size-small !important; }
+    &--s    { padding-right: $size-default !important; }
+    &--m    { padding-right: $size-medium !important; }
+    &--l    { padding-right: $size-large !important; }
+    &--xl   { padding-right: $size-extra-large !important; }
+
+    @include breakpoint(S) {
+      &--none\@s { padding-right: 0 !important; }
+      &--xxs\@s  { padding-right: $size-base !important; }
+      &--xs\@s   { padding-right: $size-small !important; }
+      &--s\@s    { padding-right: $size-default !important; }
+      &--m\@s    { padding-right: $size-medium !important; }
+      &--l\@s    { padding-right: $size-large !important; }
+      &--xl\@s   { padding-right: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { padding-right: 0 !important; }
+      &--xxs\@m  { padding-right: $size-base !important; }
+      &--xs\@m   { padding-right: $size-small !important; }
+      &--s\@m    { padding-right: $size-default !important; }
+      &--m\@m    { padding-right: $size-medium !important; }
+      &--l\@m    { padding-right: $size-large !important; }
+      &--xl\@m   { padding-right: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { padding-right: 0 !important; }
+      &--xxs\@l  { padding-right: $size-base !important; }
+      &--xs\@l   { padding-right: $size-small !important; }
+      &--s\@l    { padding-right: $size-default !important; }
+      &--m\@l    { padding-right: $size-medium !important; }
+      &--l\@l    { padding-right: $size-large !important; }
+      &--xl\@l   { padding-right: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { padding-right: 0 !important; }
+      &--xxs\@xl  { padding-right: $size-base !important; }
+      &--xs\@xl   { padding-right: $size-small !important; }
+      &--s\@xl    { padding-right: $size-default !important; }
+      &--m\@xl    { padding-right: $size-medium !important; }
+      &--l\@xl    { padding-right: $size-large !important; }
+      &--xl\@xl   { padding-right: $size-extra-large !important; }
+    }
+
+  }
+
+  &-b {
+
+    &--none { padding-bottom: 0 !important; }
+    &--xxs  { padding-bottom: $size-base !important; }
+    &--xs   { padding-bottom: $size-small !important; }
+    &--s    { padding-bottom: $size-default !important; }
+    &--m    { padding-bottom: $size-medium !important; }
+    &--l    { padding-bottom: $size-large !important; }
+    &--xl   { padding-bottom: $size-extra-large !important; }
+
+    @include breakpoint(S) {
+      &--none\@s { padding-bottom: 0 !important; }
+      &--xxs\@s  { padding-bottom: $size-base !important; }
+      &--xs\@s   { padding-bottom: $size-small !important; }
+      &--s\@s    { padding-bottom: $size-default !important; }
+      &--m\@s    { padding-bottom: $size-medium !important; }
+      &--l\@s    { padding-bottom: $size-large !important; }
+      &--xl\@s   { padding-bottom: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { padding-bottom: 0 !important; }
+      &--xxs\@m  { padding-bottom: $size-base !important; }
+      &--xs\@m   { padding-bottom: $size-small !important; }
+      &--s\@m    { padding-bottom: $size-default !important; }
+      &--m\@m    { padding-bottom: $size-medium !important; }
+      &--l\@m    { padding-bottom: $size-large !important; }
+      &--xl\@m   { padding-bottom: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { padding-bottom: 0 !important; }
+      &--xxs\@l  { padding-bottom: $size-base !important; }
+      &--xs\@l   { padding-bottom: $size-small !important; }
+      &--s\@l    { padding-bottom: $size-default !important; }
+      &--m\@l    { padding-bottom: $size-medium !important; }
+      &--l\@l    { padding-bottom: $size-large !important; }
+      &--xl\@l   { padding-bottom: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { padding-bottom: 0 !important; }
+      &--xxs\@xl  { padding-bottom: $size-base !important; }
+      &--xs\@xl   { padding-bottom: $size-small !important; }
+      &--s\@xl    { padding-bottom: $size-default !important; }
+      &--m\@xl    { padding-bottom: $size-medium !important; }
+      &--l\@xl    { padding-bottom: $size-large !important; }
+      &--xl\@xl   { padding-bottom: $size-extra-large !important; }
+    }
+
+  }
+
+  &-l {
+
+    &--none { padding-left: 0 !important; }
+    &--xxs  { padding-left: $size-base !important; }
+    &--xs   { padding-left: $size-small !important; }
+    &--s    { padding-left: $size-default !important; }
+    &--m    { padding-left: $size-medium !important; }
+    &--l    { padding-left: $size-large !important; }
+    &--xl   { padding-left: $size-extra-large !important; }
+
+    @include breakpoint(S) {
+      &--none\@s { padding-left: 0 !important; }
+      &--xxs\@s  { padding-left: $size-base !important; }
+      &--xs\@s   { padding-left: $size-small !important; }
+      &--s\@s    { padding-left: $size-default !important; }
+      &--m\@s    { padding-left: $size-medium !important; }
+      &--l\@s    { padding-left: $size-large !important; }
+      &--xl\@s   { padding-left: $size-extra-large !important; }
+    }
+
+    @include breakpoint(M) {
+      &--none\@m { padding-left: 0 !important; }
+      &--xxs\@m  { padding-left: $size-base !important; }
+      &--xs\@m   { padding-left: $size-small !important; }
+      &--s\@m    { padding-left: $size-default !important; }
+      &--m\@m    { padding-left: $size-medium !important; }
+      &--l\@m    { padding-left: $size-large !important; }
+      &--xl\@m   { padding-left: $size-extra-large !important; }
+    }
+
+    @include breakpoint(L) {
+      &--none\@l { padding-left: 0 !important; }
+      &--xxs\@l  { padding-left: $size-base !important; }
+      &--xs\@l   { padding-left: $size-small !important; }
+      &--s\@l    { padding-left: $size-default !important; }
+      &--m\@l    { padding-left: $size-medium !important; }
+      &--l\@l    { padding-left: $size-large !important; }
+      &--xl\@l   { padding-left: $size-extra-large !important; }
+    }
+
+    @include breakpoint(XL) {
+      &--none\@xl { padding-left: 0 !important; }
+      &--xxs\@xl  { padding-left: $size-base !important; }
+      &--xs\@xl   { padding-left: $size-small !important; }
+      &--s\@xl    { padding-left: $size-default !important; }
+      &--m\@xl    { padding-left: $size-medium !important; }
+      &--l\@xl    { padding-left: $size-large !important; }
+      &--xl\@xl   { padding-left: $size-extra-large !important; }
+    }
+
+  }
+
+}
+
+// Floats ---------------------------------------------------------------------
+.fds-clear {
+
+  clear: both;
+
+  @include breakpoint(S) {
+    &\@s  { clear: both;  }
+  }
+  @include breakpoint(M) {
+    &\@m  { clear: both;  }
+  }
+  @include breakpoint(L) {
+    &\@l  { clear: both;  }
+  }
+  @include breakpoint(XL) {
+    &\@xl  { clear: both;  }
+  }
+
+}
+
+.fds-clearfix { @include clearfix; }
+
+.fds-float {
+
+  &--left  { float: left; }
+  &--right { float: right; }
+  &--none  { float: none; }
+
+  @include breakpoint(S) {
+    &--left\@s  { float: left; }
+    &--right\@s { float: right; }
+    &--none\@s  { float: none; }
+  }
+
+  @include breakpoint(M) {
+    &--left\@m  { float: left; }
+    &--right\@m { float: right; }
+    &--none\@m  { float: none; }
+  }
+
+  @include breakpoint(L) {
+    &--left\@l  { float: left; }
+    &--right\@l { float: right; }
+    &--none\@l  { float: none; }
+  }
+
+  @include breakpoint(XL) {
+    &--left\@xl  { float: left; }
+    &--right\@xl { float: right; }
+    &--none\@xl  { float: none; }
+  }
+
+}
+
+// Font -----------------------------------------------------------------------
+.fds-font {
+
+  &--sans,
+  &--sans-regular { font-family: $font-sans; font-weight: $font-normal; }
+  &--sans-light   { font-family: $font-sans; font-weight: $font-light; }
+  &--sans-bold    { font-family: $font-sans; font-weight: $font-bold; }
+
+  &--mono         { font-family: $font-mono; }
+
+  @include breakpoint(S) {
+    &--sans\@s,
+    &--sans-regular\@s { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@s   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@s    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(M) {
+    &--sans\@m,
+    &--sans-regular\@m { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@m   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@m    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(L) {
+    &--sans\@l,
+    &--sans-regular\@l { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@l   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@l    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+  @include breakpoint(XL) {
+    &--sans\@xl,
+    &--sans-regular\@xl { font-family: $font-sans; font-weight: $font-normal; }
+    &--sans-light\@xl   { font-family: $font-sans; font-weight: $font-light; }
+    &--sans-bold\@xl    { font-family: $font-sans; font-weight: $font-bold; }
+  }
+
+
+}
+
+// Color: Foreground-----------------------------------------------------------
+.fds-color {
+
+  // Default
+  & {
+    &--white          { color: $color-fds-white !important }
+    &--black          { color: $color-fds-black !important }
+    &--primary        { color: $color-fds-primary !important }
+    &--primary-300    { color: $color-fds-primary-300 !important }
+    &--primary-200    { color: $color-fds-primary-200 !important }
+    &--primary-100    { color: $color-fds-primary-100 !important }
+    &--primary-900    { color: $color-fds-primary-900 !important }
+    &--secondary      { color: $color-fds-secondary !important }
+    &--secondary-300  { color: $color-fds-secondary-300 !important }
+    &--secondary-200  { color: $color-fds-secondary-200 !important }
+    &--secondary-100  { color: $color-fds-secondary-100 !important }
+    &--secondary-900  { color: $color-fds-secondary-900 !important }
+    &--tertiary       { color: $color-fds-tertiary !important }
+    &--tertiary-300   { color: $color-fds-tertiary-300 !important }
+    &--tertiary-200   { color: $color-fds-tertiary-200 !important }
+    &--tertiary-100   { color: $color-fds-tertiary-100 !important }
+    &--tertiary-900   { color: $color-fds-tertiary-900 !important }
+    &--aqua           { color: $color-fds-aqua !important }
+    &--aqua-300       { color: $color-fds-aqua-300 !important }
+    &--aqua-200       { color: $color-fds-aqua-200 !important }
+    &--aqua-100       { color: $color-fds-aqua-100 !important }
+    &--aqua-900       { color: $color-fds-aqua-900 !important }
+    &--red            { color: $color-fds-red !important }
+    &--red-300        { color: $color-fds-red-300 !important }
+    &--red-200        { color: $color-fds-red-200 !important }
+    &--red-100        { color: $color-fds-red-100 !important }
+    &--red-900        { color: $color-fds-red-900 !important }
+    &--yellow         { color: $color-fds-yellow !important }
+    &--yellow-300     { color: $color-fds-yellow-300 !important }
+    &--yellow-200     { color: $color-fds-yellow-200 !important }
+    &--yellow-100     { color: $color-fds-yellow-100 !important }
+  }
+
+  @include breakpoint(S) {
+    &--primary\@s        { color: $color-fds-primary !important }
+    &--primary-300\@s    { color: $color-fds-primary-300 !important }
+    &--primary-200\@s    { color: $color-fds-primary-200 !important }
+    &--primary-100\@s    { color: $color-fds-primary-100 !important }
+    &--primary-900\@s    { color: $color-fds-primary-900 !important }
+    &--secondary\@s      { color: $color-fds-secondary !important }
+    &--secondary-300\@s  { color: $color-fds-secondary-300 !important }
+    &--secondary-200\@s  { color: $color-fds-secondary-200 !important }
+    &--secondary-100\@s  { color: $color-fds-secondary-100 !important }
+    &--secondary-900\@s  { color: $color-fds-secondary-900 !important }
+    &--tertiary\@s       { color: $color-fds-tertiary !important }
+    &--tertiary-300\@s   { color: $color-fds-tertiary-300 !important }
+    &--tertiary-200\@s   { color: $color-fds-tertiary-200 !important }
+    &--tertiary-100\@s   { color: $color-fds-tertiary-100 !important }
+    &--tertiary-900\@s   { color: $color-fds-tertiary-900 !important }
+    &--aqua\@s           { color: $color-fds-aqua !important }
+    &--aqua-300\@s       { color: $color-fds-aqua-300 !important }
+    &--aqua-200\@s       { color: $color-fds-aqua-200 !important }
+    &--aqua-100\@s       { color: $color-fds-aqua-100 !important }
+    &--aqua-900\@s       { color: $color-fds-aqua-900 !important }
+    &--red\@s            { color: $color-fds-red !important }
+    &--red-300\@s        { color: $color-fds-red-300 !important }
+    &--red-200\@s        { color: $color-fds-red-200 !important }
+    &--red-100\@s        { color: $color-fds-red-100 !important }
+    &--red-900\@s        { color: $color-fds-red-900 !important }
+    &--yellow\@s         { color: $color-fds-yellow !important }
+    &--yellow-300\@s     { color: $color-fds-yellow-300 !important }
+    &--yellow-200\@s     { color: $color-fds-yellow-200 !important }
+    &--yellow-100\@s     { color: $color-fds-yellow-100 !important }
+    &--white\@s          { color: $color-fds-white !important }
+    &--black\@s          { color: $color-fds-black !important }
+  }
+
+  @include breakpoint(M) {
+    &--primary\@m        { color: $color-fds-primary !important }
+    &--primary-300\@m    { color: $color-fds-primary-300 !important }
+    &--primary-200\@m    { color: $color-fds-primary-200 !important }
+    &--primary-100\@m    { color: $color-fds-primary-100 !important }
+    &--primary-900\@m    { color: $color-fds-primary-900 !important }
+    &--secondary\@m      { color: $color-fds-secondary !important }
+    &--secondary-300\@m  { color: $color-fds-secondary-300 !important }
+    &--secondary-200\@m  { color: $color-fds-secondary-200 !important }
+    &--secondary-100\@m  { color: $color-fds-secondary-100 !important }
+    &--secondary-900\@m  { color: $color-fds-secondary-900 !important }
+    &--tertiary\@m       { color: $color-fds-tertiary !important }
+    &--tertiary-300\@m   { color: $color-fds-tertiary-300 !important }
+    &--tertiary-200\@m   { color: $color-fds-tertiary-200 !important }
+    &--tertiary-100\@m   { color: $color-fds-tertiary-100 !important }
+    &--tertiary-900\@m   { color: $color-fds-tertiary-900 !important }
+    &--aqua\@m           { color: $color-fds-aqua !important }
+    &--aqua-300\@m       { color: $color-fds-aqua-300 !important }
+    &--aqua-200\@m       { color: $color-fds-aqua-200 !important }
+    &--aqua-100\@m       { color: $color-fds-aqua-100 !important }
+    &--aqua-900\@m       { color: $color-fds-aqua-900 !important }
+    &--red\@m            { color: $color-fds-red !important }
+    &--red-300\@m        { color: $color-fds-red-300 !important }
+    &--red-200\@m        { color: $color-fds-red-200 !important }
+    &--red-100\@m        { color: $color-fds-red-100 !important }
+    &--red-900\@m        { color: $color-fds-red-900 !important }
+    &--yellow\@m         { color: $color-fds-yellow !important }
+    &--yellow-300\@m     { color: $color-fds-yellow-300 !important }
+    &--yellow-200\@m     { color: $color-fds-yellow-200 !important }
+    &--yellow-100\@m     { color: $color-fds-yellow-100 !important }
+    &--white\@m          { color: $color-fds-white !important }
+    &--black\@m          { color: $color-fds-black !important }
+  }
+
+  @include breakpoint(L) {
+    &--primary\@l        { color: $color-fds-primary !important }
+    &--primary-300\@l    { color: $color-fds-primary-300 !important }
+    &--primary-200\@l    { color: $color-fds-primary-200 !important }
+    &--primary-100\@l    { color: $color-fds-primary-100 !important }
+    &--primary-900\@l    { color: $color-fds-primary-900 !important }
+    &--secondary\@l      { color: $color-fds-secondary !important }
+    &--secondary-300\@l  { color: $color-fds-secondary-300 !important }
+    &--secondary-200\@l  { color: $color-fds-secondary-200 !important }
+    &--secondary-100\@l  { color: $color-fds-secondary-100 !important }
+    &--secondary-900\@l  { color: $color-fds-secondary-900 !important }
+    &--tertiary\@l       { color: $color-fds-tertiary !important }
+    &--tertiary-300\@l   { color: $color-fds-tertiary-300 !important }
+    &--tertiary-200\@l   { color: $color-fds-tertiary-200 !important }
+    &--tertiary-100\@l   { color: $color-fds-tertiary-100 !important }
+    &--tertiary-900\@l   { color: $color-fds-tertiary-900 !important }
+    &--aqua\@l           { color: $color-fds-aqua !important }
+    &--aqua-300\@l       { color: $color-fds-aqua-300 !important }
+    &--aqua-200\@l       { color: $color-fds-aqua-200 !important }
+    &--aqua-100\@l       { color: $color-fds-aqua-100 !important }
+    &--aqua-900\@l       { color: $color-fds-aqua-900 !important }
+    &--red\@l            { color: $color-fds-red !important }
+    &--red-300\@l        { color: $color-fds-red-300 !important }
+    &--red-200\@l        { color: $color-fds-red-200 !important }
+    &--red-100\@l        { color: $color-fds-red-100 !important }
+    &--red-900\@l        { color: $color-fds-red-900 !important }
+    &--yellow\@l         { color: $color-fds-yellow !important }
+    &--yellow-300\@l     { color: $color-fds-yellow-300 !important }
+    &--yellow-200\@l     { color: $color-fds-yellow-200 !important }
+    &--yellow-100\@l     { color: $color-fds-yellow-100 !important }
+    &--white\@l          { color: $color-fds-white !important }
+    &--black\@l          { color: $color-fds-black !important }
+  }
+
+  @include breakpoint(XL) {
+    &--primary\@xl        { color: $color-fds-primary !important }
+    &--primary-300\@xl    { color: $color-fds-primary-300 !important }
+    &--primary-200\@xl    { color: $color-fds-primary-200 !important }
+    &--primary-100\@xl    { color: $color-fds-primary-100 !important }
+    &--primary-900\@xl    { color: $color-fds-primary-900 !important }
+    &--secondary\@xl      { color: $color-fds-secondary !important }
+    &--secondary-300\@xl  { color: $color-fds-secondary-300 !important }
+    &--secondary-200\@xl  { color: $color-fds-secondary-200 !important }
+    &--secondary-100\@xl  { color: $color-fds-secondary-100 !important }
+    &--secondary-900\@xl  { color: $color-fds-secondary-900 !important }
+    &--tertiary\@xl       { color: $color-fds-tertiary !important }
+    &--tertiary-300\@xl   { color: $color-fds-tertiary-300 !important }
+    &--tertiary-200\@xl   { color: $color-fds-tertiary-200 !important }
+    &--tertiary-100\@xl   { color: $color-fds-tertiary-100 !important }
+    &--tertiary-900\@xl   { color: $color-fds-tertiary-900 !important }
+    &--aqua\@xl           { color: $color-fds-aqua !important }
+    &--aqua-300\@xl       { color: $color-fds-aqua-300 !important }
+    &--aqua-200\@xl       { color: $color-fds-aqua-200 !important }
+    &--aqua-100\@xl       { color: $color-fds-aqua-100 !important }
+    &--aqua-900\@xl       { color: $color-fds-aqua-900 !important }
+    &--red\@xl            { color: $color-fds-red !important }
+    &--red-300\@xl        { color: $color-fds-red-300 !important }
+    &--red-200\@xl        { color: $color-fds-red-200 !important }
+    &--red-100\@xl        { color: $color-fds-red-100 !important }
+    &--red-900\@xl        { color: $color-fds-red-900 !important }
+    &--yellow\@xl         { color: $color-fds-yellow !important }
+    &--yellow-300\@xl     { color: $color-fds-yellow-300 !important }
+    &--yellow-200\@xl     { color: $color-fds-yellow-200 !important }
+    &--yellow-100\@xl     { color: $color-fds-yellow-100 !important }
+    &--white\@xl          { color: $color-fds-white !important }
+    &--black\@xl          { color: $color-fds-black !important }
+  }
+
+}
+
+// Text -----------------------------------------------------------------------
+.fds-text {
+
+  // scss-lint:disable PlaceholderInExtend
+
+  &--h1 { @include fds-header('1'); }
+  &--h2 { @include fds-header('2'); }
+  &--h3 { @include fds-header('3'); }
+  &--h4 { @include fds-header('4'); }
+  &--h5 { @include fds-header('5'); }
+  &--h6 { @include fds-header('6'); }
+
+  @include breakpoint(S) {
+    &--h1\@s { @include fds-header('1'); }
+    &--h2\@s { @include fds-header('2'); }
+    &--h3\@s { @include fds-header('3'); }
+    &--h4\@s { @include fds-header('4'); }
+    &--h5\@s { @include fds-header('5'); }
+    &--h6\@s { @include fds-header('6'); }
+  }
+  @include breakpoint(M) {
+    &--h1\@m { @include fds-header('1'); }
+    &--h2\@m { @include fds-header('2'); }
+    &--h3\@m { @include fds-header('3'); }
+    &--h4\@m { @include fds-header('4'); }
+    &--h5\@m { @include fds-header('5'); }
+    &--h6\@m { @include fds-header('6'); }
+  }
+  @include breakpoint(L) {
+    &--h1\@l { @include fds-header('1'); }
+    &--h2\@l { @include fds-header('2'); }
+    &--h3\@l { @include fds-header('3'); }
+    &--h4\@l { @include fds-header('4'); }
+    &--h5\@l { @include fds-header('5'); }
+    &--h6\@l { @include fds-header('6'); }
+  }
+  @include breakpoint(XL) {
+    &--h1\@xl { @include fds-header('1'); }
+    &--h2\@xl { @include fds-header('2'); }
+    &--h3\@xl { @include fds-header('3'); }
+    &--h4\@xl { @include fds-header('4'); }
+    &--h5\@xl { @include fds-header('5'); }
+    &--h6\@xl { @include fds-header('6'); }
+  }
+
+  &-size {
+
+    &--0 { @include font-size(0); }
+    &--1 { @include font-size(1); }
+    &--2 { @include font-size(2); }
+    &--3 { @include font-size(3); }
+    &--4 { @include font-size(4); }
+    &--5 { @include font-size(5); }
+    &--6 { @include font-size(6); }
+    &--7 { @include font-size(7); }
+
+    @include breakpoint(S) {
+      &--0\@s{ @include font-size(0); }
+      &--1\@s{ @include font-size(1); }
+      &--2\@s{ @include font-size(2); }
+      &--3\@s{ @include font-size(3); }
+      &--4\@s{ @include font-size(4); }
+      &--5\@s{ @include font-size(5); }
+      &--6\@s{ @include font-size(6); }
+      &--7\@s{ @include font-size(7); }
+    }
+    @include breakpoint(M) {
+      &--0\@m { @include font-size(0); }
+      &--1\@m { @include font-size(1); }
+      &--2\@m { @include font-size(2); }
+      &--3\@m { @include font-size(3); }
+      &--4\@m { @include font-size(4); }
+      &--5\@m { @include font-size(5); }
+      &--6\@m { @include font-size(6); }
+      &--7\@m { @include font-size(7); }
+    }
+    @include breakpoint(L) {
+      &--0\@l { @include font-size(0); }
+      &--1\@l { @include font-size(1); }
+      &--2\@l { @include font-size(2); }
+      &--3\@l { @include font-size(3); }
+      &--4\@l { @include font-size(4); }
+      &--5\@l { @include font-size(5); }
+      &--6\@l { @include font-size(6); }
+      &--7\@l { @include font-size(7); }
+    }
+    @include breakpoint(XL) {
+      &--0\@xl { @include font-size(0); }
+      &--1\@xl { @include font-size(1); }
+      &--2\@xl { @include font-size(2); }
+      &--3\@xl { @include font-size(3); }
+      &--4\@xl { @include font-size(4); }
+      &--5\@xl { @include font-size(5); }
+      &--6\@xl { @include font-size(6); }
+      &--7\@xl { @include font-size(7); }
+    }
+
+  }
+
+  &-align {
+
+    &--right  { text-align: right; }
+    &--center { text-align: center; }
+    &--left   { text-align: left; }
+
+    @include breakpoint(S) {
+      &--right\@s  { text-align: right; }
+      &--center\@s { text-align: center; }
+      &--left\@s   { text-align: left; }
+    }
+
+    @include breakpoint(M) {
+      &--right\@m  { text-align: right; }
+      &--center\@m { text-align: center; }
+      &--left\@m   { text-align: left; }
+    }
+
+    @include breakpoint(L) {
+      &--right\@l  { text-align: right; }
+      &--center\@l { text-align: center; }
+      &--left\@l   { text-align: left; }
+    }
+
+    @include breakpoint(XL) {
+      &--right\@xl  { text-align: right; }
+      &--center\@xl { text-align: center; }
+      &--left\@xl   { text-align: left; }
+    }
+
+  }
+
+}
+
+// Visibility -----------------------------------------------------------------
+.fds-show {
+  display: revert !important;
+  &\@xs {
+    @include breakpoint(S, down)   { display: none !important; }
+    &-only {
+      @include breakpoint(S)       { display: none !important; }
+    }
+  }
+  &\@s {
+    @include breakpoint(S, down)   { display: none !important; }
+    &-only {
+      @include breakpoint(S, down) { display: none !important; }
+      @include breakpoint(M)       { display: none !important; }
+    }
+  }
+  &\@m {
+    @include breakpoint(M, down) { display: none !important; }
+    &-only {
+      @include breakpoint(M, down) { display: none !important; }
+      @include breakpoint(L)       { display: none !important; }
+    }
+  }
+  &\@l {
+    @include breakpoint(L, down)   { display: none !important; }
+    &-only {
+      @include breakpoint(L, down) { display: none !important; }
+      @include breakpoint(XL)      { display: none !important; }
+    }
+  }
+  &\@xl {
+    @include breakpoint(XL, down)  { display: none !important; }
+    &-only {
+      @include breakpoint(XL, down){ display: none !important; }
+    }
+  }
+}
+
+.fds-hide {
+  display: none !important;
+  &\@xs {
+    &-only {
+      @media screen and (max-width: $screen-s) {
+        display: none !important;
+      }
+    }
+  }
+  &\@s {
+    @include breakpoint(S)   { display: none !important; }
+    &-only {
+      @media screen and (max-width: $screen-m) and (min-width: $screen-s) { display: none !important; }
+    }
+  }
+  &\@m {
+    @include breakpoint(M)   { display: none !important; }
+    &-only {
+      @media screen and (max-width: $screen-l) and (min-width: $screen-m) { display: none !important; }
+    }
+  }
+  &\@l {
+    @include breakpoint(L)   { display: none !important; }
+    &-only {
+      @media screen and (max-width: $screen-xl) and (min-width: $screen-l) { display: none !important; }
+    }
+  }
+  &\@xl {
+    @include breakpoint(XL)   { display: none !important; }
+    &-only {
+      @media screen and (min-width: $screen-xl) { display: none !important; }
+    }
+  }
+}
+
+// ETC ------------------------------------------------------------------------
+.fds-text-overflow,
+.fds-ellipsis {
+
+  &        { @include fds-ellipsis(); }
+  &--none  { @include fds-ellipsis-unset(); }
+
+  @include breakpoint(S)  {
+          &\@s  { @include fds-ellipsis(); }
+    &--none\@s  { @include fds-ellipsis-unset(); }
+  }
+
+  @include breakpoint(M)  {
+          &\@m  { @include fds-ellipsis(); }
+    &--none\@m  { @include fds-ellipsis-unset(); }
+  }
+
+  @include breakpoint(L)  {
+          &\@l  { @include fds-ellipsis(); }
+    &--none\@l  { @include fds-ellipsis-unset(); }
+  }
+
+  @include breakpoint(XL) {
+    &\@xl { @include fds-ellipsis(); }
+    &--none\@xl { @include fds-ellipsis-unset(); }
+  }
+
+}
+
+// Screenreader-only
+.fds-sr-only,
+.sr-only {
+  @include sr-only(); // mixin from USWDS
+  &\@xs-only { @media (max-width: $screen-s)                             { @include sr-only(); } }
+  &\@s-only  { @media (min-width: $screen-s) and (max-width: $screen-m)  { @include sr-only(); } }
+  &\@m-only  { @media (min-width: $screen-m) and (max-width: $screen-l)  { @include sr-only(); } }
+  &\@l-only  { @media (min-width: $screen-l) and (max-width: $screen-xl) { @include sr-only(); } }
+  &\@xl-only { @media (min-width: $screen-xl)                            { @include sr-only(); } }
+}
+
+.fds-email-string {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+

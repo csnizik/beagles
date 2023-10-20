@@ -1,0 +1,252 @@
+.fds-stepped-tabs {
+
+  $colorComplete: $color-fds-secondary-300;
+  $colorActive: $color-fds-secondary;
+  $colorFuture: $color-fds-secondary-100;
+  $colorFutureActionable: tint($color-fds-secondary, 80%);
+  $colorFutureText: transparentize($color-fds-base, .3); // $color-fds-secondary-900
+  $colorDark: $color-fds-secondary-900;
+  $labelPadding: $size-small;
+
+  $arrowMagicNumber: 2rem;
+
+  & {
+    display: none;
+    @media (min-width: 20em) {
+      width: 100%;
+      margin: $size-medium 0;
+      display: block;
+      overflow: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+  }
+
+  &__bd {}
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    flex: 1;
+  }
+
+  &__label {
+
+    & {
+      @include reset-button();
+      @include font-size(0);
+      height: $form-height-default - $size-small;
+      cursor: initial;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      padding: ($labelPadding + $size-base) ($labelPadding * 3);
+      background-color: $color-fds-tertiary-100;
+      color: $color-fds-base;
+      position: relative;
+      line-height: $line-height-flat;
+    }
+
+    &:focus {
+      outline: 0 !important;
+    }
+
+    @include breakpoint(M) {
+      @include font-size(2);
+    }
+
+    @include breakpoint(L) {
+      @include font-size(3);
+      font-weight: $font-bold;
+      height: $form-height-default;
+    }
+
+    .fds-stepped-tabs__item:first-child & {
+      padding-left: $labelPadding;
+    }
+
+    .fds-stepped-tabs__item:last-child & {
+      padding-right: $labelPadding;
+    }
+
+    &:before,
+    &:after {
+
+      pointer-events: none;
+      position: absolute;
+      content: '';
+      top: -4px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: $arrowMagicNumber 0 $arrowMagicNumber ($arrowMagicNumber - .8rem); // super magical number
+      z-index: 1;
+
+      @include breakpoint(L) {
+        top: 0;
+      }
+
+    }
+
+    &:before {
+
+      left: -12px;
+      border-color: $color-fds-base-bg $color-fds-base-bg $color-fds-base-bg transparent;
+
+      .fds-stepped-tabs__item:first-child & {
+        display: none;
+      }
+
+    }
+
+    &:after {
+
+      right: -12px;
+      border-color: transparent transparent transparent $color-fds-base-bg;
+
+      .fds-stepped-tabs__item:last-child & {
+        display: none;
+      }
+
+    }
+
+    &--complete {
+
+      background-color: $colorComplete;
+      // scss-lint:disable ImportantRule
+      color: $color-fds-white !important;
+
+      &:focus,
+      &:visited,
+      &:active,
+      &:hover {
+        // scss-lint:disable ImportantRule
+        &:not(span) {
+          color: $color-fds-white;
+        }
+      }
+
+      &:hover {
+        &:not(span) {
+          background-color: $colorDark;
+        }
+      }
+
+    }
+
+    &--active {
+
+      background-color: $colorActive;
+      color: $color-fds-white;
+
+      &:focus,
+      &:visited,
+      &:active,
+      &:hover {
+        // scss-lint:disable ImportantRule
+        &:not(span) {
+          color: $color-fds-white !important;
+        }
+      }
+
+      &:hover {
+        &:not(span) {
+          background-color: $colorDark;
+        }
+      }
+
+    }
+
+    &--incomplete {
+
+      background-color: $colorFuture;
+      color: $colorFutureText;
+
+      &:hover {
+        &:not(span) {
+          background-color: $colorFutureActionable;
+        }
+      }
+
+    }
+
+    &:not(span) {
+      cursor: pointer;
+    }
+
+  }
+
+  &__icon {
+
+    display: none;
+
+    @include breakpoint(M) {
+      display: inline;
+    }
+
+  }
+
+  &__text {
+
+    & {
+      white-space: nowrap;
+      display: flex;
+      gap: $size-small;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+      @include breakpoint(M) {
+        letter-spacing: .25px;
+      }
+    }
+
+    .fds-stepped-tabs__label:focus & {
+      outline: 3px solid $color-focus;
+    }
+    .fds-stepped-tabs__label:focus:not(:focus-visible) & {
+      outline: 0;
+    }
+    .fds-stepped-tabs__label:focus-visible & {
+      outline: 3px solid $color-focus;
+    }
+
+    @include breakpoint(L, down) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 30vw;
+    }
+
+  }
+
+  .fds-icon {
+    display: none;
+    @include breakpoint(S) {
+      display: revert;
+    }
+  }
+
+}
+
+.fds-stepped-tabs__label[href]:active,
+.fds-stepped-tabs__label[tabindex]:active,
+button:not([disabled]).fds-stepped-tabs__label:active {
+  background-color: $button-primary-active;
+}
+
+.fds-stepped-tabs-note {
+  border: 1px solid $color-fds-red;
+  background-color: $color-fds-red-100;
+  padding: $size-small;
+  @media (min-width: 20em) {
+    display: none;
+  }
+}
+

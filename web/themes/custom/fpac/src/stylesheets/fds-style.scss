@@ -1,0 +1,84 @@
+@use 'sass:math' as math;
+
+////////////////////////////////////////////////////////////////////////////////
+// USWDS - Start off with a select set of imports from USWDS ///////////////////
+@import 'uswds-select';
+@import 'core/DEVELOPMENT'; // optional
+
+////////////////////////////////////////////////////////////////////////////////
+// FDS - Custom ////////////////////////////////////////////////////////////////
+
+// Core -------------- /////////////////////////////////////////////////////////
+
+@import 'core/fds.variables';
+@import 'core/fds.font';
+@import 'core/fds.utilities';
+@import 'core/fds.base';
+@import 'core/fds.grid';
+
+// Elements -------------- /////////////////////////////////////////////////////
+
+@import 'elements/fds.skipnav';
+@import 'elements/fds.typography';
+@import 'elements/fds.list';
+@import 'elements/fds.icons';
+@import 'elements/fds.buttons';
+@import 'elements/fds.figure';
+@import 'elements/fds.form-elements.textfields';
+@import 'elements/fds.form-elements.checkbox-radio';
+@import 'elements/fds.form-elements.switch';
+@import 'elements/fds.form-elements.select';
+@import 'elements/fds.form-elements.affix';
+@import 'elements/fds.slider';
+
+@import 'elements/fds.table';
+@import 'elements/fds.label';
+@import 'elements/fds.badge';
+
+// Components -------------- ///////////////////////////////////////////////////
+
+@import 'components/fds.level';
+@import 'components/fds.search';
+@import 'components/fds.box';
+@import 'components/fds.disclaimer';
+@import 'components/fds.tophat';
+@import 'components/fds.header-app';
+@import 'components/fds.nav-global';
+@import 'components/fds.content-tabs';
+@import 'components/fds.modal';
+@import 'components/fds.alerts';
+@import 'components/fds.btn-group';
+@import 'components/fds.growl';
+@import 'components/fds.breadcrumb';
+@import 'components/fds.media-object';
+@import 'components/fds.forms';
+@import 'components/fds.forms.field';
+@import 'components/fds.date-picker';
+@import 'components/fds.footer-nav';
+@import 'components/fds.footer';
+@import 'components/fds.screen-id';
+@import 'components/fds.topper';
+@import 'components/fds.whiteout';
+@import 'components/fds.select-multi';
+@import 'components/fds.stepped-tabs';
+@import 'components/fds.stepped-control';
+@import 'components/fds.pagination';
+@import 'components/fds.spinbox';
+@import 'components/fds.progress';
+@import 'components/fds.splash';
+@import 'components/fds.timeline';
+@import 'components/fds.divider';
+
+// Layout-------------- ////////////////////////////////////////////////////////
+
+@import 'layout/fds.section';
+
+// Other -------------- ////////////////////////////////////////////////////////
+
+@import 'elements/fds.css-utilities';
+@import 'components/fds.SHAME';
+
+// fin /////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+

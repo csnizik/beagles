@@ -1,0 +1,142 @@
+.fds-field {
+
+  & {
+
+    position: relative;
+    margin-bottom: $size-default;
+
+    h1 + & {
+      margin-top: $size-medium;
+    }
+
+    @include breakpoint(M) {
+      max-width: $fds-form-width;
+    }
+
+  }
+
+  // Pseudos ------------------------------------------------------------------
+
+  &:before {
+    @include breakpoint(M) {
+      content: '';
+      position: absolute;
+      left: -( $size-default + math.div($size-base, 2) );
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      transition: all .1s ease-in-out;
+    }
+  }
+
+  // Children ------------------------------------------------------------------
+
+  &__label {
+
+    display: flex;
+    gap: $size-base;
+
+    .fds-field--error & {
+      font-weight: $font-bold;
+    }
+
+  }
+
+  &__label-desc {
+    font-style: italic;
+    font-weight: $font-normal;
+    margin-left: auto;
+    color: $color-fds-tertiary-300;
+    font-size: $form-text-size--sm; // not useing mixin, as we want to *inherit* line-height
+  }
+
+  &__help {
+    @include font-size(2);
+    margin-top: $size-base;
+    display: block;
+    color: $color-fds-tertiary-300;
+  }
+
+  &__message {
+
+    @include font-size(2);
+    font-weight: $font-bold;
+    padding-top: $size-base;
+
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all .8s ease-in;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+
+    &:empty {
+      max-height: 0;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fds-field--error & {
+      max-height: 120px;
+      opacity: 1;
+    }
+
+  }
+
+  &__column {
+
+    @include breakpoint(M, down) {
+      margin-top: $size-medium;
+    }
+
+  }
+
+  &__item {
+
+    display: block;
+    width: 100%;
+
+    &--short {
+      max-width: 6rem;
+    }
+
+    &--medium {
+      @include breakpoint(M) {
+        max-width: math.div($fds-form-width, 2);
+      }
+    }
+
+    &[size] {
+      width: auto;
+    }
+
+  }
+
+  // Variants ----------------------------------------------------------------
+
+  &--fill,
+  &--block {
+    @include breakpoint(M) {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  &--error {
+    &:before {
+      @include breakpoint(M) {
+        background-color: $color-fds-red;
+      }
+    }
+  }
+
+  &--columns {
+
+    @include breakpoint(M, down) {
+      margin-top: -1em;
+    }
+
+  }
+
+}

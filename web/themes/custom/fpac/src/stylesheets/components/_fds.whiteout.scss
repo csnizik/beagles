@@ -1,0 +1,20 @@
+.fds-whiteout {
+
+  & {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: transparentize($color-fds-tertiary-900, .6);
+  }
+
+  &[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1002;
+  }
+
+}

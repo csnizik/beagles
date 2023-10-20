@@ -1,0 +1,203 @@
+$growlPadding: $size-default;
+$growlMargin: $size-medium;
+$growlDistance: 110%;
+
+@keyframes growlShow {
+  0% {
+    overflow: hidden;
+    opacity: 0;
+    transform: translate3d($growlDistance, 0, 0);
+    max-height: 0;
+  }
+  66% {
+    overflow: hidden;
+    opacity: 1;
+    transform: translate3d($growlDistance, 0, 0);
+    max-height: 500px;
+  }
+  100% {
+    padding-top: $growlPadding;
+    padding-bottom: $growlPadding;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    max-height: none;
+  }
+}
+
+@keyframes growlDismiss {
+  0% {
+    transform: translate3d(0, 0, 0);
+    margin-bottom: $growlMargin;
+  }
+  44% {
+    overflow: hidden;
+    transform: translate3d($growlDistance, 0, 0);
+    max-height: 500px;
+    opacity: 1;
+    padding-top: $growlPadding;
+    padding-bottom: $growlPadding;
+    margin-bottom: $growlMargin;
+  }
+  100% {
+    overflow: hidden;
+    transform: translate3d($growlDistance, 0, 0);
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+@keyframes growlCenterDismiss {
+  100% {
+    opacity: 0;
+  }
+}
+
+.fds-growl-container {
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1003;
+
+  // max-height: (100vh - #{$growlPadding});
+  max-height: 100%;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include breakpoint(M) {
+    left: auto;
+    width: 364px;
+  }
+
+  &--centered {
+
+    max-height: 100%;
+    z-index: 1002;
+    animation: none;
+
+    @include breakpoint(L) {
+      $topish: ($size-extra-large * 3);
+      position: fixed;
+      left: 50%;
+      top: $topish;
+      max-height: 100%;
+      max-height: (100vh - #{$topish});
+      top: 20vh;
+      transform: translate(-50%, 0);
+    }
+
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+}
+
+.fds-growl {
+
+  & {
+    pointer-events: all;
+    box-shadow: $shadow-size-overlay;
+    margin: $growlMargin;
+    padding: $growlPadding;
+    background-color: $color-fds-aqua-100;
+    border: 1px solid $color-fds-aqua;
+    border-left-width: 4px;
+    animation: .66s growlShow ease-in-out both;
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  &--centered {
+
+    animation: none;
+    visibility: visible;
+    opacity: 1;
+
+    // scss-lint:disable SelectorFormat
+    &.fds-growl--dismissing {
+      animation: .23s growlCenterDismiss both;
+    }
+
+  }
+
+  &--dismissing {
+    animation: .66s growlDismiss both;
+  }
+
+  &--error {
+    background-color: $color-fds-red-100;
+    border-color: $color-fds-red;
+  }
+
+  &--warning {
+    background-color: $color-fds-yellow-100;
+    border-color: $color-fds-yellow;
+  }
+
+  &--success {
+    background-color: $color-fds-primary-100;
+    border-color: $color-fds-primary;
+  }
+
+  &__hd {
+    position: relative;
+  }
+
+  &__close {
+
+    @include fds-button-reset;
+    width: $size-extra-large;
+    height: $size-extra-large;
+    position: absolute;
+    top: -$growlPadding;
+    right: -$growlPadding;
+    padding: ($growlPadding * 1.5);
+
+    background-image: url('#{$image-path}/material-design-icons/ic_close_24px.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:active {
+      opacity: .6;
+    }
+
+  }
+
+  &__close-icon {
+    display: none;
+  }
+
+  &__title {
+    @include fds-header('3');
+    margin-top: 0;
+    margin-bottom: $size-small;
+    font-family: $font-sans;
+    padding-right: $size-medium;
+    color: $color-base;
+  }
+
+  &__bd {
+
+    @include font-size(2);
+    padding-right: $size-medium;
+
+    :first-child {
+      margin-top: 0;
+    }
+
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+}

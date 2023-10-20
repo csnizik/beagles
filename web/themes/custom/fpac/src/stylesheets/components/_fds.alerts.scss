@@ -1,0 +1,125 @@
+// scss-lint:disable PlaceholderInExtend
+
+.fds-alert {
+
+  & {
+    @extend .usa-alert;
+    width: 100%;
+    padding: $size-default;
+    margin-top: $size-medium;
+    margin-bottom: $size-medium;
+    border: 1px solid rgba(0,0,0,.07);
+    border-left: $size-base solid $color-fds-tertiary-900;
+    background-position: ($size-default + $size-base) $size-default;
+    background-size: 2.8rem;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  // Variants ---------------------------------------------------------------
+
+  &--success {
+    @extend .usa-alert-success;
+    background-color: $color-fds-primary-100;
+    border-left-color: $color-fds-primary;
+    background-image: url('#{$image-path}/material-design-icons/ic_check_circle_24px.svg');
+  }
+
+  &--warning {
+    @extend .usa-alert-warning;
+    border-left-color: $color-fds-yellow;
+    background-image: url('#{$image-path}/material-design-icons/ic_warning_24px.svg');
+  }
+
+  &--error {
+    @extend .usa-alert-error;
+    background-color: $color-fds-red-100;
+    border-left-color: $color-fds-red;
+    background-image: url('#{$image-path}/material-design-icons/ic_error_24px.svg');
+  }
+
+  &--info {
+    @extend .usa-alert-info;
+    background-color: $color-fds-aqua-100;
+    border-left-color: $color-fds-aqua;
+    background-image: url('#{$image-path}/material-design-icons/ic_info_24px.svg');
+  }
+
+  &--no-icon {
+    background-image: none;
+    padding: $size-small;
+  }
+
+  // Elements
+
+  &__close {
+
+    @include fds-button-reset;
+    width: $size-extra-large;
+    height: ($size-extra-large - $size-small);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: ($size-default * 1.5);
+
+    background-image: url('#{$image-path}/material-design-icons/ic_close_24px.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:active {
+      opacity: .6;
+    }
+
+  }
+
+  &__icon {
+    @extend .usa-alert-icon;
+  }
+
+  &__body {
+
+    @extend .usa-alert-body;
+    display: block;
+
+
+    .fds-alert--no-icon & {
+      padding: 0 $size-base;
+    }
+
+  }
+
+  &__heading {
+
+    @extend .usa-alert-heading;
+    @include font-size(4);
+    font-family: $font-sans;
+    color: $color-base;
+    font-weight: $font-bold;
+    margin-bottom: $size-small;
+
+    .fds-alert--no-icon & {
+      @include font-size(3);
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__text {
+    @extend .usa-alert-text;
+    &:only-child {
+      margin-top: $size-small;
+    }
+    & + & {
+      margin-top: $size-small;
+    }
+    .fds-alert--no-icon & {
+      margin: 0;
+    }
+    .fds-alert--no-icon &:only-child {
+      padding-top: 0;
+    }
+  }
+
+}

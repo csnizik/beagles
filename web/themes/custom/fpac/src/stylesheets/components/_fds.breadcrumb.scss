@@ -1,0 +1,92 @@
+.fds-breadcrumb {
+
+  & {
+    margin: $size-medium 0 0;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+
+    @include font-size(1);
+    margin: 0;
+    display: inline-flex;
+
+    @include breakpoint(M) {
+      @include font-size(2);
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: none;
+      margin: 0;
+    }
+
+    &:after {
+      content: '/';
+      display: inline-flex;
+      margin-right: $size-small;
+      margin-left: $size-small;
+    }
+
+    &:last-child {
+
+      &:after {
+        display: none;
+      }
+
+    }
+
+    &:only-child {
+
+      & {
+        display: inline-block;
+        align-items: center;
+      }
+
+      &:after {
+        display: none;
+      }
+
+    }
+
+  }
+
+  &__link {
+
+    & {
+      @include reset-button();
+      color: $color-fds-link;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: $size-base;
+    }
+
+    &:visited,
+    &:hover {
+      color: $color-fds-link;
+    }
+
+    &:before {
+      .fds-breadcrumb__item:only-child & {
+        content: '';
+        display: block;
+        width: $size-default;
+        height: $size-default;
+        margin-right: $size-base;
+        background-image: url('#{$image-path}/material-design-icons/ic_arrow_back_24px.svg');
+        background-position: center;
+        background-size: ($size-medium - $size-base);
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,132 @@
+.fds-modal {
+
+  & {
+    will-change: visibility, opacity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1002;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s cubic-bezier(.23, 1, .32, 1);
+    transition-delay: 0s;
+    background-color: transparentize($color-fds-tertiary-900, .6);
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--top,
+  &--fullscreen {
+    align-items: flex-start;
+  }
+
+  &--top {
+    padding-top: 10vh;
+  }
+
+  &__dialog {
+
+    padding: $size-default;
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+
+    @include breakpoint(M) {
+      padding: $size-medium;
+    }
+
+    @include breakpoint(L) {
+      padding: ($size-large * 2) $size-medium;
+      max-width: 800px;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fds-modal--small & {
+
+      @include breakpoint(M) {
+        max-width: 400px;
+      }
+    }
+
+    .fds-modal--large & {
+      max-width: $site-max-width;
+    }
+
+    .fds-modal--fullscreen & {
+
+      padding-top: $size-medium;
+
+      @include breakpoint(L) {
+        max-width: 100%;
+      }
+    }
+
+  }
+
+  &__close {
+
+    @include fds-button-reset;
+    width: $size-extra-large;
+    height: $size-extra-large;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: ($size-default * 1.5);
+    z-index: 2;
+    background-image: url('#{$image-path}/material-design-icons/ic_close_24px.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 26px;
+
+    &:active {
+      opacity: .6;
+    }
+
+  }
+
+  &__close-icon {
+    display: none;
+  }
+
+  &__title {
+    @include fds-header('2');
+    margin-top: 0;
+    margin-bottom: $size-small;
+    font-weight: normal;
+    margin-right: $size-default; // to prevent awkward space with Close button
+  }
+
+  &__content {
+
+    position: relative;
+    padding: $size-medium;
+    background-color: $color-fds-base-bg;
+    background-clip: padding-box;
+    box-shadow: $shadow-size-popout;
+    margin-bottom: $size-medium;
+
+    // scss-lint:disable SelectorFormat
+    .fds-modal--fullscreen & {
+      min-height: calc(100vh - 5rem); // magic number
+    }
+
+  }
+
+}
+
+.fds-modal-scroll-fix {
+  overflow: hidden;
+}

@@ -1,0 +1,429 @@
+/* ---------------------------------------------------------------------------*/
+/* BASE: BUTTONS                                                              */
+
+$button-height            : $form-height-default;
+$button-height--sm        : $form-height-small; // 30px
+$button-height--lg        : $form-height-large;
+$button-padding           : $size-default;
+$button-text              : $color-fds-white;
+$button-line-height       : 1;
+$button-border-radius     : $radius-s;
+$button-font-family       : $font-sans;
+$button-font-weight       : $font-bold;
+$button-font-size         : $font-size-3;
+
+$button-default           : $color-fds-secondary;
+$button-default-text      : $button-text;
+$button-default-hover     : shade($button-default, 25%);
+$button-default-active    : shade($button-default, 55%);
+
+$button-primary           : $color-fds-secondary;
+$button-primary-text      : $button-text;
+$button-primary-hover     : shade($button-primary, 25%);
+$button-primary-active    : shade($button-primary, 45%);
+
+$button-tertiary        : $color-fds-red;
+$button-tertiary-text   : $button-text;
+$button-tertiary-hover  : shade($color-fds-red, 30%);
+$button-tertiary-active : shade($color-fds-red, 70%);
+
+$button-alt              : $color-fds-white;
+$button-alt-text         : $color-fds-secondary;
+$button-alt-hover        : shade($button-alt, 5%);
+$button-alt-active       : $button-default-active;
+$button-alt-border       : $color-fds-secondary-300;
+$button-alt-border-width : 1px;
+
+$button-secondary        : $button-alt;
+$button-secondary-text   : $button-alt-text;
+$button-secondary-hover  : $button-alt-hover;
+$button-secondary-active : $button-alt-active;
+$button-secondary-border       : $button-alt-border;
+$button-secondary-border-width : $button-alt-border-width;
+
+$button-flat-padding     : 0;
+$button-flat             : transparent;
+$button-flat-text        : $color-fds-link;
+$button-flat-hover       : transparent;
+$button-flat-active      : transparent;
+$button-flat-border      : transparent;
+$button-flat-border-width: 0;
+
+$button-plain             : transparent;
+$button-plain-padding     : 0;
+$button-plain-hover       : transparent;
+$button-plain-text        : inherit;
+$button-plain-active      : transparent;
+$button-plain-border-width: 0;
+
+@mixin fds-button($variant: default) {
+
+
+  @if $variant == 'default' {
+
+    // -------------------------------------------------------------------------
+    // reset
+    vertical-align: middle;
+    white-space: nowrap;
+    @include reset-button();
+    @include font-smoothing(on);
+    height: $button-height;
+    user-select: none;
+    text-align: center;
+    line-height: $button-line-height;
+
+    // scss-lint:disable all ImportantRule
+    text-decoration: none !important; // yep, intentional
+
+    // -------------------------------------------------------------------------
+    // normalize
+    font-size: $button-font-size;
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    display: inline-block;
+    display: inline-flex;
+    gap: ($size-small * .75);
+    align-items: center;
+    border-radius: $button-border-radius;
+
+    // scss-lint:disable Shorthand
+    padding: ($button-padding - .1rem);
+
+    // -------------------------------------------------------------------------
+    // default
+
+    background-color: $button-default;
+
+    &,
+    &:visited,
+    .fds-alert &,
+    .fds-alert &:visited {
+      color: $button-default-text;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $button-default-text;
+    }
+
+    &:hover:not([disabled]) {
+      color: $button-text;
+      background-color: $button-default-hover;
+    }
+
+    &:focus:not([disabled]) {
+      outline-offset: 3px;
+    }
+
+    &:active:not([disabled]) {
+      color: $button-text;
+      background-color: $button-default-active;
+      box-shadow: none;
+      outline-offset: 3px;
+    }
+
+    &[disabled] {
+
+      $color-transparentized: transparentize($button-default-text, .2);
+
+      opacity: .65;
+      color: $color-transparentized;
+      filter: saturate(70%);
+      cursor: not-allowed;
+
+      @media print {
+        filter: none;
+      }
+
+      &:visited {
+        color: $color-transparentized;
+      }
+
+      &:hover {
+        color: $color-transparentized;
+        cursor: not-allowed;
+      }
+
+    }
+
+  }
+
+  @else if $variant == 'primary' {
+
+    background-color: $button-primary;
+
+    &,
+    &:visited,
+    .fds-alert &,
+    .fds-alert &:visited {
+      color: $button-primary-text;
+    }
+
+    &:hover {
+      color: $button-primary-text;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: $button-primary-hover;
+    }
+
+    &:active:not([disabled]) {
+      color: $button-primary-text;
+      background-color: $button-primary-active;
+    }
+
+  }
+
+  @else if $variant == 'tertiary' {
+
+    background-color: $button-tertiary;
+
+    &,
+    &:visited,
+    .fds-alert &,
+    .fds-alert &:visited {
+      color: $button-tertiary-text;
+    }
+
+    &:hover:not([disabled]) {
+      color: $button-tertiary-text;
+      background-color: $button-tertiary-hover;
+    }
+
+    &:active:not([disabled]) {
+      color: $button-tertiary-text;
+      background-color: $button-tertiary-active;
+    }
+
+  }
+
+  @else if $variant == 'secondary' {
+
+    background-color: $button-alt;
+    box-shadow: 0 0 0 $button-alt-border-width $button-alt-border inset;
+
+    &,
+    &:visited,
+    .fds-alert &,
+    .fds-alert &:visited {
+      color: $button-alt-text;
+    }
+
+    &:hover {
+      color: inherit;
+    }
+
+    &:hover:not([disabled]) {
+      color: $button-alt-text;
+      background-color: $button-alt-hover;
+    }
+
+    &:active:not([disabled]) {
+      color: $button-alt-hover;
+      background-color: $button-alt-active;
+      box-shadow: none;
+    }
+
+    // scss-lint:disable SelectorFormat
+    &[disabled] {
+      background-color: $color-fds-base-bg;
+      color: $button-alt-text;
+      &:hover {
+        color: $button-alt-text;
+      }
+    }
+
+  }
+
+  @else if $variant == 'block' {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @else if $variant == 'inline' {
+    display: inline-block;
+    display: inline-flex;
+    width: auto;
+  }
+
+  @else if $variant == 'small' {
+
+    height: $button-height--sm;
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
+    padding: ($button-padding - $size-base);
+    font-size: $font-size-1; // no we're not using mixin cuz we don't want its line-height
+
+  }
+
+  @else if $variant == 'medium' {
+
+    height: $button-height;
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
+    padding: ($button-padding - .1rem);
+    font-size: $button-font-size;
+
+  }
+
+  @else if $variant == 'large' {
+
+    height: $button-height--lg;
+
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon Shorthand
+    padding: (($button-padding) + .2rem);
+    font-size: $font-size-4; // no we're not using mixin cuz we don't want its line-height
+    border-radius: ($button-border-radius * 1.5);
+
+  }
+
+  @else if $variant == 'flat' {
+
+    text-align: left;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: normal;
+    background-color: $button-flat;
+    box-shadow: none;
+    // scss-lint:disable ImportantRule
+    text-decoration: underline !important; // ¯\_(ツ)_/¯
+    border-radius: unset;
+
+    &,
+    &:visited,
+    .fds-alert &,
+    .fds-alert &:visited {
+      color: $button-flat-text;
+    }
+
+    &:not(.fds-btn-small),
+    &:not(.fds-btn-large) {
+      padding-right: $button-flat-padding;
+      padding-left: $button-flat-padding;
+    }
+
+    &:hover:not([disabled]) {
+      color: $color-fds-link-hover;
+      background-color: $button-flat-hover;
+    }
+
+    &:active:not([disabled]) {
+      color: $color-fds-base;
+      background-color: $button-flat-active;
+      box-shadow: none;
+    }
+
+    // scss-lint:disable SelectorFormat
+    &[disabled] {
+      color: $button-flat-text;
+      &:hover {
+        color: $button-flat-text;
+      }
+    }
+
+  }
+
+  @else if $variant == 'plain' {
+
+    text-align: left;
+    height: auto;
+    background-color: $button-plain;
+    padding: $button-plain-padding;
+    font-weight: normal;
+    border-width: $button-plain-border-width;
+    box-shadow: none;
+    // scss-lint:disable ImportantRule
+    text-decoration: none; // ¯\_(ツ)_/¯
+    border-radius: unset;
+
+    &:hover:not([disabled]) {
+      color: $color-fds-link-hover;
+      background-color: $button-plain-hover;
+    }
+
+    &,
+    &:visited,
+    .fds-alert &,
+    .fds-alert &:visited {
+      color: $button-plain-text;
+    }
+
+    &:active:not([disabled]) {
+      color: $color-fds-base;
+      background-color: $button-plain-active;
+      box-shadow: none;
+    }
+
+    // scss-lint:disable SelectorFormat
+    &[disabled] {
+      color: inherit;
+      &:hover {
+        color: inherit;
+      }
+    }
+
+  }
+
+}
+
+.fds-btn {
+
+  @include fds-button(default);
+
+  // scss-lint:disable all
+
+  &--primary   { @include fds-button(primary);   }
+  &--secondary,
+  &--alt       { @include fds-button(secondary); }
+  &--tertiary  { @include fds-button(tertiary);  }
+  &--fill,
+  &--block     { @include fds-button(block);     }
+  &--inline    { @include fds-button(inline);    }
+  &--small     { @include fds-button(small);     }
+  &--medium    { @include fds-button(medium);    }
+  &--large     { @include fds-button(large);     }
+  &--flat      { @include fds-button(flat);      }
+  &--plain     { @include fds-button(plain);     }
+
+  @include breakpoint(S) {
+    &--small\@s { @include fds-button(small); }
+    &--medium\@s { @include fds-button(medium); }
+    &--large\@s { @include fds-button(large); }
+    &--fill\@s
+    &--block\@s { @include fds-button(block); }
+    &--inline\@s { @include fds-button(inline); }
+    &--plain\@s { @include fds-button(plain); }
+  }
+  @include breakpoint(M) {
+    &--small\@m { @include fds-button(small); }
+    &--medium\@m { @include fds-button(medium); }
+    &--large\@m { @include fds-button(large); }
+    &--fill,
+    &--block\@m { @include fds-button(block); }
+    &--inline\@m { @include fds-button(inline); }
+    &--plain\@m { @include fds-button(plain); }
+  }
+  @include breakpoint(L) {
+    &--small\@l { @include fds-button(small); }
+    &--medium\@l { @include fds-button(medium); }
+    &--large\@l { @include fds-button(large); }
+    &--fill\@l
+    &--block\@l { @include fds-button(block); }
+    &--inline\@l { @include fds-button(inline); }
+    &--plain\@l { @include fds-button(plain); }
+  }
+  @include breakpoint(XL) {
+    &--small\@xl { @include fds-button(small); }
+    &--medium\@xl { @include fds-button(medium); }
+    &--large\@xl { @include fds-button(large); }
+    &--fill\@xl,
+    &--block\@xl { @include fds-button(block); }
+    &--inline\@xl { @include fds-button(inline); }
+    &--plain\@xl { @include fds-button(plain); }
+  }
+
+  * {
+    pointer-events: none;
+  }
+
+}

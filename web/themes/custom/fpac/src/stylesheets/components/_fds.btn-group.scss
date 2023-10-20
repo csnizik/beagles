@@ -1,0 +1,134 @@
+// scss-lint:disable EmptyRule
+
+.fds-btn-group {
+
+  & {
+    display: inline-flex;
+    width: auto;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  &--fill,
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &--inline {
+    display: inline-flex;
+    width: auto;
+  }
+
+  @include breakpoint(S) {
+    &--fill\@s,
+    &--block\@s  { display: flex; width: 100%; }
+    &--inline\@s { display: inline-flex; width: auto; }
+  }
+  @include breakpoint(M) {
+    &--fill\@m,
+    &--block\@m  { display: flex; width: 100%; }
+    &--inline\@m { display: inline-flex; width: auto; }
+  }
+  @include breakpoint(L) {
+    &--fill\@l,
+    &--block\@l  { display: flex; width: 100%; }
+    &--inline\@l { display: inline-flex; width: auto; }
+  }
+  @include breakpoint(XL) {
+    &--fill\@xl,
+    &--block\@xl  { display: flex; width: 100%; }
+    &--inline\@xl { display: inline-flex; width: auto; }
+  }
+
+  &__item {
+
+    & {
+      @include fds-button;
+      @include fds-button(secondary);
+      display: flex;
+      justify-content: center;
+      flex: auto;
+    }
+
+    & + & {
+      margin-left: -1px;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fds-btn-group--small  & { @include fds-button(small);  }
+    .fds-btn-group--medium & { @include fds-button(medium); }
+    .fds-btn-group--large  & { @include fds-button(large);  }
+
+    @include breakpoint(S) {
+      .fds-btn-group--small\@s  & { @include fds-button(small);  }
+      .fds-btn-group--medium\@s & { @include fds-button(medium); }
+      .fds-btn-group--large\@s  & { @include fds-button(large);  }
+    }
+
+    @include breakpoint(M) {
+      .fds-btn-group--small\@m  & { @include fds-button(small);  }
+      .fds-btn-group--medium\@m & { @include fds-button(medium); }
+      .fds-btn-group--large\@m  & { @include fds-button(large);  }
+    }
+
+    @include breakpoint(L) {
+      .fds-btn-group--small\@l  & { @include fds-button(small);  }
+      .fds-btn-group--medium\@l & { @include fds-button(medium); }
+      .fds-btn-group--large\@l  & { @include fds-button(large);  }
+    }
+
+    @include breakpoint(XL) {
+      .fds-btn-group--small\@xl  & { @include fds-button(small);  }
+      .fds-btn-group--medium\@xl & { @include fds-button(medium); }
+      .fds-btn-group--large\@xl  & { @include fds-button(large);  }
+    }
+
+    &:focus:not([disabled]) {
+      z-index: 1;
+    }
+    &:active:not([disabled]) {
+      background-color: $color-fds-tertiary;
+      z-index: 1;
+    }
+
+    &:focus:not([disabled]) {}
+
+    &:active:not([disabled]) {
+      background-color: $button-primary-hover;
+      color: $button-primary-text;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: $radius-none;
+    }
+
+    &:first-child {
+      border-top-right-radius: $radius-none;
+      border-bottom-right-radius: $radius-none;
+    }
+
+    &:last-child {
+      border-top-left-radius: $radius-none;
+      border-bottom-left-radius: $radius-none;
+    }
+
+    &:only-child {
+      border-radius: $button-border-radius;
+    }
+
+    &--active {
+      @include fds-button(primary);
+      background-color: $color-fds-selection-bg;
+      color: $button-secondary-text;
+      .fds-btn-group & {
+        color: $button-secondary-text; // intentionall over-specific
+      }
+      &:hover:not([disabled]) {
+        color: $button-primary-text;
+      }
+    }
+
+  }
+
+}

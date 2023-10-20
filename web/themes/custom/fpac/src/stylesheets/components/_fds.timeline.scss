@@ -1,0 +1,115 @@
+$timeline: fds-timeline;
+
+.#{$timeline} {
+
+  & {
+    margin: $size-medium 0;
+    position: relative;
+    width: 100%;
+  }
+
+  &:before {
+    content: '';
+    border-left: 2px solid $color-fds-tertiary-200;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $size-medium;
+  }
+
+  &__item {
+
+    & {
+      border: 1px solid $color-fds-tertiary-200;
+      margin: $size-medium 0;
+      padding: $size-default;
+      border-radius: $size-base;
+      position: relative;
+    }
+
+    &--system {
+      border-width: 0;
+      padding: 0;
+      padding-left: ($size-base * 12.5);
+    }
+
+    &--system:before {
+      content: '';
+      width: $size-medium;
+      height: $size-medium;
+      background-color: white;
+      display: block;
+      border: 1px solid $color-fds-tertiary-200;
+      position: absolute;
+      left: ($size-default + .1rem);
+      border-radius: 100%;
+    }
+
+    &--user {
+      background-color: white;
+    }
+
+    &--add-comment {
+
+      border-top-width: 2px;
+      background-color: $color-fds-tertiary-100;
+
+      &:focus-within {
+        background-color: $color-fds-aqua-100;
+        border-color: $color-fds-aqua-200;
+      }
+
+    }
+
+    &--editing {
+      background-color: $color-fds-aqua-100;
+      border-color: $color-fds-aqua-200;
+    }
+
+  }
+
+  &__icon {
+    & {
+      position: absolute;
+      padding: $size-base $size-small;
+      left: ($size-default - .1rem);
+      top: -( math.div($size-base, 2) );
+      background-color: $color-fds-base-bg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: $line-height-flat;
+      color: $color-fds-tertiary;
+      height: ($size-medium + $size-base);
+      width: ($size-medium + $size-base);
+      border-radius: $radius-oval;
+    }
+    .#{$timeline}__item--user & {
+      display: none;
+    }
+  }
+
+  &__hd {
+    @include font-size(2);
+  }
+
+  &__info {}
+
+  &__action {
+    margin-left: $size-small;
+    display: flex;
+    > :not(:last-child) {
+      margin-right: $size-default;
+    }
+    @include breakpoint(S) {
+      float: right;
+    }
+  }
+
+  &__action-btn {}
+
+  &__bd {
+    margin-top: $size-small;
+  }
+
+}

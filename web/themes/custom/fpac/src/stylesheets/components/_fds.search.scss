@@ -1,0 +1,90 @@
+.fds-search {
+
+  & {
+    width: 100%;
+    display: block;
+  }
+
+  &__bd {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    &--sr-only {
+      @include sr-only();
+    }
+  }
+
+  &__entry {
+
+    &--grow {
+      flex-grow: 1;
+    }
+
+  }
+
+  &__submit {
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      padding-bottom: 1px;
+    }
+
+  }
+
+  &__input {
+    &,
+    &[size] {
+      display: block;
+      width: 100%;
+      appearance: none !important; // yeah yeah.... sue me
+      box-sizing: inherit !important; // yeah yeah.... sue me
+      border-right-width: 0;
+    }
+  }
+
+  &__select {
+    border-right-width: 0;
+  }
+
+  &__btn {
+
+    display: block;
+    width: 100%;
+    border-top-left-radius: $radius-none;
+    border-bottom-left-radius: $radius-none;
+
+    &--icon {
+
+      $search-icon-width-default: ($size-base * 10);
+      $search-icon-width-small: ($size-base * 8);
+      $search-icon-width-large: ($size-base * 13);
+
+      background-image: url('#{$image-path}/material-design-icons/ic_search_white_24px.svg');
+      background-size: 66%;
+      background-position: $size-small center;
+      background-repeat: no-repeat;
+      width: $search-icon-width-default;
+
+      &.fds-btn--small {
+        width: $search-icon-width-small;
+        background-position: 6px center; // magic number
+      }
+      &.fds-btn--large {
+        width: $search-icon-width-large;
+        background-position: 10px center; // magic number
+      }
+
+    }
+
+  }
+
+  &__text {
+    .fds-search__btn--icon & {
+      @include sr-only();
+    }
+  }
+
+}

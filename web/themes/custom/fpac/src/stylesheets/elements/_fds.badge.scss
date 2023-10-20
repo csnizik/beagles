@@ -1,0 +1,117 @@
+$badge-spacing: ($size-base - .1rem);
+
+.fds-badge {
+
+  & {
+    @include reset-button();
+    @include font-size(0);
+    cursor: default;
+    line-height: $font-size-1;
+    font-family: $font-sans; // brute-force to override any inheritance (e.g. within an <h1>)
+    font-weight: $font-bold;
+    letter-spacing: .5px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: $marker-bgc;
+    border-radius: $size-medium;
+    color: $marker-text-color;
+    min-width: $line-height-small - $size-base;
+    text-align: center;
+    padding: $badge-spacing ($badge-spacing * 2);
+    box-shadow: 0 -1px 0 adjust-color($color-fds-tertiary, $alpha: -0.75) inset;
+    a &,
+    button & {
+      cursor: pointer;
+    }
+  }
+
+  &:visited {
+    color: $marker-text-color;
+  }
+
+  &[disabled] {
+    opacity: .65;
+    filter: saturate(70%);
+    cursor: not-allowed;
+  }
+
+  // Empty badges collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  &--inverse,
+  &--neutral {
+    background-color: $marker-bgc-neutral;
+    box-shadow:
+      0 -1px 0  adjust-color($color-fds-tertiary, $alpha: -0.60) inset,
+      0 0 0 1px adjust-color($color-fds-tertiary, $alpha: -0.70) inset
+    ;
+  }
+
+  &--general {
+    background-color: $marker-bgc-general;
+  }
+
+  &--alert {
+
+    background-color: $marker-bgc-alert;
+
+    @media print {
+      background-color: shade($marker-bgc-alert, 60%);
+    }
+
+  }
+
+  &--warning {
+    background-color: $marker-bgc-warning;
+  }
+
+  &--success {
+    background-color: $marker-bgc-success;
+  }
+
+  &--large {
+    @include font-size(3);
+    line-height: $font-size-3 + .1rem;
+    min-width: $line-height-small;
+  }
+
+  &--extra-large {
+    @include font-size(4);
+    line-height: $font-size-4 + .2rem;
+    min-width: $line-height-medium;
+  }
+
+  &[disabled] {
+    opacity: .75;
+    filter: grayscale(55%);
+    color: transparentize($marker-text-color, .1);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  h1 &,
+  h2 & {
+    position: relative;
+    top: -$size-base;
+    margin-left: $size-base;
+  }
+
+}
+
+// scss-lint:disable QualifyingElement
+button.fds-badge,
+a.fds-badge {
+
+  &:hover:not([disabled]),
+  &:focus,
+  &:active {
+    cursor: pointer;
+    box-shadow:
+      0 -1px 0   adjust-color($color-fds-tertiary, $alpha: -0.20) inset,
+      0 0 0 1px  adjust-color($color-fds-tertiary, $alpha: -0.60) inset
+    ;
+  }
+
+}

@@ -1,0 +1,94 @@
+.fds-select-multi {
+
+  & {
+    position: relative;
+  }
+
+  &__list {
+
+    & {
+      @include reset-ul();
+      resize: vertical;
+      overflow: auto;
+      scroll-behavior: smooth;
+      height: 190px;
+      border: 1px solid $form-outline-color;
+      border-radius: $form-border-radius;
+      background-color: $color-fds-white;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fds-select-multi--disabled & {
+      background-color: $form-disabled-bg-color;
+      color: $form-text-color-disabled;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .fds-select-multi--error & {
+      border-color: $form-error-color;
+      box-shadow: 0 0 0 1px $form-error-color;
+      background-color: $form-error-color-bg;
+    }
+
+  }
+
+  &__list-sub {
+    @include reset-ul();
+    overflow: auto;
+    max-height: 190px;
+    padding: $size-base 0 0 ($size-base * 2);
+    background-color: $color-fds-white;
+  }
+
+  &__item {
+
+    & {
+      @include reset-li();
+      position: relative;
+      padding: 0 $size-small;
+    }
+
+    &:first-child:not(.fds-select-multi__item--group) {
+      margin-top: $size-base;
+    }
+
+    &--group {
+
+      & {
+        @include font-size(2);
+        padding-top: $size-base;
+        padding-bottom: $size-base;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        background-color: $color-fds-tertiary-100;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      .fds-select-multi--error & {
+        background-color: shade($form-error-color-bg, 4%);
+      }
+
+    }
+
+  }
+
+  // &__check {}
+
+  &__label {
+
+    padding: math.div($size-base, 2) 0;
+
+    .fds-select-multi__check + & {
+      display: block;
+    }
+
+  }
+
+  &:active,
+  &:focus-within {
+    outline: 3px solid $color-focus;
+  }
+
+}

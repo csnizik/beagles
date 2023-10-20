@@ -1,0 +1,210 @@
+.fds-stepped-control {
+
+  $component-bgcolor-default: $white;
+  $component-border-color: $color-fds-tertiary-200;
+  $component-padding: $size-default;
+
+  & {
+
+    margin: $size-medium (-$size-default);
+    background-color: $component-bgcolor-default;
+    border: 1px solid $component-border-color;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding: $component-padding;
+    transition: all .23s ease-in-out;
+    width: 100%;
+
+    @include breakpoint(L) {
+      border-left-width: 1px;
+      border-right-width: 1px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+  }
+
+  &--sticky {
+
+    position: sticky;
+    z-index: 1001;
+    box-shadow: $shadow-size-popout;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-color: shade($component-border-color, 20%);
+    bottom: 0;
+    margin-left: -$size-default;
+    margin-right: -$size-default;
+
+    @include breakpoint(XL) {
+
+      box-shadow: $shadow-size-overlay;
+      bottom: $size-default;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+
+      .fds-section--fullscreen &,
+      &.fds-stepped-control--modal {
+        bottom: 0;
+      }
+
+    }
+
+  }
+
+  &--unstuck {
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid $component-border-color;
+  }
+
+  &--modal {
+
+    margin-bottom: -$size-medium;
+    margin-left: -$size-medium;
+    margin-right: -$size-medium;
+    border-bottom-width: 0;
+
+    @include breakpoint(L) {
+      border-right-width: 0;
+      border-bottom-width: 0;
+      border-left-width: 0;
+    }
+
+  }
+
+  &__bd {
+
+    align-items: center;
+
+    @include breakpoint(L) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__shim {
+    display: none;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display: block;
+      @include breakpoint(L) {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__message {
+
+    @include font-size(3);
+    margin-bottom: $size-default;
+    text-align: center;
+
+    @include breakpoint(L) {
+      @include font-size(4);
+      text-align: left;
+      margin-bottom: 0;
+      margin-right: $size-default;
+      padding-left: $size-small;
+    }
+
+    &--fill,
+    &--block {
+      flex-basis: 100%;
+      @include breakpoint(L) {
+        margin-bottom: $size-default;
+      }
+    }
+
+  }
+
+  &__list {
+
+    flex: 1;
+
+    @include breakpoint(M) {
+      display: flex;
+    }
+
+    @include breakpoint(L) {
+      margin-left: auto;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+  }
+
+  &__item {
+
+    & {
+
+      margin-bottom: $size-default;
+
+      @include breakpoint(M) {
+        margin-right: $size-default;
+        margin-bottom: 0;
+        flex: 1;
+      }
+
+      @include breakpoint(L) {
+        flex: none;
+        flex: revert;
+        flex-shrink: 1;
+      }
+
+    }
+
+    &:last-child {
+
+      margin-bottom: 0;
+
+      @include breakpoint(M) {
+        margin-right: 0;
+      }
+
+    }
+
+    &--pull {
+      @include breakpoint(L) {
+        margin-right: auto;
+        border-right: $size-default solid transparent;
+      }
+    }
+
+    &--push {
+      @include breakpoint(L) {
+        margin-left: auto;
+        border-left: $size-default solid transparent;
+      }
+    }
+
+  }
+
+  &__btn {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+    @include breakpoint(L, down) {
+      height: $button-height;
+      font-size: $button-font-size;
+      padding:
+        ($button-padding - .1rem)
+        ($button-padding * 1.5)
+        ($button-padding - .1rem)
+      ;
+    }
+
+  }
+
+}
+
+.DEMO-STICKY-STEPPED-CONTROL {
+  outline: 3px dashed transparentize($color-fds-red, .9);
+  outline-offset: -3px;
+}

@@ -1,0 +1,60 @@
+
+.fds-disclaimer {
+
+  & {
+
+    background-color: $color-fds-primary-900;
+    height: auto;
+    padding-top: $size-base;
+    padding-bottom: $size-base;
+    font-size: $font-size-0 - .1rem;
+
+    @include media($small-screen) {
+      font-size: $h6-font-size;
+    }
+
+  }
+
+  &__bd {
+
+    display: flex;
+    align-items: center;
+    max-width: ($site-max-width + 24px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: $color-fds-white;
+    padding: 0 $size-default;
+
+    @media print {
+      max-width: none;
+    }
+
+  }
+
+  &__official {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__agency {
+  }
+
+  &__flag-icon {
+    margin-right: $size-small;
+    width: 2rem;
+  }
+
+  &__stage {
+    margin-left: $size-small;
+    &--prototype {
+      background-color: $color-fds-yellow;
+      color: black;
+      padding: 0 $size-base;
+      font-size: $font-size-0 - .2rem;
+      text-transform: uppercase;
+    }
+  }
+
+}

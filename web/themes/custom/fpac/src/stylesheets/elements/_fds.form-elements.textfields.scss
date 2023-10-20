@@ -1,0 +1,210 @@
+///////////////////////////////////////////////////////////////////////////////
+// Text Fields
+
+@mixin textFieldMedium() {
+  @include fds-shared-form-properties();
+  @include placeholder { color: $form-placeholder-color; }
+  padding:
+    ($form-padding - .1rem) // to achieve vertical alignment
+    ($form-padding)
+    ($form-padding)
+  ;
+}
+
+@mixin textFieldSmall() {
+  height: $button-height--sm;
+  font-size: $form-text-size--sm;
+}
+
+@mixin textFieldLarge() {
+  height: $button-height--lg;
+  font-size: $form-text-size--lg;
+  padding-left: $form-padding + $size-base;
+}
+
+@mixin textFieldBlock() {
+  display: block;
+  width: 100%;
+}
+
+@mixin textFieldInline() {
+  display: revert;
+  width: revert;
+}
+
+.fds-input,
+.fds-textarea {
+
+  // --------------------------------------------------------------------------
+  // Variants
+
+  &          { @include textFieldMedium(); }
+  &--small   { @include textFieldSmall();  }
+  &--medium  { @include textFieldMedium(); }
+  &--large   { @include textFieldLarge();  }
+  &--fill,
+  &--block   { @include textFieldBlock();  }
+  &--inline  { @include textFieldBlock();  }
+
+  @include breakpoint(S) {
+    &--small\@s  { @include textFieldSmall(); }
+    &--medium\@s { @include textFieldMedium(); }
+    &--large\@s  { @include textFieldLarge(); }
+    &--fill\@s,
+    &--block\@s  { @include textFieldBlock(); }
+    &--inline\@s { @include textFieldInline(); }
+  }
+
+  @include breakpoint(M) {
+    &--small\@m  { @include textFieldSmall(); }
+    &--medium\@m { @include textFieldMedium(); }
+    &--large\@m  { @include textFieldLarge(); }
+    &--fill\@m,
+    &--block\@m  { @include textFieldBlock(); }
+    &--inline\@m { @include textFieldInline(); }
+  }
+
+  @include breakpoint(L) {
+    &--small\@l  { @include textFieldSmall(); }
+    &--medium\@l { @include textFieldMedium(); }
+    &--large\@l  { @include textFieldLarge(); }
+    &--fill\@l,
+    &--block\@l  { @include textFieldBlock(); }
+    &--inline\@l { @include textFieldInline(); }
+  }
+
+  @include breakpoint(XL) {
+    &--small\@xl  { @include textFieldSmall(); }
+    &--medium\@xl { @include textFieldMedium(); }
+    &--large\@xl  { @include textFieldLarge(); }
+    &--fill\@xl,
+    &--block\@xl  { @include textFieldBlock(); }
+    &--inline\@xl { @include textFieldInline(); }
+  }
+
+
+  // --------------------------------------------------------------------------
+  // States
+
+  &:focus {
+    border-color: $form-focus-color;
+    box-shadow: 0 0 0 1px $form-focus-color inset;
+  }
+
+  &--error {
+
+    border-color: $form-error-color;
+    box-shadow: 0 0 0 1px $form-error-color inset;
+    background-color: $form-error-color-bg;
+
+    @include placeholder {
+      color: shade($form-placeholder-color, 20%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem $form-error-color-focus inset;
+      border-color: transparent;
+    }
+
+  }
+
+  &--positive {
+
+    border-color: $form-positive-color;
+    box-shadow: 0 0 0 1px $form-positive-color inset;
+    background-color: $form-positive-color-bg;
+
+    @include placeholder {
+      color: shade($form-placeholder-color, 20%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem $form-positive-color-focus inset;
+      border-color: transparent;
+    }
+
+  }
+
+}
+
+.fds-input {
+  &[size] {
+    width: auto;
+  }
+}
+
+.fds-textarea {
+
+  & {
+    min-height: 15rem;
+    display: block;
+    max-width: none;
+    width: 100%;
+    line-height: $base-line-height;
+    padding: $form-padding;
+    resize: vertical;
+  }
+
+  &[rows] {
+    height: auto;
+    min-height: 6rem;
+  }
+
+}
+
+[type="search"] {
+  box-sizing: border-box; // yeah, this is lame
+}
+
+////////////////////////////////////////////////////////////////////////
+// File (Upload)
+
+@mixin file-upload-button() {
+  @include font-size(0);
+  font-weight: $font-bold;
+  appearance: none;
+  background-color: #fff;
+  border-width: 0;
+  box-shadow: 0 0 0 1px $button-default inset;
+  padding: ($size-base + .1rem) $size-small $size-base;
+  color: $button-default;
+  border-radius: $button-border-radius;
+  margin-right: $size-small;
+}
+
+// File input type
+[type=file] {
+
+  @include font-size(1);
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: $size-small;
+
+  &:not(.fds-input) {
+    background-color: transparent;
+  }
+
+  &::-ms-value {
+    border-width: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  &::-ms-browse {
+    @include file-upload-button;
+    border-radius: 0;
+  }
+
+  &::-webkit-file-upload-button {
+    @include file-upload-button;
+  }
+
+}
+
+[type=password] {
+  font-family: $font-mono;
+}
+
+

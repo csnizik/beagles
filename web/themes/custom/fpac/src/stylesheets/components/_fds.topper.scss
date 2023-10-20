@@ -1,0 +1,44 @@
+.fds-topper {
+
+  & {
+
+    padding-left: $size-default;
+    padding-right: $size-default;
+
+    @media print {
+      display: none;
+    }
+
+  }
+
+  &--fullscreen {
+    @include breakpoint(L) {
+      padding-left: $size-medium;
+      padding-right: $size-medium;
+    }
+  }
+
+  &__bd {
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: $size-medium 0;
+    max-width: $site-max-width;
+
+    .fds-topper--fullscreen > & {
+      max-width: none;
+    }
+
+    @media print {
+      max-width: none;
+    }
+
+  }
+
+  &__link {
+    display: inline-flex;
+    gap: math.div($size-base, 2);
+    font-weight: $font-bold;
+  }
+
+}
