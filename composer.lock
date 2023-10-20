@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a5a062ea3174003db441d52ea518202",
+    "content-hash": "1ae6f249f2223807b8927a7a9757f1f6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2617,6 +2617,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/group",
                 "issues": "https://drupal.org/project/issues/group"
+            }
+        },
+        {
+            "name": "drupal/holy",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/holy.git",
+                "reference": "2.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/holy-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "3568a5e0932cc40bc29a2850762471ebe4c6dfb4"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.4",
+                    "datestamp": "1684955587",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jaroslav Červený",
+                    "homepage": "https://www.drupal.org/user/3192761"
+                }
+            ],
+            "description": "Contrib theme",
+            "homepage": "https://www.drupal.org/project/holy",
+            "support": {
+                "source": "https://git.drupalcode.org/project/holy"
             }
         },
         {

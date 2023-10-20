@@ -30,6 +30,7 @@
         "drupal/fontawesome": "^2.26",
         "drupal/geofield": "^1.55",
         "drupal/group": "^3.2",
+        "drupal/holy": "^2.0",
         "drupal/masquerade": "^2.0@RC",
         "drupal/svg_image": "^3.0",
         "drupal/uswds_base": "^3.4",

@@ -1,0 +1,23 @@
+name: 'FPAC Theme'
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - fpac/base
+  - fpac/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - fpac/user
+  core/drupal.dropbutton:
+    - fpac/dropbutton
+  core/drupal.dialog:
+    - fpac/dialog
+  file/drupal.file:
+    - fpac/file
+  core/drupal.progress:
+    - fpac/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.1.5'
+description: 'Custom theme generated with starterkit.'

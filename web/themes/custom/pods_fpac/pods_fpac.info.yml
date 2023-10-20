@@ -9,3 +9,17 @@ libraries:
 core_version_requirement: ^10
 generator: 'starterkit_theme:10.1.5'
 description: 'Custom theme generated with starterkit.'
+
+regions:
+  tophat: 'Tophat'
+  header: 'Header'
+  nav_global: 'Global Navigation'
+  content_top: 'Content Top'
+  content: 'Content'
+  breadcrumb: 'Breadcrumb'
+  alert: 'Alert'
+  nav_secondary: 'Secondary Navigation'
+  content_bottom: 'Content Bottom'
+  footer: 'Footer'
+
+

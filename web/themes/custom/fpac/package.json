@@ -1,0 +1,24 @@
+{
+  "name": "fpac",
+  "version": "1.0.0",
+  "description": "fpac theme, generated from starterkit_theme. Additional information on generating themes can be found in the [Starterkit documentation](https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme).",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "csnizik@tulane.edu",
+  "license": "ISC",
+  "devDependencies": {
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csscombx": "^4.2.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-rem-to-px": "^1.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "sass": "^1.69.4",
+    "stylelint": "^14.16.1",
+    "stylelint-config-drupal": "^3.1.0"
+  }
+}

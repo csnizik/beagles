@@ -19,3 +19,22 @@ function pods_fpac_preprocess_image_widget(array &$variables) {
     unset($data['preview']);
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function pods_fpac_theme_suggestions_region_alter(array &$suggestion, array $variables) {
+  $region = $variables['elements']['#region'];
+
+  if ($region == 'tophat'){
+    $suggestions[] = 'region__tophat';
+  }
+}
+
+function pods_fpac_theme_suggestions_block_alter(array &$suggestion, array $variables) {
+  $block_id = $variables['elements']['#id'];
+
+  if ($block_id == 'pods_fpac_usdabanner') {
+    $suggestions[] = 'block__pods_fpac_usdabanner';
+  }
+}
