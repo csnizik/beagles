@@ -4,8 +4,8 @@
   "description": "fpac theme, generated from starterkit_theme. Additional information on generating themes can be found in the [Starterkit documentation](https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme).",
   "main": "index.js",
   "scripts": {
-    "build-css": "sass --load-path=src/stylesheets/ --load-path=src/stylesheets/lib/uswds src/stylesheets/fds-style.scss:css/fds-style.css",
-    "watch-css": "sass --load-path=src/stylesheets/ --load-path=src/stylesheets/lib/uswds --watch src/stylesheets/fds-style.scss:css/fds-style.css"
+    "build": "sass --load-path=src/stylesheets/ --load-path=src/stylesheets/lib/uswds src/stylesheets/fds-style.scss:css/fds-style.css",
+    "watch": "sass --load-path=src/stylesheets/ --load-path=src/stylesheets/lib/uswds --watch src/stylesheets/fds-style.scss:css/fds-style.css"
 
   },
   "author": "csnizik@tulane.edu",
