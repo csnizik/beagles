@@ -1,0 +1,22 @@
+name: 'FPAC Design System'
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - fpacds/base
+  - fpacds/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - fpacds/user
+  core/drupal.dropbutton:
+    - fpacds/dropbutton
+  core/drupal.dialog:
+    - fpacds/dialog
+  file/drupal.file:
+    - fpacds/file
+  core/drupal.progress:
+    - fpacds/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.1.5'
