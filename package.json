@@ -1,0 +1,22 @@
+{
+  "name": "PODS-new",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:csnizik/PODS-new.git",
+  "author": "csnizik <csnizik@tulane.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/server": "^7.5.1",
+    "@storybook/server-webpack5": "^7.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.5.1"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  }
+}
