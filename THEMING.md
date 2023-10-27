@@ -7,5 +7,4 @@
 ## Storybook
 
 Following the instructions [here](https://storybook.js.org/addons/@lullabot/storybook-drupal-addon) under heading "Configure your Drupal site"
-
-
+Had to set node version to latest (21.1.0), install corepack with `brew install corepack`, use corepack to migrate from yarn 1.x to 3.x using [this](https://yarnpkg.com/migration/guide)
