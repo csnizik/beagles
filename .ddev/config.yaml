@@ -33,13 +33,13 @@ webimage_extra_packages:
   - make
 web_extra_exposed_ports:
   - name: storybook
-  - container_port: 6006
-  - http_port: 6007
-  - https_port: 6006
+    container_port: 6006
+    http_port: 6007
+    https_port: 6006
 web_extra_daemons:
   - name: node.js
-  - command: "tail -F package.json > /dev/null"
-  - directory: /var/www/html
+    command: "tail -F package.json > /dev/null"
+    directory: /var/www/html
 hooks:
   post-start:
     - exec: echo '================================================================================='
