@@ -6,6 +6,7 @@
   "author": "csnizik <csnizik@tulane.edu>",
   "license": "MIT",
   "devDependencies": {
+    "@lullabot/storybook-drupal-addon": "^2.0.2",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-links": "^7.5.1",
     "@storybook/blocks": "^7.5.1",
