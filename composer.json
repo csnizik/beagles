@@ -109,5 +109,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/cl_server": "^2.0@beta"
     }
 }
