@@ -11,4 +11,6 @@
       1. sdc
       2. serialization
    2. Add storybook to repo:
-      1. npm i -g sb@latest
+      1. `npm i -g sb@latest`
+      2. `npm i --save-dev @lullabot/storybook-drupal-addon`
+      3. 
