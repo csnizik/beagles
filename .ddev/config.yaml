@@ -24,7 +24,7 @@ ngrok_args: --domain ideally-correct-quail.ngrok-free.app
 # Start of SB customizations
 ###############################################################################
 
-nodejs_version: "18"
+nodejs_version: "16"
 webimage_extra_packages:
   - pkg-config
   - libpixman-1-dev
