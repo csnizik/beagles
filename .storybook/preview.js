@@ -15,6 +15,7 @@ const preview = {
   globals: {
     drupalTheme: 'fpacds',
     supportedDrupalThemes: {
+      fpacds: { title: 'FPAC Design System'},
       claro: { title: 'Claro' },
       olivero: { title: 'Olivero' },
       stark: { title: 'Stark' },
