@@ -5,7 +5,16 @@
 # that your settings.local.php file is listed at the end of settings.php.
 
 parameters:
- twig.config:
-   debug: true
-   auto_reload: true
-   cache: false
+  twig.config:
+    debug: true
+    auto_reload: true
+    cache: false
+  cors.config:
+    enabled: true
+    allowedHeaders: ['*']
+    allowedMethods: []
+    allowedOrigins: ['*']
+    exposedHeaders: false
+    maxAge: false
+    supportsCredentials: true
+
