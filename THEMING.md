@@ -6,11 +6,6 @@
 
 ## Storybook
 
-1. Install and enable the Drupal cl_server module
-   1. Dependencies of cl_server:
-      1. sdc
-      2. serialization
-   2. Add storybook to repo:
-      1. `npm i -g sb@latest`
-      2. `npm i --save-dev @lullabot/storybook-drupal-addon`
-      3. 
+Following the instructions [here](https://storybook.js.org/addons/@lullabot/storybook-drupal-addon) under heading "Configure your Drupal site"
+
+
